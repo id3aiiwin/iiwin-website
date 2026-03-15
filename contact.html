@@ -7,56 +7,44 @@
 <link rel="stylesheet" href="assets/style.css">
 <style>
 .contact-section { background:#0a0e1a; padding:80px 5vw 100px; }
-.contact-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; }
-.contact-info .sec-title { color:#f5f0e8; text-align:left; font-size:32px; margin-bottom:32px; }
-.info-item { display:flex; gap:16px; margin-bottom:28px; align-items:flex-start; }
-.info-icon { font-size:20px; flex-shrink:0; margin-top:2px; }
-.info-text strong { display:block; font-size:14px; letter-spacing:2px; color:#c9a84c; margin-bottom:6px; }
-.info-text p { font-size:16px; line-height:1.8; color:#d8e4ec; }
-.contact-form-wrap { background:#0d1120; border:1px solid rgba(201,168,76,.15); padding:48px 40px; border-radius:2px; }
-.contact-form-wrap h3 { font-family:'Noto Serif TC',serif; font-size:22px; font-weight:700; color:#f0e6cc; letter-spacing:3px; margin-bottom:32px; }
-.form-group { margin-bottom:24px; }
-.form-group label { display:block; font-size:13px; letter-spacing:2px; color:#c9a84c; margin-bottom:8px; }
-.form-group input,
-.form-group textarea {
-  width:100%; background:#080c17; border:1px solid rgba(201,168,76,.2);
-  color:#f0e6cc; padding:14px 16px; font-size:15px;
-  font-family:'Noto Sans TC',sans-serif; border-radius:2px;
-  outline:none; transition:border-color .25s;
-}
-.form-group input:focus,
-.form-group textarea:focus { border-color:rgba(201,168,76,.6); }
-.form-group textarea { height:140px; resize:vertical; }
-.form-note { font-size:13px; color:#586478; margin-bottom:24px; line-height:1.8; }
-.btn-submit {
-  width:100%; padding:16px; font-size:15px; letter-spacing:3px;
-  background:linear-gradient(135deg,#b8882e,#f0d080); color:#0a0e1a;
-  border:none; border-radius:2px; cursor:pointer; font-weight:500;
-  font-family:'Noto Sans TC',sans-serif;
-  transition:transform .2s, box-shadow .2s;
-}
-.btn-submit:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(201,168,76,.35); }
-.form-success { display:none; text-align:center; padding:32px; }
-.form-success p { font-size:18px; color:#c9a84c; letter-spacing:2px; }
-@media(max-width:768px){
-  .contact-inner { grid-template-columns:1fr; gap:48px; }
-  .contact-form-wrap { padding:32px 24px; }
-}
+.contact-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.contact-info-hd { margin-bottom:32px; }
+.loc-title { font-family:'Noto Serif TC',serif; font-size:28px; font-weight:700; color:#f5f0e8; letter-spacing:4px; margin-top:10px; }
+.info-item { display:flex; gap:16px; margin-bottom:22px; align-items:flex-start; }
+.info-icon { font-size:18px; flex-shrink:0; margin-top:3px; }
+.info-text strong { display:block; font-size:12px; letter-spacing:2px; color:#c9a84c; margin-bottom:5px; font-weight:500; }
+.info-text p { font-size:15px; color:#d8e4ec; line-height:1.8; }
+.line-cta-box { margin-top:40px; background:#0d1120; border:1px solid rgba(201,168,76,.15); border-radius:4px; padding:36px; text-align:center; position:relative; overflow:hidden; }
+.line-cta-box::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(6,199,85,.05),transparent 60%); pointer-events:none; }
+.line-cta-icon { font-size:52px; margin-bottom:16px; line-height:1; }
+.line-cta-title { font-family:'Noto Serif TC',serif; font-size:20px; font-weight:700; color:#f0e6cc; letter-spacing:3px; margin-bottom:10px; }
+.line-cta-desc { font-size:14px; color:#8a9bb5; line-height:1.9; margin-bottom:28px; }
+.line-btn { display:inline-flex; align-items:center; gap:10px; padding:16px 40px; background:#06C755; color:#fff; font-size:15px; letter-spacing:2px; font-weight:500; border-radius:4px; text-decoration:none; font-family:'Noto Sans TC',sans-serif; transition:transform .2s,box-shadow .2s; }
+.line-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(6,199,85,.35); }
+.line-id { margin-top:14px; font-size:13px; color:#586478; letter-spacing:1px; }
+.contact-map-wrap iframe { width:100%; height:280px; border:0; border-radius:4px; filter:grayscale(.4); display:block; margin-bottom:28px; }
+.contact-steps h4 { font-family:'Noto Serif TC',serif; font-size:16px; font-weight:700; color:#f0e6cc; letter-spacing:2px; margin-bottom:16px; }
+.step-list { list-style:none; counter-reset:steps; }
+.step-list li { counter-increment:steps; display:flex; gap:14px; align-items:flex-start; font-size:14px; color:#d8e4ec; line-height:1.8; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid rgba(255,255,255,.05); }
+.step-list li:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.step-list li::before { content:counter(steps); display:flex; align-items:center; justify-content:center; width:24px; height:24px; flex-shrink:0; background:rgba(201,168,76,.15); color:#c9a84c; font-size:12px; font-weight:700; border-radius:50%; margin-top:2px; }
+@media(max-width:768px){ .contact-inner{grid-template-columns:1fr;gap:48px;} }
 </style>
 </head>
 <body>
 <nav class="nav solid" id="mainNav">
-  <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家"></a>
-  <ul class="nav-links" id="navLinks">
-    <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
-    <li><a href="assessment.html">評量分析</a></li>
-    <li><a href="counseling.html">評量諮商</a></li>
-    <li><a href="training.html">教育訓練</a></li>
-    <li><a href="marketing.html">整合行銷</a></li>
-  </ul>
+  <div style="display:flex;align-items:center;gap:40px;flex:1;">
+    <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家"></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+      <li><a href="assessment.html">評量分析</a></li>
+      <li><a href="counseling.html">評量諮商</a></li>
+      <li><a href="training.html">教育訓練</a></li>
+      <li><a href="marketing.html">整合行銷</a></li>
+    </ul>
+  </div>
   <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
-
 <div class="page-hero">
   <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
   <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
@@ -65,94 +53,67 @@
     <div class="page-hero-title">聯絡我們</div>
   </div>
 </div>
-
 <section class="contact-section">
   <div class="contact-inner">
-    <div class="contact-info reveal">
-      <div class="sec-eyebrow">GET IN TOUCH</div>
-      <div class="sec-title" style="color:#f5f0e8;font-family:'Noto Serif TC',serif;text-align:left;font-size:32px;margin-bottom:32px;">與我們聯繫</div>
-      <div class="info-item">
-        <span class="info-icon">🏢</span>
-        <div class="info-text"><strong>公司名稱</strong><p>天生贏家全生涯事業有限公司</p></div>
+    <div class="reveal">
+      <div class="contact-info-hd">
+        <div class="sec-eyebrow">GET IN TOUCH</div>
+        <div class="loc-title">與我們聯繫</div>
       </div>
-      <div class="info-item">
-        <span class="info-icon">🔢</span>
-        <div class="info-text"><strong>統一編號</strong><p>53277119</p></div>
-      </div>
-      <div class="info-item">
-        <span class="info-icon">📍</span>
-        <div class="info-text"><strong>地址</strong><p>320 桃園市中壢區<br>領航南路三段468號15樓之13</p></div>
-      </div>
-      <div class="info-item">
-        <span class="info-icon">📞</span>
-        <div class="info-text"><strong>電話</strong><p>03-352-5125</p></div>
-      </div>
-      <div class="info-item">
-        <span class="info-icon">🕐</span>
-        <div class="info-text"><strong>服務時間</strong><p>週一至週五 09:00 – 17:00</p></div>
-      </div>
-      <div class="info-item">
-        <span class="info-icon">🚇</span>
-        <div class="info-text"><strong>大眾運輸</strong><p>桃園捷運 A18 桃園高鐵站下車<br>步行約 10 分鐘</p></div>
-      </div>
-      <div class="info-item">
-        <span class="info-icon">🚗</span>
-        <div class="info-text"><strong>停車</strong><p>青雲停車場（$10/hr，悠遊卡進出）</p></div>
+      <div class="info-item"><span class="info-icon">📍</span><div class="info-text"><strong>地址</strong><p>320 桃園市中壢區領航南路三段468號15樓之13</p></div></div>
+      <div class="info-item"><span class="info-icon">📞</span><div class="info-text"><strong>電話</strong><p>03-352-5125</p></div></div>
+      <div class="info-item"><span class="info-icon">🕐</span><div class="info-text"><strong>服務時間</strong><p>週一至週五 09:00 – 17:00</p></div></div>
+      <div class="info-item"><span class="info-icon">🚇</span><div class="info-text"><strong>大眾運輸</strong><p>桃園捷運 A18 桃園高鐵站下車，步行約 10 分鐘</p></div></div>
+      <div class="line-cta-box">
+        <div class="line-cta-icon">💬</div>
+        <div class="line-cta-title">加入 LINE 官方帳號</div>
+        <p class="line-cta-desc">歡迎透過 LINE 與我們聯繫<br>請留下您的 <strong style="color:#c9a84c;">姓名、電話、聯絡事項</strong><br>我們將盡快回覆您</p>
+        <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" class="line-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          立即加入 LINE
+        </a>
+        <p class="line-id">LINE ID：@wvv6736q</p>
       </div>
     </div>
-
-    <div class="contact-form-wrap reveal">
-      <h3>傳送訊息</h3>
-      <!-- 表單：使用 Formspree 免費服務，替換 YOUR_FORM_ID -->
-      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <label>您的姓名 *</label>
-          <input type="text" name="name" placeholder="請輸入姓名" required>
-        </div>
-        <div class="form-group">
-          <label>電子郵件 *</label>
-          <input type="email" name="email" placeholder="請輸入 Email" required>
-        </div>
-        <div class="form-group">
-          <label>聯絡電話</label>
-          <input type="tel" name="phone" placeholder="請輸入電話（選填）">
-        </div>
-        <div class="form-group">
-          <label>內容 *</label>
-          <textarea name="message" placeholder="請詳述您的需求..." required></textarea>
-        </div>
-        <p class="form-note">* 為必填欄位，我們將於 1-2 個工作天內回覆您。</p>
-        <button type="submit" class="btn-submit">送出訊息</button>
-      </form>
-      <div class="form-success" id="formSuccess">
-        <p>✓ 感謝您的來信！<br>我們將盡快與您聯繫。</p>
+    <div class="reveal">
+      <div class="contact-map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d904.6!2d121.2247!3d24.9851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823129b04e9d7%3A0x3de5bcbb0f5a7ae4!2z5qGD5ZyL5biC5Lit5aebIOmHjemqoOWNlui3r!5e0!3m2!1szh-TW!2stw!4v1" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="contact-steps">
+        <h4>聯絡步驟</h4>
+        <ol class="step-list">
+          <li>點擊「立即加入 LINE」，加入天生贏家官方帳號</li>
+          <li>傳送訊息，留下您的<strong style="color:#c9a84c;">姓名</strong></li>
+          <li>留下您的<strong style="color:#c9a84c;">聯絡電話</strong></li>
+          <li>說明您的<strong style="color:#c9a84c;">聯絡事項或需求</strong></li>
+          <li>我們將於服務時間內盡快與您聯繫 ✓</li>
+        </ol>
       </div>
     </div>
   </div>
 </section>
-
 <footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
-    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
-    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區<br>領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p></div>
+  <div class="footer-top">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家">
+        <p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p>
+      </div>
+      <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+      <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p><a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">LINE 官方帳號 →</a></div>
+    </div>
   </div>
-  <div class="footer-divider"></div>
-  <div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" style="color:rgba(255,255,255,.35);">聯絡我們</a></div>
+  <div class="footer-bottom-wrap">
+    <div class="footer-bottom">
+      <span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span>
+      <a href="contact.html" style="color:rgba(255,255,255,.35);transition:color .2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.35)'">聯絡我們</a>
+    </div>
+  </div>
 </footer>
 <script>
 function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
 var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i*0.12)+'s'; io.observe(el); });
-function handleSubmit(e){
-  e.preventDefault();
-  var form=document.getElementById('contactForm');
-  fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
-  .then(function(r){
-    if(r.ok){ form.style.display='none'; document.getElementById('formSuccess').style.display='block'; }
-    else{ alert('送出失敗，請直接撥打電話聯繫我們。'); }
-  }).catch(function(){ alert('送出失敗，請直接撥打電話聯繫我們。'); });
-}
 </script>
 </body>
 </html>
