@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教育訓練 — 天生贏家全生涯事業有限公司</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.training-section { padding:80px 5vw; }
+.training-section.dark { background:#0a0e1a; }
+.training-section.light { background:#fff; }
+.training-inner { max-width:1100px; margin:0 auto; }
+.training-block { display:grid; grid-template-columns:300px 1fr; gap:64px; align-items:center; margin-bottom:64px; padding-bottom:64px; border-bottom:1px solid rgba(201,168,76,.1); }
+.training-block:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.training-block.reverse { grid-template-columns:1fr 300px; }
+.training-block.reverse .training-img { order:2; }
+.training-block.reverse .training-body { order:1; }
+.training-img { border-radius:4px; overflow:hidden; }
+.training-img img { width:100%; height:220px; object-fit:cover; filter:brightness(.85); }
+.training-body h3 { font-family:'Noto Serif TC',serif; font-size:26px; font-weight:700; color:#f0e6cc; letter-spacing:3px; margin-bottom:16px; }
+.training-body p { font-size:16px; line-height:2; color:#d8e4ec; margin-bottom:20px; }
+.training-links { display:flex; flex-wrap:wrap; gap:12px; }
+.training-link { display:inline-flex; align-items:center; gap:8px; padding:10px 24px; font-size:13px; letter-spacing:2px; color:#c9a84c; border:1px solid rgba(201,168,76,.4); border-radius:2px; transition:all .25s; }
+.training-link:hover { background:rgba(201,168,76,.1); border-color:#c9a84c; }
+@media(max-width:768px){
+  .training-block, .training-block.reverse { grid-template-columns:1fr; gap:24px; }
+  .training-block.reverse .training-img, .training-block.reverse .training-body { order:unset; }
+}
+</style>
+</head>
+<body>
+<nav class="nav solid" id="mainNav">
+  <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家"></a>
+  <ul class="nav-links" id="navLinks">
+    <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+    <li><a href="assessment.html">評量分析</a></li>
+    <li><a href="counseling.html">評量諮商</a></li>
+    <li><a href="training.html">教育訓練</a></li>
+    <li><a href="marketing.html">整合行銷</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
+  <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">TRAINING</div>
+    <div class="page-hero-title">教育訓練</div>
+  </div>
+</div>
+
+<section class="training-section dark">
+  <div class="training-inner">
+    <div style="text-align:center; margin-bottom:64px;" class="reveal">
+      <div class="sec-eyebrow">OUR PROGRAMS</div>
+      <div class="sec-title gold" style="font-size:clamp(24px,3vw,40px);">訓練項目</div>
+      <div class="sec-hr"></div>
+    </div>
+
+    <div class="training-block reveal">
+      <div class="training-img">
+        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="學童教育" onerror="this.style.background='#1a2035';this.style.height='220px'">
+      </div>
+      <div class="training-body">
+        <h3>🎒 學童教育</h3>
+        <p>透過天賦教育幫助孩子培養自信和溝通能力，以及與人融洽相處的能力，懂得如何自我管理，培養正確的價值觀進而更瞭解自己，發掘自己的特質，更有勇氣與動力找尋未來方向。</p>
+        <div class="training-links">
+          <a href="https://www.iiwin.com.tw/22825360702594532946.html" class="training-link">天賦教育 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="training-block reverse reveal">
+      <div class="training-body">
+        <h3>🌱 個人成長</h3>
+        <p>提供多階層的公開班課程型態，讓您在安排培訓時能更加清楚階層上的所需職能，擁有豐富的講師團隊，並擁有多面向的課程，完善提供給個人學習的方向與實務。</p>
+        <div class="training-links">
+          <a href="https://www.iiwin.com.tw/20844382833550631243.html" class="training-link">公開課程 →</a>
+          <a href="https://www.iiwin.com.tw/2516325226251632356026696.html" class="training-link">二代接班手把手計畫 →</a>
+        </div>
+      </div>
+      <div class="training-img">
+        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="個人成長" onerror="this.style.background='#1a2035';this.style.height='220px'">
+      </div>
+    </div>
+
+    <div class="training-block reveal">
+      <div class="training-img">
+        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="企業訓練" onerror="this.style.background='#1a2035';this.style.height='220px'">
+      </div>
+      <div class="training-body">
+        <h3>🏢 企業訓練</h3>
+        <p>不同的企業，有不同的企業文化和理念，落實理念的初衷，永續經營，是每家企業的共同期許。設為企業量身訂做最適切的培訓課程；讓企業能夠將核心價值與理念永續傳承。</p>
+        <div class="training-links">
+          <a href="https://www.iiwin.com.tw/20225269893534732244.html" class="training-link">企業內訓 →</a>
+          <a href="https://www.iiwin.com.tw/eap217292403721332211612604126696.html" class="training-link">EAP員工協助方案 →</a>
+          <a href="https://www.iiwin.com.tw/25976203013668122411.html" class="training-link">企業數位轉型 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區<br>領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p></div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" style="color:rgba(255,255,255,.35);">聯絡我們</a></div>
+</footer>
+<script>
+function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
+var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i*0.1)+'s'; io.observe(el); });
+</script>
+</body>
+</html>

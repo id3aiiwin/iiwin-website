@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>整合行銷 — 天生贏家全生涯事業有限公司</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.mkt-section { padding:80px 5vw; }
+.mkt-section.dark { background:#0a0e1a; }
+.mkt-inner { max-width:1100px; margin:0 auto; }
+.mkt-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; }
+.mkt-card { background:#0d1120; padding:48px 36px; border:1px solid rgba(201,168,76,.12); position:relative; overflow:hidden; transition:border-color .3s,background .3s; }
+.mkt-card:hover { border-color:rgba(201,168,76,.5); background:#101526; }
+.mkt-card::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.07),transparent 60%); opacity:0; transition:opacity .4s; }
+.mkt-card:hover::before { opacity:1; }
+.mkt-card-line { position:absolute; bottom:0; left:0; height:2px; width:0; background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c); transition:width .45s; }
+.mkt-card:hover .mkt-card-line { width:100%; }
+.mkt-icon { font-size:36px; margin-bottom:20px; }
+.mkt-title { font-family:'Noto Serif TC',serif; font-size:20px; font-weight:700; color:#f0e6cc; letter-spacing:3px; margin-bottom:14px; }
+.mkt-desc { font-size:16px; line-height:2; color:#d8e4ec; }
+.consultant-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-bottom:48px; }
+.con-card { background:#0d1120; padding:40px 32px; border:1px solid rgba(201,168,76,.15); text-align:center; transition:border-color .3s; }
+.con-card:hover { border-color:rgba(201,168,76,.5); }
+.con-title { font-family:'Noto Serif TC',serif; font-size:20px; font-weight:700; color:#f0e6cc; letter-spacing:3px; margin-bottom:12px; }
+.con-link { display:inline-flex; align-items:center; gap:8px; font-size:13px; color:#c9a84c; letter-spacing:2px; margin-top:12px; }
+@media(max-width:768px){ .mkt-grid,.consultant-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<nav class="nav solid" id="mainNav">
+  <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家"></a>
+  <ul class="nav-links" id="navLinks">
+    <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+    <li><a href="assessment.html">評量分析</a></li>
+    <li><a href="counseling.html">評量諮商</a></li>
+    <li><a href="training.html">教育訓練</a></li>
+    <li><a href="marketing.html">整合行銷</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
+  <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">MARKETING</div>
+    <div class="page-hero-title">整合行銷</div>
+  </div>
+</div>
+
+<section class="mkt-section dark">
+  <div class="mkt-inner">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="sec-eyebrow">CONSULTING</div>
+      <div class="sec-title gold" style="font-size:clamp(24px,3vw,40px);">顧問服務</div>
+      <div class="sec-hr" style="margin-bottom:48px;"></div>
+    </div>
+    <div class="consultant-grid">
+      <a href="https://www.iiwin.com.tw/218302698931574300533901521839.html" class="con-card reveal">
+        <div style="font-size:40px;margin-bottom:16px;">📊</div>
+        <div class="con-title">商業策略顧問</div>
+        <span class="con-link">了解更多 →</span>
+      </a>
+      <a href="https://www.iiwin.com.tw/259762581831574300533901521839.html" class="con-card reveal">
+        <div style="font-size:40px;margin-bottom:16px;">📈</div>
+        <div class="con-title">數據策略顧問</div>
+        <span class="con-link">了解更多 →</span>
+      </a>
+    </div>
+
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="sec-eyebrow">SERVICES</div>
+      <div class="sec-title gold" style="font-size:clamp(24px,3vw,40px);">行銷服務項目</div>
+      <div class="sec-hr" style="margin-bottom:0;"></div>
+    </div>
+    <div class="mkt-grid">
+      <div class="mkt-card reveal"><div class="mkt-card-line"></div><div class="mkt-icon">🎯</div><div class="mkt-title">品牌規劃</div><p class="mkt-desc">藉由專業行銷顧問人員分析市場型態、流行趨勢，協助企業找到專屬定位及客群，擬定完善行銷計畫，建立良好品牌形象。</p></div>
+      <div class="mkt-card reveal"><div class="mkt-card-line"></div><div class="mkt-icon">💬</div><div class="mkt-title">口碑行銷</div><p class="mkt-desc">以第三者角度進行撰寫分享，使文章更具說服力，藉此帶動網路風向，讓消費者進一步了解品牌及商品，成為購買參考的依據。</p></div>
+      <div class="mkt-card reveal"><div class="mkt-card-line"></div><div class="mkt-icon">📱</div><div class="mkt-title">社群媒體經營</div><p class="mkt-desc">元宇宙時代來臨，我們透過多元類型文案、時下流行議題等，以社群媒體傳遞品牌第一手資訊，與消費者進行互動，長期維繫顧客關係。</p></div>
+      <div class="mkt-card reveal"><div class="mkt-card-line"></div><div class="mkt-icon">🎬</div><div class="mkt-title">多媒體設計</div><p class="mkt-desc">動態素材呈現往往比平面、文字更具吸引力，一條龍的影片製作服務，讓消費者透過影片快速了解品牌與商品益處，同時帶來豐富感官體驗。</p></div>
+      <div class="mkt-card reveal"><div class="mkt-card-line"></div><div class="mkt-icon">📣</div><div class="mkt-title">線上媒體廣告投放</div><p class="mkt-desc">透過完善廣告規劃，與精準目標客群鎖定，讓企業將預算花在刀口上，達到廣告擴散效應，除鞏固既有客戶外，也開發更多潛在客戶。</p></div>
+      <div class="mkt-card reveal"><div class="mkt-card-line"></div><div class="mkt-icon">🖼️</div><div class="mkt-title">圖文素材設計</div><p class="mkt-desc">行銷除了擁有精確文案外，圖片素材也相當重要，一張好的素材能夠快速吸引消費者目光，讓他們願意駐足，也能襯托出品牌調性及商品特色。</p></div>
+      <div class="mkt-card reveal"><div class="mkt-card-line"></div><div class="mkt-icon">⭐</div><div class="mkt-title">部落客及網紅行銷</div><p class="mkt-desc">透過部落客、網紅自身人氣及號召力，使品牌及商品擁有更多曝光管道，讓消費者對此產生印象及好感，進而吸引更多客群。</p></div>
+      <div class="mkt-card reveal"><div class="mkt-card-line"></div><div class="mkt-icon">✍️</div><div class="mkt-title">行銷文案企劃與撰寫</div><p class="mkt-desc">從受眾角度精準切入，將對外宣傳文字化，讓消費者確實了解商品內容，成為商品與消費者最佳溝通方式。</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區<br>領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p></div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" style="color:rgba(255,255,255,.35);">聯絡我們</a></div>
+</footer>
+<script>
+function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
+var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i*0.08)+'s'; io.observe(el); });
+</script>
+</body>
+</html>

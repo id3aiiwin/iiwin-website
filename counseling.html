@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>評量諮商 — 天生贏家全生涯事業有限公司</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.counsel-intro { background:#fff; padding:80px 5vw; }
+.counsel-intro-inner { max-width:900px; margin:0 auto; text-align:center; }
+.counsel-intro h2 { font-family:'Noto Serif TC',serif; font-size:clamp(20px,2.5vw,28px); font-weight:400; color:#1a1a2e; letter-spacing:3px; line-height:1.8; margin-bottom:24px; font-style:italic; }
+.counsel-intro p { font-size:16px; line-height:2.2; color:#555; }
+.counsel-services { background:#0a0e1a; padding:80px 5vw; }
+.counsel-services-inner { max-width:1100px; margin:0 auto; }
+.counsel-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+.c-card { background:#0d1120; padding:48px 36px; border:1px solid rgba(201,168,76,.12); position:relative; overflow:hidden; transition:border-color .3s,background .3s; display:flex; flex-direction:column; }
+.c-card:hover { border-color:rgba(201,168,76,.5); background:#101526; }
+.c-card::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.07),transparent 60%); opacity:0; transition:opacity .4s; }
+.c-card:hover::before { opacity:1; }
+.c-card-line { position:absolute; bottom:0; left:0; height:2px; width:0; background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c); transition:width .45s; }
+.c-card:hover .c-card-line { width:100%; }
+.c-icon { font-size:40px; margin-bottom:24px; }
+.c-title { font-family:'Noto Serif TC',serif; font-size:22px; font-weight:700; color:#f0e6cc; letter-spacing:3px; margin-bottom:16px; }
+.c-desc { font-size:16px; line-height:2; color:#d8e4ec; margin-bottom:28px; flex:1; }
+.c-link { display:inline-flex; align-items:center; gap:8px; font-size:13px; color:#c9a84c; letter-spacing:2px; transition:gap .3s; }
+.c-link:hover { gap:12px; }
+@media(max-width:768px){ .counsel-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<nav class="nav solid" id="mainNav">
+  <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家"></a>
+  <ul class="nav-links" id="navLinks">
+    <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+    <li><a href="assessment.html">評量分析</a></li>
+    <li><a href="counseling.html">評量諮商</a></li>
+    <li><a href="training.html">教育訓練</a></li>
+    <li><a href="marketing.html">整合行銷</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
+  <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">COUNSELING</div>
+    <div class="page-hero-title">評量諮商</div>
+  </div>
+</div>
+
+<section class="counsel-intro">
+  <div class="counsel-intro-inner reveal">
+    <h2>開放的心，是我們為自己留下的指引燈</h2>
+    <p>覺知，是一切改變的開端。情緒的釋放與清除，讓生活可以向前邁進。透過諮商療育是為了更清楚自己的狀態，以及自己是誰的時候，我們就能做出選擇，決定我們想要成為什麼樣的人。</p>
+    <br>
+    <p>每個人在不同的發展階段都會面臨不同的變化、抉擇與挑戰。因應得宜，調適良好，可以凝聚能量，面對下一項任務、正常發展；適應不良，則耗費心神，卻停滯不前，甚至發展成疾。生活中遇挫折受困時，協助我們了解個人、家庭或資源，接納既存感受，釋放被桎梏的能量，學習尊重個人的處境與選擇，或創造新的意義。</p>
+  </div>
+</section>
+
+<section class="counsel-services">
+  <div class="counsel-services-inner">
+    <div style="text-align:center; margin-bottom:56px;" class="reveal">
+      <div class="sec-eyebrow">OUR SERVICES</div>
+      <div class="sec-title gold" style="font-size:clamp(24px,3vw,40px);">諮商服務</div>
+      <div class="sec-hr"></div>
+    </div>
+    <div class="counsel-grid">
+      <div class="c-card reveal">
+        <div class="c-card-line"></div>
+        <div class="c-icon">🧠</div>
+        <div class="c-title">個人諮商</div>
+        <p class="c-desc">讓生命重新統整，也喚醒內在力量與找到更多面對生活的資源。強化體驗內在感受，協助達到更深層次的覺知。幫助你釋放內心的感受，以及無法說出的言語，讓心中積壓多年的痛苦得以釋放。</p>
+        <a href="https://www.iiwin.com.tw/20491201543556621830.html" class="c-link">瞭解更多 →</a>
+      </div>
+      <div class="c-card reveal">
+        <div class="c-card-line"></div>
+        <div class="c-icon">👥</div>
+        <div class="c-title">團體療育</div>
+        <p class="c-desc">人生，是一段用生命碰觸其他生命的時光，尋覓天命，需要同伴，更需要機會與環境，透過深層共學的社群，讓彼此建立共同願景，成為最紮實的生命共同體，落實「社會企業家」的正向影響力。</p>
+        <a href="https://www.iiwin.com.tw/22296396363027432946.html" class="c-link">瞭解更多 →</a>
+      </div>
+      <div class="c-card reveal">
+        <div class="c-card-line"></div>
+        <div class="c-icon">🏠</div>
+        <div class="c-title">家族療育</div>
+        <p class="c-desc">幫助家庭的每個人理解彼此的想法和立場。這個家發生了什麼狀況？為什麼他會這樣做？我們能為彼此做什麼嗎？用不同於以前解決的模式，給自己跟彼此一個新的選擇。</p>
+        <a href="http://line.me/R/ti/p/%40wvv6736q" class="c-link">諮詢客服 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區<br>領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p></div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" style="color:rgba(255,255,255,.35);">聯絡我們</a></div>
+</footer>
+<script>
+function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
+var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i*0.1)+'s'; io.observe(el); });
+</script>
+</body>
+</html>

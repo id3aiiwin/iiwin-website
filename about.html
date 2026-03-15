@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>關於我們 — 天生贏家全生涯事業有限公司</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.about-main { background:#fff; padding:80px 5vw; }
+.about-main-inner { max-width:1100px; margin:0 auto; }
+.about-story { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; margin-bottom:80px; }
+.about-story img { width:100%; border-radius:4px; }
+.about-story-body h2 { font-family:'Noto Serif TC',serif; font-size:32px; font-weight:900; color:#1a1a2e; letter-spacing:4px; margin-bottom:24px; }
+.about-story-body p { font-size:16px; line-height:2; color:#555; margin-bottom:16px; }
+.about-values { background:#0a0e1a; padding:80px 5vw; }
+.about-values-inner { max-width:1100px; margin:0 auto; }
+.about-values-hd { text-align:center; margin-bottom:56px; }
+.values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+.value-card { background:#0d1120; padding:48px 36px; border:1px solid rgba(201,168,76,.12); position:relative; overflow:hidden; transition:border-color .3s,background .3s; }
+.value-card:hover { border-color:rgba(201,168,76,.5); background:#101526; }
+.value-card::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.07),transparent 60%); opacity:0; transition:opacity .4s; }
+.value-card:hover::before { opacity:1; }
+.value-card-line { position:absolute; bottom:0; left:0; height:2px; width:0; background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c); transition:width .45s cubic-bezier(.4,0,.2,1); }
+.value-card:hover .value-card-line { width:100%; }
+.value-icon { font-size:36px; margin-bottom:24px; }
+.value-title { font-family:'Noto Serif TC',serif; font-size:22px; font-weight:700; color:#f0e6cc; letter-spacing:3px; margin-bottom:16px; }
+.value-desc { font-size:16px; line-height:2; color:#d8e4ec; }
+@media(max-width:900px){
+  .about-story { grid-template-columns:1fr; gap:40px; }
+  .values-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+<nav class="nav solid" id="mainNav">
+  <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家"></a>
+  <ul class="nav-links" id="navLinks">
+    <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+    <li><a href="assessment.html">評量分析</a></li>
+    <li><a href="counseling.html">評量諮商</a></li>
+    <li><a href="training.html">教育訓練</a></li>
+    <li><a href="marketing.html">整合行銷</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
+  <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">ABOUT US</div>
+    <div class="page-hero-title">關於我們</div>
+  </div>
+</div>
+
+<section class="about-main">
+  <div class="about-main-inner">
+    <div class="about-story reveal">
+      <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/158962680-119536040179551-403490448402419964-n.jpeg" alt="天生贏家故事">
+      <div class="about-story-body">
+        <h2>我們的故事</h2>
+        <p>【天生贏家】秉持卓越的精神，將這份善知識拓展至世界每一個角落，故於西元 2000 年起服務上海、北京、新加坡，隔年將觸角延伸至美澳及菲律賓。</p>
+        <p>【天生贏家】全體工作人員，均以愛與使命感為客戶服務；真心關心生命中每一個人，尊重每個人與生俱來不同的先天性格。因為瞭解、進而開解，讓生命發揮更高價值。</p>
+        <p>比大海更遼闊的景色，那是天空，比天空更遼闊的景色，是靈魂深處。教育的本質乃在激發學生靈魂的深處所在。— 維克多雨果</p>
+        <p>從事教育培訓的我，這些年來經常往返海內外，輔導對象包含教育機構、企業、社團等，但總是看到每個人在規劃未來，卻不知從何做起。啟動自己天賦、歸屬天命，可以讓你的心更加篤定，知道自己是怎樣的人，為自己寫下渴盼的生命故事。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-values">
+  <div class="about-values-inner">
+    <div class="about-values-hd reveal">
+      <div class="sec-eyebrow">CORE VALUES</div>
+      <div class="sec-title gold" style="font-size:clamp(28px,4vw,46px);">核心價值</div>
+      <div class="sec-hr"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-card-line"></div>
+        <div class="value-icon">🎯</div>
+        <div class="value-title">使命</div>
+        <p class="value-desc">協助發現與生俱來的天賦，打開生命可能性，對社會做有價值的貢獻。</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-card-line"></div>
+        <div class="value-icon">🌟</div>
+        <div class="value-title">願景</div>
+        <p class="value-desc">成為可信賴的精神啦啦隊，提升人的覺醒力量，活出有影響力的人生。</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="value-card-line"></div>
+        <div class="value-icon">💎</div>
+        <div class="value-title">信念</div>
+        <p class="value-desc">打開人生中善良美好的品格、勇於創新的智慧、破釜沉舟的膽識、高瞻遠矚的胸懷，打造自己的金鑰匙，做個卓越長青的天生贏家！</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家">
+      <p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p>
+    </div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區<br>領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p></div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" style="color:rgba(255,255,255,.35);">聯絡我們</a></div>
+</footer>
+<script>
+function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
+var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i*0.1)+'s'; io.observe(el); });
+</script>
+</body>
+</html>
