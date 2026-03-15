@@ -11,12 +11,12 @@
 .ci-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
 .ci-lead{font-family:'Noto Serif TC',serif;font-size:18px;color:#d4c9b0;line-height:2.2;margin-bottom:64px;text-align:center;padding:36px 48px;border:1px solid rgba(201,168,76,.15);border-radius:2px;background:#0d1120;font-style:italic}
 
-/* 服務卡片 */
+/* ===== 服務卡片 ===== */
 .c-services{display:flex;flex-direction:column;gap:2px}
+
 .c-card{
   display:grid;
   grid-template-columns:360px 1fr;
-  min-height:340px;
   background:#0d1120;
   border:1px solid rgba(201,168,76,.12);
   position:relative;
@@ -25,21 +25,34 @@
   text-decoration:none;
   color:inherit;
 }
-/* 偶數卡片：文左圖右 */
 .c-card:nth-child(even){grid-template-columns:1fr 360px}
 .c-card:nth-child(even) .c-img{order:2}
 .c-card:nth-child(even) .c-body{order:1}
-
 .c-card:hover{border-color:rgba(201,168,76,.5)}
 .c-card-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1);z-index:2}
 .c-card:hover .c-card-line{width:100%}
 
-/* 圖片欄：直接讓 img 填滿 grid cell，不使用 position:absolute */
-.c-img{overflow:hidden;display:block;}
-.c-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.75);display:block;transition:transform .5s}
+/* 關鍵修正：
+   style.css 的全域 img { max-width:100% } 導致 height:100% 失效。
+   改用 position:absolute 填滿已知高度的容器，徹底迴避這個問題。 */
+.c-img{
+  position:relative;
+  min-height:340px;
+  overflow:hidden;
+}
+.c-img img{
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  max-width:none;   /* 覆蓋 style.css 的 max-width:100% */
+  object-fit:cover;
+  filter:brightness(.75);
+  display:block;
+  transition:transform .5s;
+}
 .c-card:hover .c-img img{transform:scale(1.04)}
 
-/* 文字欄 */
 .c-body{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
 .c-eyebrow{font-size:11px;letter-spacing:4px;color:#c9a84c;text-transform:uppercase;margin-bottom:10px}
 .c-title{font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,26px);font-weight:700;color:#f0e6cc;letter-spacing:3px;margin-bottom:8px}
@@ -52,11 +65,9 @@
 .c-sub-link:hover{color:#c9a84c;border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.06)}
 
 @media(max-width:900px){
-  .c-card,
-  .c-card:nth-child(even){grid-template-columns:1fr;min-height:auto}
-  .c-card:nth-child(even) .c-img,
-  .c-card:nth-child(even) .c-body{order:unset}
-  .c-img{height:220px}
+  .c-card,.c-card:nth-child(even){grid-template-columns:1fr}
+  .c-card:nth-child(even) .c-img,.c-card:nth-child(even) .c-body{order:unset}
+  .c-img{min-height:220px}
 }
 </style>
 </head>
@@ -94,7 +105,7 @@
     </div>
 
     <div class="c-services">
-      <!-- 個人諮商服務：圖左文右（第1張，奇數） -->
+      <!-- 第1張：個人諮商服務（奇數 → 圖左文右） -->
       <a href="counseling-personal.html" class="c-card reveal">
         <div class="c-card-line"></div>
         <div class="c-img"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=80" alt="個人諮商服務"></div>
@@ -114,7 +125,7 @@
         </div>
       </a>
 
-      <!-- 天賦療育：文左圖右（第2張，偶數） -->
+      <!-- 第2張：天賦療育（偶數 → 文左圖右） -->
       <a href="counseling-talent.html" class="c-card reveal">
         <div class="c-card-line"></div>
         <div class="c-img"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80" alt="天賦療育"></div>
@@ -127,7 +138,7 @@
         </div>
       </a>
 
-      <!-- 團體療育：圖左文右（第3張，奇數） -->
+      <!-- 第3張：團體療育（奇數 → 圖左文右） -->
       <a href="counseling-group.html" class="c-card reveal">
         <div class="c-card-line"></div>
         <div class="c-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80" alt="團體療育"></div>
