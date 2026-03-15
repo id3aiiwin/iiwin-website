@@ -7,53 +7,41 @@
 <link rel="stylesheet" href="assets/style.css">
 <style>
 /* ── 兩欄左圖右文 ── */
-.assess-intro { background:#0a0e1a; padding:80px 5vw; }
-.assess-inner { max-width:1100px; margin:0 auto; }
-.assess-block {
-  display:grid; grid-template-columns:1fr 1fr; gap:72px;
-  align-items:center; margin-bottom:80px; padding-bottom:80px;
-  border-bottom:1px solid rgba(201,168,76,.08);
-}
-.assess-block:last-of-type { border-bottom:none; margin-bottom:0; padding-bottom:0; }
-.assess-block.reverse .assess-img { order:2; }
-.assess-block.reverse .assess-body { order:1; }
-.assess-img { position:relative; border-radius:4px; overflow:hidden; }
-.assess-img img { width:100%; height:340px; object-fit:cover; filter:brightness(.75); display:block; }
-.assess-img::after { content:''; position:absolute; inset:0; border:1px solid rgba(201,168,76,.25); pointer-events:none; }
-.assess-img-label {
-  position:absolute; bottom:0; left:0; right:0;
-  padding:20px 24px;
-  background:linear-gradient(to top,rgba(8,12,23,.9),transparent);
-}
-.assess-img-label span { font-family:'Noto Serif TC',serif; font-size:13px; letter-spacing:3px; color:#c9a84c; }
-.assess-eyebrow { font-size:11px; letter-spacing:5px; color:#c9a84c; text-transform:uppercase; margin-bottom:14px; display:flex; align-items:center; gap:12px; }
-.assess-eyebrow::after { content:''; display:block; width:28px; height:1px; background:#c9a84c; }
-.assess-title { font-family:'Noto Serif TC',serif; font-size:clamp(22px,3vw,32px); font-weight:900; color:#f0e6cc; letter-spacing:4px; margin-bottom:20px; line-height:1.3; }
-.assess-divider { width:36px; height:1px; background:linear-gradient(to right,#c9a84c,transparent); margin-bottom:20px; }
-.assess-body p { font-size:16px; line-height:2; color:#d8e4ec; margin-bottom:14px; }
-
-/* ── 工具卡片區 ── */
-.tools-section { background:#080c17; padding:80px 5vw; border-top:1px solid rgba(201,168,76,.08); }
-.tools-inner { max-width:1100px; margin:0 auto; }
-.tools-hd { text-align:center; margin-bottom:56px; }
-.tools-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
-.t-card { background:#0d1120; padding:36px 32px; border:1px solid rgba(201,168,76,.1); position:relative; overflow:hidden; transition:border-color .3s,background .3s; display:flex; flex-direction:column; }
-.t-card:hover { border-color:rgba(201,168,76,.5); background:#101526; }
-.t-card:hover .t-line { width:100%; }
-.t-card::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.06),transparent 60%); opacity:0; transition:opacity .4s; }
-.t-card:hover::before { opacity:1; }
-.t-line { position:absolute; bottom:0; left:0; height:2px; width:0; background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c); transition:width .45s cubic-bezier(.4,0,.2,1); }
-.t-title { font-family:'Noto Serif TC',serif; font-size:17px; font-weight:700; color:#f0e6cc; letter-spacing:2px; margin-bottom:12px; }
-.t-desc { font-size:14px; line-height:1.9; color:#8a9bb5; flex:1; margin-bottom:16px; }
-.t-link { font-size:12px; color:#c9a84c; letter-spacing:2px; display:inline-flex; align-items:center; gap:6px; transition:gap .3s; }
-.t-link:hover { gap:10px; }
-
-@media(max-width:900px){
-  .assess-block, .assess-block.reverse { grid-template-columns:1fr; gap:32px; }
-  .assess-block.reverse .assess-img, .assess-block.reverse .assess-body { order:unset; }
-  .tools-grid { grid-template-columns:1fr 1fr; }
-}
-@media(max-width:520px){ .tools-grid{grid-template-columns:1fr;} }
+.intro-section{background:#0a0e1a;padding:80px 5vw;position:relative;overflow:hidden}
+.intro-section::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px);background-size:80px 80px}
+.intro-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.intro-block{display:grid;grid-template-columns:480px 1fr;gap:72px;align-items:center;margin-bottom:3px;background:#0d1120;padding:56px 48px;border:1px solid rgba(201,168,76,.12);position:relative;overflow:hidden;transition:border-color .3s}
+.intro-block:hover{border-color:rgba(201,168,76,.4)}
+.intro-block.rev{grid-template-columns:1fr 480px}
+.intro-block.rev .intro-img{order:2}
+.intro-block.rev .intro-body{order:1}
+.intro-block-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.intro-block:hover .intro-block-line{width:100%}
+.intro-img{border-radius:4px;overflow:hidden;position:relative}
+.intro-img img{width:100%;height:320px;object-fit:cover;filter:brightness(.8);display:block;transition:transform .5s}
+.intro-block:hover .intro-img img{transform:scale(1.03)}
+.intro-img::after{content:'';position:absolute;inset:0;border:1px solid rgba(201,168,76,.2);pointer-events:none}
+.intro-eyebrow{font-size:11px;letter-spacing:5px;color:#c9a84c;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.intro-eyebrow::after{content:'';display:block;width:24px;height:1px;background:#c9a84c}
+.intro-title{font-family:'Noto Serif TC',serif;font-size:clamp(22px,2.8vw,30px);font-weight:700;color:#f0e6cc;letter-spacing:4px;margin-bottom:16px}
+.intro-div{width:32px;height:1px;background:linear-gradient(to right,#c9a84c,transparent);margin-bottom:16px}
+.intro-body p{font-size:17px;line-height:2;color:#d8e4ec;margin-bottom:12px}
+/* ── 評測流程 ── */
+.process-section{background:#050810;padding:80px 5vw;border-top:1px solid rgba(201,168,76,.08)}
+/* ── 評量工具 ── */
+.tools-section{background:#0a0e1a;padding:80px 5vw;border-top:1px solid rgba(201,168,76,.08)}
+.tools-inner{max-width:1100px;margin:0 auto}
+.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.t-card{background:#0d1120;padding:36px 32px;border:1px solid rgba(201,168,76,.1);position:relative;overflow:hidden;transition:border-color .3s,background .3s;display:flex;flex-direction:column}
+.t-card:hover{border-color:rgba(201,168,76,.5);background:#101526}
+.t-card:hover .t-line{width:100%}
+.t-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.t-title{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:12px}
+.t-desc{font-size:16px;line-height:1.9;color:#8a9bb5;flex:1;margin-bottom:16px}
+.t-link{font-size:13px;color:#c9a84c;letter-spacing:2px;display:inline-flex;align-items:center;gap:6px;text-decoration:none;transition:gap .3s}
+.t-link:hover{gap:10px}
+@media(max-width:960px){.intro-block,.intro-block.rev{grid-template-columns:1fr;gap:32px}.intro-block.rev .intro-img,.intro-block.rev .intro-body{order:unset}.tools-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.tools-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -61,9 +49,7 @@
   <div style="display:flex;align-items:center;gap:40px;flex:1;">
     <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
     <ul class="nav-links" id="navLinks">
-      <li class="nav-sub"><a href="about.html">關於我們</a>
-        <ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul>
-      </li>
+      <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
       <li><a href="assessment.html">評量分析</a></li>
       <li><a href="counseling.html">評量諮商</a></li>
       <li><a href="training.html">教育訓練</a></li>
@@ -72,7 +58,6 @@
   </div>
   <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
-
 <div class="page-hero">
   <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
   <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
@@ -82,156 +67,112 @@
   </div>
 </div>
 
-<section class="assess-intro">
-  <div class="assess-inner">
-
-    <!-- 對個人的幫助 -->
-    <div class="assess-block reveal">
-      <div class="assess-img">
-        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="對個人的幫助">
-        <div class="assess-img-label"><span>FOR INDIVIDUAL</span></div>
+<!-- 圖文介紹 -->
+<section class="intro-section">
+  <div class="intro-inner">
+    <div class="intro-block reveal">
+      <div class="intro-block-line"></div>
+      <div class="intro-img">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=80" alt="對個人的幫助">
       </div>
-      <div class="assess-body">
-        <div class="assess-eyebrow">FOR INDIVIDUAL</div>
-        <div class="assess-title">對個人的幫助</div>
-        <div class="assess-divider"></div>
+      <div class="intro-body">
+        <div class="intro-eyebrow">FOR INDIVIDUAL</div>
+        <div class="intro-title">對個人的幫助</div>
+        <div class="intro-div"></div>
         <p>透過具信度與效度的測評工具，規劃個人學習成長與發展計畫。</p>
         <p>對家長而言，透過評測可協助父母觀察孩子的特質，提早發掘孩子的先天優勢，及早規劃合適的教育方針，在適當的時機給與誘導而走向正軌。</p>
         <p>對成人而言，透過評測了解你最原始、最舒適的樣貌，懂得善用自己的優點，發現自己的盲點，進而調整往自己渴望的方向邁進。</p>
       </div>
     </div>
-
-    <!-- 對企業的幫助 -->
-    <div class="assess-block reverse reveal">
-      <div class="assess-body">
-        <div class="assess-eyebrow">FOR ENTERPRISE</div>
-        <div class="assess-title">對企業的幫助</div>
-        <div class="assess-divider"></div>
+    <div class="intro-block rev reveal">
+      <div class="intro-block-line"></div>
+      <div class="intro-body">
+        <div class="intro-eyebrow">FOR ENTERPRISE</div>
+        <div class="intro-title">對企業的幫助</div>
+        <div class="intro-div"></div>
         <p>透過具信度與效度的測評工具，除了可以分析受測者工作所需的技能與知識之外，還能深入瞭解人才在冰山下的內隱特質。</p>
         <p>懂得透過工具協助企業在選、育、用、留等層面提升人力資源運作成效，進而強化組織的經營管理能力，將使企業更具市場競爭優勢。</p>
         <p>企業若能進一步掌握人才的潛在特性與價值，並將企業與個人價值觀與目標聯結時，個人發展就會變成自主自發。</p>
       </div>
-      <div class="assess-img">
-        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="對企業的幫助" onerror="this.src='https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/158962680-119536040179551-403490448402419964-n.jpeg'">
-        <div class="assess-img-label"><span>FOR ENTERPRISE</span></div>
+      <div class="intro-img">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=700&q=80" alt="對企業的幫助">
       </div>
     </div>
-
   </div>
 </section>
 
-
 <!-- 評測流程 -->
-<section style="background:#050810;padding:80px 5vw;border-top:1px solid rgba(201,168,76,.08);">
+<section class="process-section">
   <div style="max-width:1100px;margin:0 auto;">
     <div class="reveal" style="text-align:center;margin-bottom:56px;">
       <div class="sec-eyebrow">PROCESS</div>
-      <div class="sec-title gold" style="font-size:clamp(24px,3vw,40px);">評測流程</div>
+      <div class="sec-title gold" style="font-size:clamp(26px,3.5vw,42px);">評測流程</div>
       <div class="sec-hr"></div>
     </div>
     <div class="reveal" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;position:relative;">
-      <!-- 連接線 -->
       <div style="position:absolute;top:40px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(to right,rgba(201,168,76,.2),rgba(201,168,76,.5),rgba(201,168,76,.2));z-index:0;"></div>
-      <!-- Step 1 -->
       <div style="text-align:center;padding:0 20px;position:relative;z-index:1;">
-        <div style="width:80px;height:80px;border-radius:50%;background:#0d1120;border:2px solid #c9a84c;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:'Noto Serif TC',serif;font-size:13px;font-weight:700;color:#c9a84c;letter-spacing:2px;flex-direction:column;gap:2px;">
-          <span style="font-size:10px;opacity:.7;">STEP</span>
-          <span style="font-size:22px;">01</span>
-        </div>
-        <div style="font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:12px;">初談諮詢</div>
-        <p style="font-size:14px;color:#8a9bb5;line-height:1.8;">與評量分析師進行初談，了解測驗需求與期待</p>
+        <div style="width:80px;height:80px;border-radius:50%;background:#0d1120;border:2px solid #c9a84c;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:22px;">🗣️</div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:10px;">初談諮詢</div>
+        <p style="font-size:15px;color:#8a9bb5;line-height:1.8;">與評量分析師進行初談，了解測驗需求與期待</p>
       </div>
-      <!-- Step 2 -->
       <div style="text-align:center;padding:0 20px;position:relative;z-index:1;">
-        <div style="width:80px;height:80px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:'Noto Serif TC',serif;font-size:13px;font-weight:700;color:#c9a84c;letter-spacing:2px;flex-direction:column;gap:2px;">
-          <span style="font-size:10px;opacity:.7;">STEP</span>
-          <span style="font-size:22px;">02</span>
-        </div>
-        <div style="font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:12px;">購買評測</div>
-        <p style="font-size:14px;color:#8a9bb5;line-height:1.8;">完成評測系統的購買，取得專屬測驗帳號</p>
+        <div style="width:80px;height:80px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:22px;">💳</div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:10px;">購買評測</div>
+        <p style="font-size:15px;color:#8a9bb5;line-height:1.8;">完成評測系統的購買，取得專屬測驗帳號</p>
       </div>
-      <!-- Step 3 -->
       <div style="text-align:center;padding:0 20px;position:relative;z-index:1;">
-        <div style="width:80px;height:80px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:'Noto Serif TC',serif;font-size:13px;font-weight:700;color:#c9a84c;letter-spacing:2px;flex-direction:column;gap:2px;">
-          <span style="font-size:10px;opacity:.7;">STEP</span>
-          <span style="font-size:22px;">03</span>
-        </div>
-        <div style="font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:12px;">進行測驗</div>
-        <p style="font-size:14px;color:#8a9bb5;line-height:1.8;">線上完成評測系統的測驗，不限時間與地點</p>
+        <div style="width:80px;height:80px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:22px;">📝</div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:10px;">進行測驗</div>
+        <p style="font-size:15px;color:#8a9bb5;line-height:1.8;">線上完成評測系統的測驗，不限時間與地點</p>
       </div>
-      <!-- Step 4 -->
       <div style="text-align:center;padding:0 20px;position:relative;z-index:1;">
-        <div style="width:80px;height:80px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-family:'Noto Serif TC',serif;font-size:13px;font-weight:700;color:#c9a84c;letter-spacing:2px;flex-direction:column;gap:2px;">
-          <span style="font-size:10px;opacity:.7;">STEP</span>
-          <span style="font-size:22px;">04</span>
-        </div>
-        <div style="font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:12px;">結果分析</div>
-        <p style="font-size:14px;color:#8a9bb5;line-height:1.8;">預約時間，與分析師進行測驗結果深度解析</p>
+        <div style="width:80px;height:80px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:22px;">🔍</div>
+        <div style="font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:10px;">結果分析</div>
+        <p style="font-size:15px;color:#8a9bb5;line-height:1.8;">預約時間，與分析師進行測驗結果深度解析</p>
       </div>
-    </div>
-    <!-- CTA -->
-    <div class="reveal" style="text-align:center;margin-top:56px;">
-      <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:10px;padding:16px 44px;background:#06C755;color:#fff;font-size:15px;letter-spacing:2px;font-weight:500;border-radius:4px;text-decoration:none;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-        預約評測服務
-      </a>
     </div>
   </div>
 </section>
 
-<!-- 評測工具 -->
+<!-- 評量系列 -->
 <section class="tools-section">
   <div class="tools-inner">
-    <div class="tools-hd reveal">
-      <div class="sec-eyebrow">TOOLS</div>
-      <div class="sec-title gold" style="font-size:clamp(24px,3vw,40px);">評測系統介紹</div>
+    <div class="reveal" style="text-align:center;margin-bottom:56px;">
+      <div class="sec-eyebrow">OUR TOOLS</div>
+      <div class="sec-title gold" style="font-size:clamp(26px,3.5vw,42px);">評量系列</div>
       <div class="sec-hr"></div>
     </div>
     <div class="tools-grid">
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">教養觀念量表</div><p class="t-desc">這份問卷可以幫助您釐清自己的教養觀念。請針對家中其中一位孩子情形作答。</p></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">親子關係量表</div><p class="t-desc">了解您與孩子的親子關係。請針對家中其中一位孩子的相處情形作答。</p></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">婚姻品質量表</div><p class="t-desc">健康的婚姻關係是良好家庭、親子關係最重要的基礎，找到婚姻關係加分的撇步。</p><a href="http://line.me/R/ti/p/%40wvv6736q" class="t-link" target="_blank">預約檢測 →</a></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">生活滿意度量表</div><p class="t-desc">檢測自己整體生活的滿意度，重新檢視最近這段時間生活與理想生活的差距。</p><a href="http://line.me/R/ti/p/%40wvv6736q" class="t-link" target="_blank">預約檢測 →</a></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">愛情觀心理測驗</div><p class="t-desc">每個人對待愛情都有一套屬於自己的戀愛觀，在這份測驗中了解自己的愛情觀。</p><a href="http://line.me/R/ti/p/%40wvv6736q" class="t-link" target="_blank">預約檢測 →</a></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">覺察注意量表</div><p class="t-desc">檢測對自己行為的知覺狀態，重新看看自己是否可以專注於當下。</p></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">主管領導風格評量</div><p class="t-desc">顯示主管的個人特質、領導風格、情商指數、工作能量及職場溝通特質等項目。</p></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">跨部門滿意度</div><p class="t-desc">透過測驗可以知道部門相互之間的狀況，提升對不同部門的服務態度。</p></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">兒童天賦評量</div><p class="t-desc">幫助家長發掘孩子真正需要的，給予最適合的栽培、教育與環境。</p><a href="assessment-child.html" class="t-link">了解更多 →</a></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">職能評量表</div><p class="t-desc">比對職務要求與員工職能間落差，分析訓練需求，規劃適當訓練課程。</p></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">工作風格評測</div><p class="t-desc">協助您更有效的了解與表達您的工作風格，進行工作分析。</p></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">工作能量耗損程度</div><p class="t-desc">分析目前員工工作及能量狀況，給予相關活動或講座來紓解壓力及增加正能量。</p></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">學涯競爭評量</div><p class="t-desc">協助青少年釐清適合就讀的科系方向，啟動個人生命蛻變原動力，讓學涯走得更精準。</p><a href="assessment-career.html" class="t-link">了解更多 →</a></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">成人優勢評量</div><p class="t-desc">發現你的決策風格、思考慣性、抗壓指數，活出自我渴望的新生命，創造卓越人生。</p><a href="assessment-adult.html" class="t-link">了解更多 →</a></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">職場職能評量</div><p class="t-desc">針對本身的先天優勢與後天學習成就，協助您選擇最有優勢的工作環境，在職場中持續晉升。</p><a href="assessment-workplace.html" class="t-link">了解更多 →</a></div>
-      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">愛情智慧評量</div><p class="t-desc">發掘你的致命吸引力，同時了解彼此最佳溝通模式，讓愛情滋養生命、豐沛彼此。</p><a href="assessment-love.html" class="t-link">了解更多 →</a></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">兒童天賦評量</div><p class="t-desc">幫助家長發掘孩子真正需要的，給予最適合的栽培、教育與環境，讓孩子在黃金時期得到最好的引導。</p><a href="assessment-child.html" class="t-link">了解更多 →</a></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">學涯競爭評量</div><p class="t-desc">協助青少年釐清適合就讀的科系方向，啟動個人生命蛻變原動力，讓學涯走得更精準、更有方向。</p><a href="assessment-career.html" class="t-link">了解更多 →</a></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">成人優勢評量</div><p class="t-desc">發現你的決策風格、思考慣性、抗壓指數，活出自我渴望的新生命，創造卓越人生價值。</p><a href="assessment-adult.html" class="t-link">了解更多 →</a></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">職場職能評量</div><p class="t-desc">針對本身的先天優勢與後天學習成就，協助您選擇最有優勢的工作環境，在職場中持續晉升。</p><a href="assessment-workplace.html" class="t-link">了解更多 →</a></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">愛情智慧評量</div><p class="t-desc">發掘你的致命吸引力，同時了解彼此最佳溝通模式，讓你和妳的愛情滋養生命、豐沛彼此。</p><a href="assessment-love.html" class="t-link">了解更多 →</a></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">婚姻品質量表</div><p class="t-desc">健康的婚姻關係是良好家庭、親子關係最重要的基礎，找到婚姻關係加分的撇步。</p><a href="http://line.me/R/ti/p/%40wvv6736q" class="t-link" target="_blank">預約檢測 →</a></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">教養觀念量表</div><p class="t-desc">這份問卷可以幫助您釐清自己的教養觀念，針對家中其中一位孩子情形作答，找到最適切的教養方向。</p></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">生活滿意度量表</div><p class="t-desc">檢測自己整體生活的滿意度，重新檢視最近這段時間生活與理想生活的差距。</p><a href="http://line.me/R/ti/p/%40wvv6736q" class="t-link" target="_blank">預約檢測 →</a></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">主管領導風格評量</div><p class="t-desc">顯示主管的個人特質、領導風格、情商指數、工作能量及職場溝通特質等項目，協助提升領導效能。</p></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">跨部門滿意度</div><p class="t-desc">透過測驗可以知道部門相互之間的狀況，提升對不同部門的服務態度，強化組織協作能力。</p></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">親子關係量表</div><p class="t-desc">了解您與孩子的親子關係，針對家中其中一位孩子的相處情形作答，建立更深厚的親子連結。</p></div>
+      <div class="t-card"><div class="t-line"></div><div class="t-title">工作能量耗損程度</div><p class="t-desc">分析目前員工工作及能量狀況，給予相關活動或講座來紓解壓力及增加正能量，提升工作效能。</p></div>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;">
-        <p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p>
-      </div>
-      <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
-      <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p>
-        <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">LINE 官方帳號 →</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom-wrap">
-    <div class="footer-bottom">
-      <span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span>
-      <a href="contact.html" class="footer-contact-btn">聯絡我們 →</a>
-    </div>
-  </div>
+  <div class="footer-top"><div class="footer-grid">
+    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p><a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;">LINE 官方帳號 →</a></div>
+  </div></div>
+  <div class="footer-bottom-wrap"><div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" class="footer-contact-btn">聯絡我們 →</a></div></div>
 </footer>
 <script>
-function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
-var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i*0.08)+'s'; io.observe(el); });
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('on')})},{threshold:0.05,rootMargin:'0px 0px -80px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i*0.1)+'s';io.observe(el)});
+setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('on')})},100);
 </script>
 </body>
 </html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESG企業永續課程 — 天生贏家全生涯事業有限公司</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.sub-section{background:#0a0e1a;padding:80px 5vw 100px;position:relative;overflow:hidden}
+.sub-section::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px);background-size:80px 80px}
+.sub-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.feat-block{display:grid;grid-template-columns:440px 1fr;gap:64px;align-items:center;background:#0d1120;border:1px solid rgba(201,168,76,.12);padding:56px 48px;position:relative;overflow:hidden;transition:border-color .3s;margin-bottom:2px}
+.feat-block:hover{border-color:rgba(201,168,76,.4)}
+.feat-block.rev{grid-template-columns:1fr 440px}
+.feat-block.rev .feat-img{order:2}
+.feat-block.rev .feat-body{order:1}
+.feat-block-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.feat-block:hover .feat-block-line{width:100%}
+.feat-img img{width:100%;height:300px;object-fit:cover;filter:brightness(.8);border-radius:4px;display:block;transition:transform .5s}
+.feat-block:hover .feat-img img{transform:scale(1.03)}
+.feat-eyebrow{font-size:11px;letter-spacing:5px;color:#c9a84c;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.feat-eyebrow::after{content:'';display:block;width:24px;height:1px;background:#c9a84c}
+.feat-title{font-family:"Noto Serif TC",serif;font-size:clamp(20px,2.5vw,26px);font-weight:700;color:#f0e6cc;letter-spacing:4px;margin-bottom:14px}
+.feat-div{width:32px;height:1px;background:linear-gradient(to right,#c9a84c,transparent);margin-bottom:16px}
+.feat-body p{font-size:17px;line-height:2;color:#d8e4ec;margin-bottom:12px}
+.feat-body ul{list-style:none;padding:0;margin-top:8px}
+.feat-body ul li{font-size:16px;color:#d8e4ec;line-height:1.9;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:12px}
+.feat-body ul li:last-child{border-bottom:none}
+.feat-body ul li::before{content:"▪";color:#c9a84c;flex-shrink:0}
+.sub-cta{text-align:center;margin-top:64px}
+.sub-cta p{font-size:16px;color:#8a9bb5;margin-bottom:24px}
+.sub-line-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 44px;background:#06C755;color:#fff;font-size:16px;letter-spacing:2px;font-weight:500;border-radius:4px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.sub-line-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(6,199,85,.35)}
+.sub-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#c9a84c;letter-spacing:2px;margin-top:16px}
+@media(max-width:900px){.feat-block,.feat-block.rev{grid-template-columns:1fr;gap:28px}.feat-block.rev .feat-img,.feat-block.rev .feat-body{order:unset}}
+</style>
+</head>
+<body>
+<nav class="nav solid" id="mainNav">
+  <div style="display:flex;align-items:center;gap:40px;flex:1;">
+    <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+      <li><a href="assessment.html">評量分析</a></li>
+      <li><a href="counseling.html">評量諮商</a></li>
+      <li><a href="training.html">教育訓練</a></li>
+      <li><a href="marketing.html">整合行銷</a></li>
+    </ul>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
+  <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">ESG & SUSTAINABILITY</div>
+    <div class="page-hero-title">ESG企業永續</div>
+  </div>
+</div>
+<section class="sub-section">
+  <div class="sub-inner">
+    <div class="reveal" style="font-family:'Noto Serif TC',serif;font-size:18px;color:#d4c9b0;line-height:2.2;margin-bottom:56px;text-align:center;padding:36px 48px;border:1px solid rgba(201,168,76,.15);border-radius:2px;background:#0d1120;">
+      ESG已從選擇題變成必答題。面對全球永續發展趨勢，企業必須積極落實環境、社會與治理責任，建立長期可持續的商業模式。
+    </div>
+    
+    <div class="feat-block reveal">
+      <div class="feat-block-line"></div>
+      <div class="feat-img"><img src="https://images.unsplash.com/photo-1473445730015-841f29a9490b?w=500&q=80" alt="ESG策略規劃"></div>
+      <div class="feat-body">
+        <div class="feat-eyebrow">OVERVIEW</div>
+        <div class="feat-title">ESG策略規劃</div>
+        <div class="feat-div"></div>
+        <p>永續發展不只是企業社會責任，更是創造長期價值的商業策略。我們協助您了解ESG趨勢，制定符合企業特性的永續發展路徑。</p>
+        <ul><li>ESG框架認識與國際標準</li>
+<li>企業碳盤查與減碳路徑</li>
+<li>永續報告書撰寫與揭露</li>
+<li>ESG評鑑指標與提升策略</li>
+<li>循環經濟商業模式建立</li></ul>
+      </div>
+    </div>
+    <div class="feat-block rev reveal">
+      <div class="feat-block-line"></div>
+      <div class="feat-img"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=500&q=80" alt="淨零轉型實踐"></div>
+      <div class="feat-body">
+        <div class="feat-eyebrow">TARGET</div>
+        <div class="feat-title">淨零轉型實踐</div>
+        <div class="feat-div"></div>
+        <p>2050淨零已是全球共識，企業若不提前準備，將面臨競爭劣勢與法規風險。我們協助您制定務實的淨零轉型路徑，在降低碳排的同時創造新的商業價值。</p>
+        <ul><li>碳中和與淨零排放策略</li>
+<li>再生能源導入規劃</li>
+<li>綠色供應鏈管理</li>
+<li>永續採購與綠色採購</li>
+<li>氣候風險評估與因應</li></ul>
+      </div>
+    </div>
+    <div class="sub-cta reveal">
+      <p>想了解ESG企業永續課程詳情，歡迎透過 LINE 與我們聯繫</p>
+      <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" class="sub-line-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg> 立即洽詢
+      </a><br>
+      <a href="training-enterprise.html" class="sub-back">← 返回企業內訓</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-top"><div class="footer-grid">
+    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p><a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;">LINE 官方帳號 →</a></div>
+  </div></div>
+  <div class="footer-bottom-wrap"><div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" class="footer-contact-btn">聯絡我們 →</a></div></div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("open")}
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("on")})},{threshold:0.05,rootMargin:"0px 0px -80px 0px"});
+document.querySelectorAll(".reveal").forEach(function(el,i){el.style.transitionDelay=(i*0.1)+"s";io.observe(el)});
+setTimeout(function(){document.querySelectorAll(".reveal").forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add("on")})},100);
+</script>
+</body>
+</html>

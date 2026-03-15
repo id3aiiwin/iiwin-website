@@ -112,8 +112,8 @@ img { max-width:100%; display:block; }
 /* ══════════════════════
    Scroll reveal
 ══════════════════════ */
-.reveal { opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; }
-.reveal.on { opacity:1; transform:translateY(0); }
+.reveal { opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; pointer-events:none; }
+.reveal.on { opacity:1; transform:translateY(0); pointer-events:auto; }
 
 /* ══════════════════════
    Inner page hero banner
