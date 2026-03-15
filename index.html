@@ -101,7 +101,7 @@
 <nav class="nav" id="mainNav">
   <div style="display:flex;align-items:center;gap:40px;flex:1;">
     <a href="index.html" class="nav-logo">
-      <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;">
+      <img id="navLogo" src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;">
     </a>
     <ul class="nav-links" id="navLinks">
       <li class="nav-sub">
@@ -261,10 +261,10 @@ window.addEventListener('scroll',function(){
   var nav = document.getElementById('mainNav');
   nav.classList.toggle('scrolled', window.scrollY > 10);
   /* Logo 在深色背景上保持原色（不反白） */
-  document.getElementById('navLogo').style.filter = 'none';
+  var logo=document.getElementById('navLogo'); if(logo) logo.style.filter='none';
 });
 /* 初始也確保 Logo 不反白 */
-document.getElementById('navLogo').style.filter = 'none';
+var logo2=document.getElementById('navLogo'); if(logo2) logo2.style.filter='none';
 
 function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
 
