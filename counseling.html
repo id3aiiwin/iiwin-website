@@ -19,8 +19,8 @@
 .c-card:hover{border-color:rgba(201,168,76,.5)}
 .c-card-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
 .c-card:hover .c-card-line{width:100%}
-.c-img{overflow:hidden;flex-shrink:0}
-.c-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.75);display:block;transition:transform .5s;min-height:280px}
+.c-img{overflow:hidden;flex-shrink:0;min-height:300px}
+.c-img img{width:100%;height:100%;min-height:300px;object-fit:cover;filter:brightness(.75);display:block;transition:transform .5s}
 .c-card:hover .c-img img{transform:scale(1.04)}
 .c-body{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
 .c-eyebrow{font-size:11px;letter-spacing:4px;color:#c9a84c;text-transform:uppercase;margin-bottom:10px}
@@ -76,8 +76,15 @@
           <div class="c-eyebrow">PERSONAL</div>
           <div class="c-title">個人諮商服務</div>
           <div class="c-div"></div>
-          <p class="c-desc">在這裡，我們以最安全隱私的方式，不限距離，不限時間，不限國界。提供兒童、青少年、愛情、職涯、個人等多元諮商服務，單次 50 分鐘，費用 $2,000 元起。</p>
-          <span class="c-link">了解更多 →</span>
+          <p class="c-desc">在這裡，我們以最安全隱私的方式，不限距離，不限時間，不限國界。讓您釋放心中的沉痛與煩亂，天賦評量諮商師聆聽您，陪伴您，共同找出最適切的方法。</p>
+          <div class="c-sub-links">
+            <span class="c-sub-link">兒童諮商</span>
+            <span class="c-sub-link">青少年諮商</span>
+            <span class="c-sub-link">愛情諮商</span>
+            <span class="c-sub-link">職涯諮商</span>
+            <span class="c-sub-link">個人諮商</span>
+          </div>
+          <span class="c-link" style="margin-top:20px;">了解更多 →</span>
         </div>
       </a>
       <!-- 天賦療育 -->
