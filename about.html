@@ -6,158 +6,31 @@
 <title>關於我們 — 天生贏家全生涯事業有限公司</title>
 <link rel="stylesheet" href="assets/style.css">
 <style>
-/* ══ STORY ══ */
-.about-story {
-  background:#0a0e1a; padding:90px 5vw;
-  position:relative; overflow:hidden;
-}
-.about-story::before {
-  content:''; position:absolute; inset:0; pointer-events:none;
-  background:linear-gradient(to right,rgba(201,168,76,.03) 1px,transparent 1px),
-             linear-gradient(to bottom,rgba(201,168,76,.03) 1px,transparent 1px);
-  background-size:80px 80px;
-}
-.about-story-inner {
-  max-width:1100px; margin:0 auto;
-  display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
-  position:relative; z-index:1;
-}
-.about-img-wrap { position:relative; }
-.about-img-wrap img {
-  width:100%; border-radius:4px;
-  filter:brightness(.88) contrast(1.05);
-  display:block;
-}
-.about-img-wrap::before {
-  content:''; position:absolute;
-  inset:-10px; border:1px solid rgba(201,168,76,.25);
-  border-radius:4px; pointer-events:none;
-  transform:translate(10px,10px);
-}
-.about-img-wrap::after {
-  content:''; position:absolute; inset:0;
-  background:linear-gradient(135deg,rgba(201,168,76,.08),transparent 60%);
-  border-radius:4px; pointer-events:none;
-}
-.about-body .sec-eyebrow { margin-bottom:16px; }
-.about-title {
-  font-family:'Noto Serif TC',serif;
-  font-size:clamp(28px,4vw,42px); font-weight:900;
-  color:#f5f0e8; letter-spacing:5px; margin-bottom:32px;
-  line-height:1.2;
-}
-.about-body p {
-  font-size:16px; line-height:2.1; color:#9aaabf;
-  margin-bottom:20px;
-}
-.about-body p strong { color:#d4c9b0; font-weight:500; }
-.about-quote {
-  margin:32px 0;
-  padding:24px 28px;
-  border-left:2px solid #c9a84c;
-  background:rgba(201,168,76,.05);
-  border-radius:0 4px 4px 0;
-}
-.about-quote p {
-  font-family:'Noto Serif TC',serif;
-  font-size:15px; color:#c9a84c; line-height:2;
-  margin:0; letter-spacing:1px; font-style:italic;
-}
-
-/* ══ VALUES ══ */
-.about-values {
-  background:#080c17; padding:90px 5vw;
-  border-top:1px solid rgba(201,168,76,.08);
-}
-.about-values-inner { max-width:1100px; margin:0 auto; }
-.about-values-hd { text-align:center; margin-bottom:64px; }
-.values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
-.value-card {
-  background:#0d1120; padding:52px 36px;
-  border:1px solid rgba(201,168,76,.12);
-  position:relative; overflow:hidden;
-  transition:border-color .3s, background .3s;
-}
-.value-card:hover { border-color:rgba(201,168,76,.5); background:#101526; }
-.value-card::before {
-  content:''; position:absolute; inset:0;
-  background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.07),transparent 60%);
-  opacity:0; transition:opacity .4s;
-}
-.value-card:hover::before { opacity:1; }
-.value-card-line {
-  position:absolute; bottom:0; left:0; height:2px; width:0;
-  background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);
-  transition:width .45s cubic-bezier(.4,0,.2,1);
-}
-.value-card:hover .value-card-line { width:100%; }
-.value-num {
-  font-family:'Noto Serif TC',serif;
-  font-size:11px; letter-spacing:4px; color:#c9a84c;
-  opacity:.5; margin-bottom:24px;
-}
-.value-icon { font-size:38px; margin-bottom:20px; line-height:1; }
-.value-title {
-  font-family:'Noto Serif TC',serif;
-  font-size:20px; font-weight:700; color:#f0e6cc;
-  letter-spacing:3px; margin-bottom:16px;
-}
-.value-div {
-  width:28px; height:1px; margin-bottom:16px;
-  background:linear-gradient(to right,#c9a84c,transparent);
-}
-.value-desc { font-size:16px; line-height:2; color:#d8e4ec; }
-
-/* ══ TIMELINE ══ */
-.about-timeline {
-  background:#0a0e1a; padding:90px 5vw;
-  border-top:1px solid rgba(201,168,76,.08);
-}
-.about-timeline-inner { max-width:800px; margin:0 auto; }
-.about-timeline-hd { text-align:center; margin-bottom:64px; }
-.tl-list { position:relative; padding-left:32px; }
-.tl-list::before {
-  content:''; position:absolute; left:6px; top:8px; bottom:8px;
-  width:1px; background:linear-gradient(to bottom,transparent,rgba(201,168,76,.4),rgba(201,168,76,.4),transparent);
-}
-.tl-item { position:relative; margin-bottom:40px; }
-.tl-item:last-child { margin-bottom:0; }
-.tl-dot {
-  position:absolute; left:-29px; top:6px;
-  width:14px; height:14px; border-radius:50%;
-  background:#0a0e1a; border:1px solid #c9a84c;
-  transition:background .3s;
-}
-.tl-item:hover .tl-dot { background:#c9a84c; }
-.tl-year {
-  font-family:'Noto Serif TC',serif;
-  font-size:12px; letter-spacing:3px; color:#c9a84c;
-  margin-bottom:8px;
-}
-.tl-text {
-  font-size:16px; line-height:2; color:#d8e4ec;
-  padding:20px 24px;
-  background:#0d1120; border:1px solid rgba(201,168,76,.1);
-  border-radius:4px;
-  transition:border-color .3s;
-}
-.tl-item:hover .tl-text { border-color:rgba(201,168,76,.35); }
-
-@media(max-width:900px){
-  .about-story-inner { grid-template-columns:1fr; gap:40px; }
-  .values-grid { grid-template-columns:1fr; }
-  .about-img-wrap::before { display:none; }
-}
+.about-values { background:#0a0e1a; padding:90px 5vw 100px; position:relative; overflow:hidden; }
+.about-values::before { content:''; position:absolute; inset:0; pointer-events:none; background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px); background-size:80px 80px; }
+.about-hd { text-align:center; margin-bottom:64px; position:relative; z-index:1; }
+.values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; position:relative; z-index:1; }
+.v-card { background:#0d1120; padding:52px 40px; border:1px solid rgba(201,168,76,.12); position:relative; overflow:hidden; transition:border-color .3s,background .3s; }
+.v-card:hover { border-color:rgba(201,168,76,.55); background:#101526; }
+.v-card:hover .v-line { width:100%; }
+.v-card::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.08),transparent 60%); opacity:0; transition:opacity .4s; }
+.v-card:hover::before { opacity:1; }
+.v-line { position:absolute; bottom:0; left:0; height:2px; width:0; background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c); transition:width .45s cubic-bezier(.4,0,.2,1); }
+.v-icon { font-size:44px; margin-bottom:28px; line-height:1; }
+.v-title { font-family:'Noto Serif TC',serif; font-size:24px; font-weight:700; color:#f0e6cc; letter-spacing:4px; margin-bottom:20px; }
+.v-divider { width:32px; height:1px; background:linear-gradient(to right,#c9a84c,transparent); margin-bottom:20px; }
+.v-desc { font-size:16px; line-height:2; color:#d8e4ec; }
+@media(max-width:900px){ .values-grid{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
 <nav class="nav solid" id="mainNav">
   <div style="display:flex;align-items:center;gap:40px;flex:1;">
-    <a href="index.html" class="nav-logo">
-      <img id="navLogo" src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;">
-    </a>
+    <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
     <ul class="nav-links" id="navLinks">
-      <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+      <li class="nav-sub"><a href="about.html">關於我們</a>
+        <ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul>
+      </li>
       <li><a href="assessment.html">評量分析</a></li>
       <li><a href="counseling.html">評量諮商</a></li>
       <li><a href="training.html">教育訓練</a></li>
@@ -176,91 +49,33 @@
   </div>
 </div>
 
-<!-- 我們的故事 -->
-<section class="about-story">
-  <div class="about-story-inner">
-    <div class="about-img-wrap reveal">
-      <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/158962680-119536040179551-403490448402419964-n.jpeg" alt="天生贏家的故事">
-    </div>
-    <div class="about-body reveal">
-      <div class="sec-eyebrow">OUR STORY</div>
-      <div class="about-title">我們的故事</div>
-      <p>【天生贏家】秉持卓越的精神，將這份善知識拓展至世界每一個角落，故於西元 <strong>2000 年起服務上海、北京、新加坡</strong>，隔年將觸角延伸至美澳及菲律賓。</p>
-      <p>全體工作人員，均以愛與使命感為客戶服務；真心關心生命中每一個人，尊重每個人與生俱來不同的先天性格。因為瞭解、進而開解，讓生命發揮更高價值。</p>
-      <div class="about-quote">
-        <p>「比大海更遼闊的景色，那是天空，比天空更遼闊的景色，是靈魂深處。教育的本質乃在激發學生靈魂的深處所在。」<br>— 維克多·雨果</p>
-      </div>
-      <p>從事教育培訓的我，這些年來經常往返海內外，輔導對象包含教育機構、企業、社團等。啟動自己天賦、歸屬天命，可以讓你的心更加篤定，知道自己是怎樣的人，為自己寫下渴盼的生命故事。</p>
-    </div>
-  </div>
-</section>
-
-<!-- 核心價值 -->
 <section class="about-values">
-  <div class="about-values-inner">
-    <div class="about-values-hd reveal">
-      <div class="sec-eyebrow">CORE VALUES</div>
-      <div class="sec-title gold" style="font-size:clamp(28px,4vw,46px);">核心價值</div>
-      <div class="sec-hr"></div>
-    </div>
-    <div class="values-grid">
-      <div class="value-card reveal">
-        <div class="value-card-line"></div>
-        <div class="value-num">01</div>
-        <div class="value-icon">🎯</div>
-        <div class="value-title">使命</div>
-        <div class="value-div"></div>
-        <p class="value-desc">協助發現與生俱來的天賦，打開生命可能性，對社會做有價值的貢獻。</p>
-      </div>
-      <div class="value-card reveal">
-        <div class="value-card-line"></div>
-        <div class="value-num">02</div>
-        <div class="value-icon">🌟</div>
-        <div class="value-title">願景</div>
-        <div class="value-div"></div>
-        <p class="value-desc">成為可信賴的精神啦啦隊，提升人的覺醒力量，活出有影響力的人生。</p>
-      </div>
-      <div class="value-card reveal">
-        <div class="value-card-line"></div>
-        <div class="value-num">03</div>
-        <div class="value-icon">💎</div>
-        <div class="value-title">信念</div>
-        <div class="value-div"></div>
-        <p class="value-desc">打開人生中善良美好的品格、勇於創新的智慧、破釜沉舟的膽識，打造自己的金鑰匙，做個卓越長青的天生贏家！</p>
-      </div>
-    </div>
+  <div class="about-hd reveal">
+    <div class="sec-eyebrow">CORE VALUES</div>
+    <div class="sec-title gold" style="font-size:clamp(28px,4vw,48px);">核心價值</div>
+    <div class="sec-hr"></div>
   </div>
-</section>
-
-<!-- 發展歷程 -->
-<section class="about-timeline">
-  <div class="about-timeline-inner">
-    <div class="about-timeline-hd reveal">
-      <div class="sec-eyebrow">MILESTONES</div>
-      <div class="sec-title gold" style="font-size:clamp(28px,4vw,46px);">發展歷程</div>
-      <div class="sec-hr"></div>
+  <div class="values-grid">
+    <div class="v-card reveal">
+      <div class="v-line"></div>
+      <div class="v-icon">🎯</div>
+      <div class="v-title">使命</div>
+      <div class="v-divider"></div>
+      <p class="v-desc">協助發現與生俱來的天賦，打開生命可能性，對社會做有價值的貢獻。</p>
     </div>
-    <div class="tl-list">
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2000</div>
-        <div class="tl-text">創立天生贏家，開始提供教育培訓服務，並進軍上海、北京、新加坡市場。</div>
-      </div>
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2001</div>
-        <div class="tl-text">將服務版圖延伸至美澳及菲律賓，正式成為跨國教育機構。</div>
-      </div>
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2021</div>
-        <div class="tl-text">天生贏家全生涯事業有限公司正式成立（統一編號：53277119），深耕台灣市場，持續拓展評量分析、諮商輔導、企業訓練等服務。</div>
-      </div>
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-year">至今</div>
-        <div class="tl-text">累積超過 20 年豐富經驗，成功輔導 12,000+ 學員、500+ 企業，學員滿意度達 98%，持續協助每個人發掘天賦、成為人生贏家。</div>
-      </div>
+    <div class="v-card reveal">
+      <div class="v-line"></div>
+      <div class="v-icon">🌟</div>
+      <div class="v-title">願景</div>
+      <div class="v-divider"></div>
+      <p class="v-desc">成為可信賴的精神啦啦隊，提升人的覺醒力量，活出有影響力的人生。</p>
+    </div>
+    <div class="v-card reveal">
+      <div class="v-line"></div>
+      <div class="v-icon">💎</div>
+      <div class="v-title">信念</div>
+      <div class="v-divider"></div>
+      <p class="v-desc">打開人生中善良美好的品格、勇於創新的智慧、破釜沉舟的膽識、高瞻遠矚的胸懷，打造自己的金鑰匙，做個卓越長青的天生贏家！</p>
     </div>
   </div>
 </section>
@@ -273,7 +88,9 @@
         <p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p>
       </div>
       <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
-      <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p><a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">LINE 官方帳號 →</a></div>
+      <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p>
+        <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">LINE 官方帳號 →</a>
+      </div>
     </div>
   </div>
   <div class="footer-bottom-wrap">
@@ -283,11 +100,10 @@
     </div>
   </div>
 </footer>
-
 <script>
 function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
 var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i*0.1)+'s'; io.observe(el); });
+document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i*0.12)+'s'; io.observe(el); });
 </script>
 </body>
 </html>
