@@ -6,44 +6,70 @@
 <title>評量分析 — 天生贏家全生涯事業有限公司</title>
 <link rel="stylesheet" href="assets/style.css">
 <style>
-.content-section { padding:80px 5vw; }
-.content-section.dark { background:#0a0e1a; }
-.content-section.light { background:#fff; }
-.content-inner { max-width:1100px; margin:0 auto; }
-.content-hd { margin-bottom:48px; }
-.content-hd h2 { font-family:'Noto Serif TC',serif; font-size:clamp(24px,3vw,36px); font-weight:900; letter-spacing:4px; margin-bottom:16px; }
-.content-hd h2.dark-text { color:#f0e6cc; }
-.content-hd h2.light-text { color:#1a1a2e; }
-.content-hd p { font-size:16px; line-height:2; }
-.content-hd p.dark-p { color:#d8e4ec; }
-.content-hd p.light-p { color:#555; }
-.card-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
-.tool-card { background:#0d1120; padding:40px 32px; border:1px solid rgba(201,168,76,.12); position:relative; overflow:hidden; transition:border-color .3s,background .3s; }
-.tool-card:hover { border-color:rgba(201,168,76,.5); background:#101526; }
-.tool-card-line { position:absolute; bottom:0; left:0; height:2px; width:0; background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c); transition:width .45s cubic-bezier(.4,0,.2,1); }
-.tool-card:hover .tool-card-line { width:100%; }
-.tool-title { font-family:'Noto Serif TC',serif; font-size:18px; font-weight:700; color:#f0e6cc; letter-spacing:2px; margin-bottom:12px; }
-.tool-desc { font-size:15px; line-height:1.9; color:#d8e4ec; margin-bottom:20px; }
-.tool-link { font-size:13px; color:#c9a84c; letter-spacing:2px; display:inline-flex; align-items:center; gap:6px; transition:gap .3s; }
-.tool-link:hover { gap:10px; }
-.two-col { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; }
-.two-col img { width:100%; border-radius:4px; }
-.prose h3 { font-family:'Noto Serif TC',serif; font-size:22px; font-weight:700; color:#1a1a2e; letter-spacing:3px; margin-bottom:16px; }
-.prose p { font-size:16px; line-height:2; color:#555; margin-bottom:16px; }
-@media(max-width:900px){ .card-grid{grid-template-columns:1fr 1fr;} .two-col{grid-template-columns:1fr;gap:32px;} }
-@media(max-width:520px){ .card-grid{grid-template-columns:1fr;} }
+/* ── 兩欄左圖右文 ── */
+.assess-intro { background:#0a0e1a; padding:80px 5vw; }
+.assess-inner { max-width:1100px; margin:0 auto; }
+.assess-block {
+  display:grid; grid-template-columns:1fr 1fr; gap:72px;
+  align-items:center; margin-bottom:80px; padding-bottom:80px;
+  border-bottom:1px solid rgba(201,168,76,.08);
+}
+.assess-block:last-of-type { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.assess-block.reverse .assess-img { order:2; }
+.assess-block.reverse .assess-body { order:1; }
+.assess-img { position:relative; border-radius:4px; overflow:hidden; }
+.assess-img img { width:100%; height:340px; object-fit:cover; filter:brightness(.75); display:block; }
+.assess-img::after { content:''; position:absolute; inset:0; border:1px solid rgba(201,168,76,.25); pointer-events:none; }
+.assess-img-label {
+  position:absolute; bottom:0; left:0; right:0;
+  padding:20px 24px;
+  background:linear-gradient(to top,rgba(8,12,23,.9),transparent);
+}
+.assess-img-label span { font-family:'Noto Serif TC',serif; font-size:13px; letter-spacing:3px; color:#c9a84c; }
+.assess-eyebrow { font-size:11px; letter-spacing:5px; color:#c9a84c; text-transform:uppercase; margin-bottom:14px; display:flex; align-items:center; gap:12px; }
+.assess-eyebrow::after { content:''; display:block; width:28px; height:1px; background:#c9a84c; }
+.assess-title { font-family:'Noto Serif TC',serif; font-size:clamp(22px,3vw,32px); font-weight:900; color:#f0e6cc; letter-spacing:4px; margin-bottom:20px; line-height:1.3; }
+.assess-divider { width:36px; height:1px; background:linear-gradient(to right,#c9a84c,transparent); margin-bottom:20px; }
+.assess-body p { font-size:16px; line-height:2; color:#d8e4ec; margin-bottom:14px; }
+
+/* ── 工具卡片區 ── */
+.tools-section { background:#080c17; padding:80px 5vw; border-top:1px solid rgba(201,168,76,.08); }
+.tools-inner { max-width:1100px; margin:0 auto; }
+.tools-hd { text-align:center; margin-bottom:56px; }
+.tools-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+.t-card { background:#0d1120; padding:36px 32px; border:1px solid rgba(201,168,76,.1); position:relative; overflow:hidden; transition:border-color .3s,background .3s; display:flex; flex-direction:column; }
+.t-card:hover { border-color:rgba(201,168,76,.5); background:#101526; }
+.t-card:hover .t-line { width:100%; }
+.t-card::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.06),transparent 60%); opacity:0; transition:opacity .4s; }
+.t-card:hover::before { opacity:1; }
+.t-line { position:absolute; bottom:0; left:0; height:2px; width:0; background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c); transition:width .45s cubic-bezier(.4,0,.2,1); }
+.t-title { font-family:'Noto Serif TC',serif; font-size:17px; font-weight:700; color:#f0e6cc; letter-spacing:2px; margin-bottom:12px; }
+.t-desc { font-size:14px; line-height:1.9; color:#8a9bb5; flex:1; margin-bottom:16px; }
+.t-link { font-size:12px; color:#c9a84c; letter-spacing:2px; display:inline-flex; align-items:center; gap:6px; transition:gap .3s; }
+.t-link:hover { gap:10px; }
+
+@media(max-width:900px){
+  .assess-block, .assess-block.reverse { grid-template-columns:1fr; gap:32px; }
+  .assess-block.reverse .assess-img, .assess-block.reverse .assess-body { order:unset; }
+  .tools-grid { grid-template-columns:1fr 1fr; }
+}
+@media(max-width:520px){ .tools-grid{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
 <nav class="nav solid" id="mainNav">
-  <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
-  <ul class="nav-links" id="navLinks">
-    <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
-    <li><a href="assessment.html">評量分析</a></li>
-    <li><a href="counseling.html">評量諮商</a></li>
-    <li><a href="training.html">教育訓練</a></li>
-    <li><a href="marketing.html">整合行銷</a></li>
-  </ul>
+  <div style="display:flex;align-items:center;gap:40px;flex:1;">
+    <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-sub"><a href="about.html">關於我們</a>
+        <ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul>
+      </li>
+      <li><a href="assessment.html">評量分析</a></li>
+      <li><a href="counseling.html">評量諮商</a></li>
+      <li><a href="training.html">教育訓練</a></li>
+      <li><a href="marketing.html">整合行銷</a></li>
+    </ul>
+  </div>
   <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
@@ -56,55 +82,66 @@
   </div>
 </div>
 
-<section class="content-section light">
-  <div class="content-inner">
-    <div class="two-col">
-      <div class="reveal">
-        <div class="content-hd">
-          <div class="sec-eyebrow" style="-webkit-text-fill-color:initial;">FOR INDIVIDUAL</div>
-          <h2 class="light-text">對個人的幫助</h2>
-        </div>
-        <div class="prose">
-          <p>透過具信度與效度的測評工具，規劃個人學習成長與發展計畫。</p>
-          <p>對家長而言，透過評測可協助父母觀察孩子的特質，提早發掘孩子的先天優勢，及早規劃合適的教育方針，在適當的時機給與誘導而走向正軌，而不是隨波逐流，盲目跟從時尚來學習，而荒廢了該有的專業培養。</p>
-          <p>對成人而言，透過評測了解你最原始、最舒適的樣貌是什麼樣子，懂得善用自己的優點，發現自己的盲點在哪裡，同時能了解現在的自己處在什麼樣的能量狀態，進而調整往自己渴望的方向邁進。</p>
-        </div>
+<section class="assess-intro">
+  <div class="assess-inner">
+
+    <!-- 對個人的幫助 -->
+    <div class="assess-block reveal">
+      <div class="assess-img">
+        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/158962680-119536040179551-403490448402419964-n.jpeg" alt="對個人的幫助">
+        <div class="assess-img-label"><span>FOR INDIVIDUAL</span></div>
       </div>
-      <div class="reveal">
-        <div class="content-hd" style="margin-top:52px;">
-          <div class="sec-eyebrow" style="-webkit-text-fill-color:initial;">FOR ENTERPRISE</div>
-          <h2 class="light-text">對企業的幫助</h2>
-        </div>
-        <div class="prose">
-          <p>透過具信度與效度的測評工具，除了可以分析受測者工作所需的技能與知識之外，還能深入瞭解人才在冰山下的內隱特質。</p>
-          <p>懂得透過工具協助企業在選、育、用、留等層面提升人力資源運作成效，進而強化組織的經營管理能力，將使企業更具市場競爭優勢。</p>
-          <p>企業若能進一步掌握人才的潛在特性與價值，並將企業與個人價值觀與目標聯結時，個人發展就會變成自主自發。</p>
-        </div>
+      <div class="assess-body">
+        <div class="assess-eyebrow">FOR INDIVIDUAL</div>
+        <div class="assess-title">對個人的幫助</div>
+        <div class="assess-divider"></div>
+        <p>透過具信度與效度的測評工具，規劃個人學習成長與發展計畫。</p>
+        <p>對家長而言，透過評測可協助父母觀察孩子的特質，提早發掘孩子的先天優勢，及早規劃合適的教育方針，在適當的時機給與誘導而走向正軌。</p>
+        <p>對成人而言，透過評測了解你最原始、最舒適的樣貌，懂得善用自己的優點，發現自己的盲點，進而調整往自己渴望的方向邁進。</p>
       </div>
     </div>
+
+    <!-- 對企業的幫助 -->
+    <div class="assess-block reverse reveal">
+      <div class="assess-body">
+        <div class="assess-eyebrow">FOR ENTERPRISE</div>
+        <div class="assess-title">對企業的幫助</div>
+        <div class="assess-divider"></div>
+        <p>透過具信度與效度的測評工具，除了可以分析受測者工作所需的技能與知識之外，還能深入瞭解人才在冰山下的內隱特質。</p>
+        <p>懂得透過工具協助企業在選、育、用、留等層面提升人力資源運作成效，進而強化組織的經營管理能力，將使企業更具市場競爭優勢。</p>
+        <p>企業若能進一步掌握人才的潛在特性與價值，並將企業與個人價值觀與目標聯結時，個人發展就會變成自主自發。</p>
+      </div>
+      <div class="assess-img">
+        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/colorful-professional-timeline-step-by-step-graph.png" alt="對企業的幫助" onerror="this.src='https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/158962680-119536040179551-403490448402419964-n.jpeg'">
+        <div class="assess-img-label"><span>FOR ENTERPRISE</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<section class="content-section dark">
-  <div class="content-inner">
-    <div class="content-hd reveal" style="text-align:center;">
+<!-- 評測工具 -->
+<section class="tools-section">
+  <div class="tools-inner">
+    <div class="tools-hd reveal">
       <div class="sec-eyebrow">TOOLS</div>
       <div class="sec-title gold" style="font-size:clamp(24px,3vw,40px);">評測系統介紹</div>
       <div class="sec-hr"></div>
     </div>
-    <div class="card-grid">
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">教養觀念量表</div><p class="tool-desc">這份問卷可以幫助您釐清自己的教養觀念。請您針對家中其中一位孩子情形作答。</p></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">親子關係量表</div><p class="tool-desc">這份問卷可以了解您與孩子的親子關係。請您針對家中其中一位孩子的相處情形作答。</p></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">婚姻品質量表</div><p class="tool-desc">健康的婚姻關係是良好家庭、親子關係最重要的基礎，歡迎進來檢測：找到婚姻關係加分的撇步！</p><a href="https://www.iiwin.com.tw/29983279632841524847242303732734920.html" class="tool-link">免費檢測 →</a></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">生活滿意度量表</div><p class="tool-desc">在這一份測驗中你可以檢測自己整體生活的滿意度，重新檢視最近這一段時間生活與理想生活的差距。</p><a href="https://www.iiwin.com.tw/29983279632841524847242303732734920.html" class="tool-link">免費檢測 →</a></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">愛情觀心理測驗</div><p class="tool-desc">每個人對待愛情都有一套屬於自己的戀愛觀，在這份測驗中，你可以了解自己的愛情觀。</p><a href="https://www.iiwin.com.tw/24859247733526424515297022820439511.html" class="tool-link">免費檢測 →</a></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">覺察注意量表</div><p class="tool-desc">在這一份測驗中你可以檢測對自己行為的知覺狀態，重新看看自己是否可以專注於當下。</p></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">主管領導風格評量</div><p class="tool-desc">報告內容顯示主管的個人特質、領導風格、情商指數、工作能量及職場溝通特質等項目。</p></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">跨部門滿意度</div><p class="tool-desc">透過測驗可以知道部門相互之間的狀況，提升對不同部門的服務態度。</p></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">職能評量表</div><p class="tool-desc">根據職能標準，比對職務要求與員工職能間落差，分析出員工訓練需求，規劃適當訓練課程。</p></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">工作風格評測</div><p class="tool-desc">協助您更有效的進行工作分析，亦或是更有效的了解與表達您的工作風格。</p></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">工作能量耗損程度</div><p class="tool-desc">分析目前員工工作及能量狀況，並給予相關活動或講座來紓解壓力及增加正能量。</p></div>
-      <div class="tool-card reveal"><div class="tool-card-line"></div><div class="tool-title">兒童天賦評量</div><p class="tool-desc">我們總想給孩子最好的栽培，最好的教育，最好的環境，但是什麼是我們孩子真正需要的？</p></div>
+    <div class="tools-grid">
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">教養觀念量表</div><p class="t-desc">這份問卷可以幫助您釐清自己的教養觀念。請針對家中其中一位孩子情形作答。</p></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">親子關係量表</div><p class="t-desc">了解您與孩子的親子關係。請針對家中其中一位孩子的相處情形作答。</p></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">婚姻品質量表</div><p class="t-desc">健康的婚姻關係是良好家庭、親子關係最重要的基礎，找到婚姻關係加分的撇步。</p><a href="https://www.iiwin.com.tw/29983279632841524847242303732734920.html" class="t-link" target="_blank">免費檢測 →</a></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">生活滿意度量表</div><p class="t-desc">檢測自己整體生活的滿意度，重新檢視最近這段時間生活與理想生活的差距。</p><a href="https://www.iiwin.com.tw/29983279632841524847242303732734920.html" class="t-link" target="_blank">免費檢測 →</a></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">愛情觀心理測驗</div><p class="t-desc">每個人對待愛情都有一套屬於自己的戀愛觀，在這份測驗中了解自己的愛情觀。</p><a href="https://www.iiwin.com.tw/24859247733526424515297022820439511.html" class="t-link" target="_blank">免費檢測 →</a></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">覺察注意量表</div><p class="t-desc">檢測對自己行為的知覺狀態，重新看看自己是否可以專注於當下。</p></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">主管領導風格評量</div><p class="t-desc">顯示主管的個人特質、領導風格、情商指數、工作能量及職場溝通特質等項目。</p></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">跨部門滿意度</div><p class="t-desc">透過測驗可以知道部門相互之間的狀況，提升對不同部門的服務態度。</p></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">兒童天賦評量</div><p class="t-desc">幫助家長發掘孩子真正需要的，給予最適合的栽培、教育與環境。</p><a href="assessment-child.html" class="t-link">了解更多 →</a></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">職能評量表</div><p class="t-desc">比對職務要求與員工職能間落差，分析訓練需求，規劃適當訓練課程。</p></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">工作風格評測</div><p class="t-desc">協助您更有效的了解與表達您的工作風格，進行工作分析。</p></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">工作能量耗損程度</div><p class="t-desc">分析目前員工工作及能量狀況，給予相關活動或講座來紓解壓力及增加正能量。</p></div>
+      <div class="t-card reveal"><div class="t-line"></div><div class="t-title">愛情智慧評量</div><p class="t-desc">發掘你的致命吸引力，同時了解彼此最佳溝通模式，讓愛情滋養生命、豐沛彼此。</p><a href="assessment-love.html" class="t-link">了解更多 →</a></div>
     </div>
   </div>
 </section>
@@ -116,21 +153,9 @@
         <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;">
         <p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p>
       </div>
-      <div class="footer-col">
-        <h4>服務項目</h4>
-        <ul>
-          <li><a href="assessment.html">評量分析</a></li>
-          <li><a href="counseling.html">評量諮商</a></li>
-          <li><a href="training.html">教育訓練</a></li>
-          <li><a href="marketing.html">整合行銷</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>聯絡資訊</h4>
-        <p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p>
-        <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
-          LINE 官方帳號 →
-        </a>
+      <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+      <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p>
+        <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">LINE 官方帳號 →</a>
       </div>
     </div>
   </div>
@@ -141,7 +166,6 @@
     </div>
   </div>
 </footer>
-
 <script>
 function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
 var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.1});
