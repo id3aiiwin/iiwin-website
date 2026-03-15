@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="天生贏家全生涯事業有限公司 — 評量分析、評量諮商、教育訓練、整合行銷">
+<meta property="og:title" content="天生贏家全生涯事業有限公司">
+<meta property="og:description" content="與你攜手，成為人生贏家">
+<meta property="og:image" content="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png">
+<title>天生贏家全生涯事業有限公司 — 首頁</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* ══ HERO ══ */
+.hero {
+  position:relative; width:100%; height:100vh; min-height:640px;
+  background:#080c17; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+  cursor:none;
+}
+.hero canvas { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+.hero-glow { position:fixed; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle,rgba(201,168,76,.07),transparent 65%); pointer-events:none; transform:translate(-50%,-50%); z-index:1; }
+.hero-cursor { position:fixed; pointer-events:none; z-index:100; transform:translate(-50%,-50%); }
+.hero-cursor-ring { width:38px; height:38px; border-radius:50%; border:1px solid rgba(201,168,76,.8); position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); animation:cursorPulse 2.2s ease-in-out infinite; }
+.hero-cursor-dot { width:5px; height:5px; border-radius:50%; background:#f0d080; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); }
+@keyframes cursorPulse { 0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.75;} 50%{transform:translate(-50%,-50%) scale(1.6);opacity:.2;} }
+
+.hero-vline { position:absolute; top:0; bottom:0; width:1px; background:linear-gradient(to bottom,transparent,rgba(201,168,76,.4),rgba(201,168,76,.6),rgba(201,168,76,.4),transparent); z-index:1; }
+.hero-vline.l1{left:8%;} .hero-vline.r1{right:8%;}
+.hero-vline.l2{left:16%;opacity:.3;} .hero-vline.r2{right:16%;opacity:.3;}
+.hero-hline { position:absolute; left:0; right:0; height:1px; background:linear-gradient(to right,transparent,rgba(201,168,76,.35),rgba(201,168,76,.5),rgba(201,168,76,.35),transparent); z-index:1; }
+.hero-hline.t{top:12%;} .hero-hline.b{bottom:12%;}
+.hero-corner { position:absolute; width:48px; height:48px; border-color:rgba(201,168,76,.65); border-style:solid; z-index:2; }
+.hero-corner.tl{top:5%;left:5%;border-width:1px 0 0 1px;}
+.hero-corner.tr{top:5%;right:5%;border-width:1px 1px 0 0;}
+.hero-corner.bl{bottom:5%;left:5%;border-width:0 0 1px 1px;}
+.hero-corner.br{bottom:5%;right:5%;border-width:0 1px 1px 0;}
+
+.hero-content { position:relative; z-index:3; text-align:center; padding:40px 5vw; max-width:900px; width:100%; }
+.hero-eyebrow { display:inline-flex; align-items:center; gap:16px; font-size:12px; letter-spacing:6px; color:#c9a84c; text-transform:uppercase; margin-bottom:28px; opacity:0; transform:translateY(12px); animation:fadeUp .8s ease .2s forwards; }
+.hero-eyebrow::before,.hero-eyebrow::after { content:''; display:block; width:36px; height:1px; background:#c9a84c; }
+.hero-title { font-family:'Noto Serif TC',serif; font-weight:900; color:#f5f0e8; line-height:1.15; letter-spacing:8px; margin-bottom:20px; opacity:0; transform:translateY(20px); animation:fadeUp .9s ease .4s forwards; background:linear-gradient(135deg,#b8882e,#f0d080 45%,#c9a84c 70%,#f5e09a); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.hero-sub { font-family:'Noto Serif TC',serif; color:#d4c9b0; letter-spacing:10px; margin-bottom:52px; opacity:0; transform:translateY(14px); animation:fadeUp .9s ease .6s forwards; }
+.hero-hr { width:80px; height:1px; background:linear-gradient(to right,transparent,#c9a84c,transparent); margin:0 auto 52px; opacity:0; animation:fadeIn 1s ease .85s forwards; }
+
+.hero-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:0; padding-top:28px; border-top:1px solid rgba(255,255,255,.06); opacity:0; animation:fadeIn 1s ease 1.1s forwards; }
+.hero-stat { text-align:center; padding:0 16px; position:relative; }
+.hero-stat:not(:last-child)::after { content:''; position:absolute; right:0; top:8%; bottom:8%; width:1px; background:linear-gradient(to bottom,transparent,rgba(201,168,76,.3),transparent); }
+.hero-slot-wrap { display:inline-flex; align-items:baseline; justify-content:center; height:52px; overflow:hidden; }
+.hero-slot-reel { display:flex; flex-direction:column; min-width:24px; }
+.hero-slot-reel span { font-family:'Noto Serif TC',serif; font-size:36px; font-weight:700; color:#c9a84c; line-height:52px; display:block; text-align:center; }
+.hero-suffix { font-family:'Noto Serif TC',serif; font-size:24px; font-weight:700; color:#c9a84c; line-height:52px; margin-left:2px; }
+.hero-lbl { font-size:13px; color:#4e5e75; letter-spacing:2.5px; margin-top:10px; display:block; }
+
+@keyframes fadeUp { to{opacity:1;transform:translateY(0);} }
+@keyframes fadeIn { to{opacity:1;} }
+
+/* ══ SERVICES ══ */
+.services {
+  background:#0a0e1a; padding:90px 5vw 100px;
+  position:relative; overflow:hidden;
+}
+.services::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),
+             linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px);
+  background-size:80px 80px;
+}
+.services-hd { text-align:center; margin-bottom:64px; position:relative; z-index:1; }
+.services-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; position:relative; z-index:1; }
+.sv-card {
+  background:#0d1120; padding:48px 32px 44px;
+  border:1px solid rgba(201,168,76,.15);
+  display:flex; flex-direction:column;
+  position:relative; overflow:hidden;
+  text-decoration:none;
+  transition:border-color .3s, background .3s;
+}
+.sv-card:hover { border-color:rgba(201,168,76,.6); background:#101526; }
+.sv-card:hover .sv-line { width:100%; }
+.sv-card:hover .sv-arrow { transform:translateX(5px); opacity:1; }
+.sv-card:hover .sv-ibox { transform:scale(1.06); }
+.sv-card::before { content:''; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.08),transparent 60%); opacity:0; transition:opacity .4s; }
+.sv-card:hover::before { opacity:1; }
+.sv-line { position:absolute; bottom:0; left:0; height:2px; width:0; background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c); transition:width .45s cubic-bezier(.4,0,.2,1); }
+.sv-num { font-size:11px; letter-spacing:4px; color:#c9a84c; opacity:.5; margin-bottom:26px; font-family:'Noto Serif TC',serif; }
+.sv-ibox { width:64px; height:64px; border-radius:50%; border:1px solid rgba(201,168,76,.35); display:flex; align-items:center; justify-content:center; margin-bottom:26px; transition:transform .35s; }
+.sv-icon { font-size:28px; line-height:1; }
+.sv-ctitle { font-family:'Noto Serif TC',serif; font-size:22px; font-weight:700; color:#f0e6cc; letter-spacing:3px; line-height:1.3; margin-bottom:14px; }
+.sv-cdiv { width:32px; height:1px; background:linear-gradient(to right,#c9a84c,transparent); margin-bottom:16px; }
+.sv-desc { font-size:17px; color:#d8e4ec; line-height:2; letter-spacing:.3px; margin-bottom:28px; flex:1; }
+.sv-cta { display:inline-flex; align-items:center; gap:8px; font-size:14px; color:#c9a84c; letter-spacing:3px; }
+.sv-arrow { transition:transform .3s,opacity .3s; opacity:.55; }
+
+/* ══ ABOUT STRIP ══ */
+.about-strip {
+  background:#0a0e1a;
+  border-top:1px solid rgba(201,168,76,.1);
+  padding:90px 5vw;
+}
+.about-strip-inner {
+  display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+  max-width:1200px; margin:0 auto;
+}
+.about-strip-img { border-radius:4px; overflow:hidden; position:relative; }
+.about-strip-img img { width:100%; height:420px; object-fit:cover; filter:brightness(.85); }
+.about-strip-img::after { content:''; position:absolute; inset:0; border:1px solid rgba(201,168,76,.2); pointer-events:none; }
+.about-strip-body .sec-eyebrow { margin-bottom:16px; }
+.about-strip-body .sec-title { color:#f5f0e8; text-align:left; margin-bottom:28px; }
+.about-strip-body p { font-size:16px; line-height:2; color:#8a9bb5; margin-bottom:20px; }
+.about-strip-body .btn-gold {
+  display:inline-flex; align-items:center; gap:10px;
+  padding:14px 36px; font-size:14px; letter-spacing:3px;
+  background:linear-gradient(135deg,#b8882e,#f0d080); color:#0a0e1a;
+  border-radius:2px; font-weight:500; margin-top:12px;
+  transition:transform .2s, box-shadow .2s;
+}
+.about-strip-body .btn-gold:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(201,168,76,.35); }
+
+/* ══ LOCATION ══ */
+.location {
+  background:#080c17; padding:90px 5vw;
+  border-top:1px solid rgba(201,168,76,.08);
+}
+.location-inner { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start; max-width:1200px; margin:0 auto; }
+.location-map iframe { width:100%; height:380px; border:0; border-radius:4px; filter:grayscale(.5); }
+.location-info .sec-title { color:#f5f0e8; text-align:left; font-size:28px; margin-bottom:32px; }
+.location-item { display:flex; gap:16px; margin-bottom:24px; align-items:flex-start; }
+.location-icon { color:#c9a84c; font-size:18px; flex-shrink:0; margin-top:2px; }
+.location-text { font-size:15px; color:#8a9bb5; line-height:1.8; }
+.location-text strong { color:#d4c9b0; display:block; margin-bottom:4px; }
+
+/* ══ RWD ══ */
+@media(max-width:960px){
+  .services-grid { grid-template-columns:repeat(2,1fr); }
+  .about-strip-inner { grid-template-columns:1fr; gap:40px; }
+  .location-inner { grid-template-columns:1fr; }
+}
+@media(max-width:600px){
+  .services-grid { grid-template-columns:1fr; }
+  .hero-stats { grid-template-columns:repeat(2,1fr); row-gap:28px; }
+  .hero-stat:nth-child(2)::after,.hero-stat:nth-child(3)::after { display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家">
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li class="nav-sub">
+      <a href="about.html">關於我們</a>
+      <ul class="nav-sub-menu">
+        <li><a href="contact.html">聯絡我們</a></li>
+      </ul>
+    </li>
+    <li><a href="assessment.html">評量分析</a></li>
+    <li><a href="counseling.html">評量諮商</a></li>
+    <li><a href="training.html">教育訓練</a></li>
+    <li><a href="marketing.html">整合行銷</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-glow" id="heroGlow"></div>
+  <div class="hero-cursor" id="heroCursor"><div class="hero-cursor-ring"></div><div class="hero-cursor-dot"></div></div>
+  <div class="hero-vline l1"></div><div class="hero-vline r1"></div>
+  <div class="hero-vline l2"></div><div class="hero-vline r2"></div>
+  <div class="hero-hline t"></div><div class="hero-hline b"></div>
+  <div class="hero-corner tl"></div><div class="hero-corner tr"></div>
+  <div class="hero-corner bl"></div><div class="hero-corner br"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">II WIN INTERNATIONAL</div>
+    <div class="hero-title" id="heroTitle" style="font-size:clamp(52px,9vw,110px);">天生贏家</div>
+    <div class="hero-sub" id="heroSub" style="font-size:clamp(17px,2.5vw,26px);">與你攜手　成為人生贏家</div>
+    <div class="hero-hr"></div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-slot-wrap" id="slot0"></div><span class="hero-lbl">年豐富經驗</span></div>
+      <div class="hero-stat"><div class="hero-slot-wrap" id="slot1"></div><span class="hero-lbl">成功學員</span></div>
+      <div class="hero-stat"><div class="hero-slot-wrap" id="slot2"></div><span class="hero-lbl">輔導企業</span></div>
+      <div class="hero-stat"><div class="hero-slot-wrap" id="slot3"></div><span class="hero-lbl">學員滿意度</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="services-hd reveal" id="svHd">
+    <div class="sec-eyebrow">OUR SERVICES</div>
+    <div class="sec-title gold" style="font-size:clamp(32px,4vw,52px);">服務項目</div>
+    <div class="sec-hr"></div>
+  </div>
+  <div class="services-grid">
+    <a class="sv-card reveal" href="assessment.html">
+      <div class="sv-line"></div>
+      <div class="sv-num">01</div>
+      <div class="sv-ibox"><span class="sv-icon">🔍</span></div>
+      <div class="sv-ctitle">評量分析</div>
+      <div class="sv-cdiv"></div>
+      <div class="sv-desc">自己要了解自己，更需要深層瞭解他人，才能在這趟人生的交集上，成為彼此的精神啦啦隊，創造雙贏而愉快的結果。</div>
+      <span class="sv-cta">深入了解 <span class="sv-arrow">→</span></span>
+    </a>
+    <a class="sv-card reveal" href="counseling.html">
+      <div class="sv-line"></div>
+      <div class="sv-num">02</div>
+      <div class="sv-ibox"><span class="sv-icon">🤝</span></div>
+      <div class="sv-ctitle">評量諮商</div>
+      <div class="sv-cdiv"></div>
+      <div class="sv-desc">人生旅途中，難免面臨不同的考驗和挑戰，而感到無助、挫折或痛苦，透過專業療育師，帶領您重新達到身心靈的平衡。</div>
+      <span class="sv-cta">深入了解 <span class="sv-arrow">→</span></span>
+    </a>
+    <a class="sv-card reveal" href="training.html">
+      <div class="sv-line"></div>
+      <div class="sv-num">03</div>
+      <div class="sv-ibox"><span class="sv-icon">🎓</span></div>
+      <div class="sv-ctitle">教育訓練</div>
+      <div class="sv-cdiv"></div>
+      <div class="sv-desc">提供個人以及企業課程規劃，提供再進修的專業課程，創造企業的核心價值與理念永續，以及個人獨特價值與魅力。</div>
+      <span class="sv-cta">深入了解 <span class="sv-arrow">→</span></span>
+    </a>
+    <a class="sv-card reveal" href="marketing.html">
+      <div class="sv-line"></div>
+      <div class="sv-num">04</div>
+      <div class="sv-ibox"><span class="sv-icon">📡</span></div>
+      <div class="sv-ctitle">整合行銷</div>
+      <div class="sv-cdiv"></div>
+      <div class="sv-desc">以一站式服務為核心，首創結合「體驗活動」、「數位行銷」與「探索旅遊」，提供機關團體與企業客戶全方位行銷策略。</div>
+      <span class="sv-cta">深入了解 <span class="sv-arrow">→</span></span>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<section class="about-strip">
+  <div class="about-strip-inner">
+    <div class="about-strip-img reveal">
+      <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/158962680-119536040179551-403490448402419964-n.jpeg" alt="關於天生贏家">
+    </div>
+    <div class="about-strip-body reveal">
+      <div class="sec-eyebrow">ABOUT US</div>
+      <div class="sec-title" style="color:#f5f0e8;text-align:left;font-family:'Noto Serif TC',serif;">我們的故事</div>
+      <p>【天生贏家】秉持卓越的精神，將這份善知識拓展至世界每一個角落，故於西元 2000 年起服務上海、北京、新加坡，隔年將觸角延伸至美澳及菲律賓。</p>
+      <p>全體工作人員，均以愛與使命感為客戶服務；真心關心生命中每一個人，尊重每個人與生俱來不同的先天性格。因為瞭解、進而開解，讓生命發揮更高價值。</p>
+      <a href="about.html" class="btn-gold">了解更多 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location">
+  <div class="location-inner">
+    <div class="reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.8!2d121.2274!3d24.9876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5qGD5ZyL5biC5Lit5aebIOmHjemqoOWNlui3r!5e0!3m2!1szh-TW!2stw!4v1" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="location-info reveal">
+      <div class="sec-eyebrow">LOCATION</div>
+      <div class="sec-title" style="color:#f5f0e8;text-align:left;font-family:'Noto Serif TC',serif;font-size:28px;margin-bottom:32px;">聯絡資訊</div>
+      <div class="location-item">
+        <span class="location-icon">📍</span>
+        <div class="location-text"><strong>地址</strong>320 桃園市中壢區領航南路三段468號15樓之13</div>
+      </div>
+      <div class="location-item">
+        <span class="location-icon">📞</span>
+        <div class="location-text"><strong>電話</strong>03-352-5125</div>
+      </div>
+      <div class="location-item">
+        <span class="location-icon">🕐</span>
+        <div class="location-text"><strong>服務時間</strong>週一至週五 09:00 - 17:00</div>
+      </div>
+      <div class="location-item">
+        <span class="location-icon">🚇</span>
+        <div class="location-text"><strong>大眾運輸</strong>桃園捷運 A18 桃園高鐵站下車，步行約 10 分鐘</div>
+      </div>
+      <div class="location-item">
+        <span class="location-icon">🚗</span>
+        <div class="location-text"><strong>停車</strong>青雲停車場（$10/hr，悠遊卡進出）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家">
+      <p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p>
+    </div>
+    <div class="footer-col">
+      <h4>服務項目</h4>
+      <ul>
+        <li><a href="assessment.html">評量分析</a></li>
+        <li><a href="counseling.html">評量諮商</a></li>
+        <li><a href="training.html">教育訓練</a></li>
+        <li><a href="marketing.html">整合行銷</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>聯絡資訊</h4>
+      <p>📍 桃園市中壢區<br>領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p>
+    </div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span>
+    <span><a href="contact.html" style="color:rgba(255,255,255,.35);transition:color .2s;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.35)'">聯絡我們</a></span>
+  </div>
+</footer>
+
+<script>
+/* ── Nav scroll shadow ── */
+window.addEventListener('scroll',function(){
+  document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>10);
+});
+
+/* ── Mobile menu ── */
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+/* ── Hero canvas particle ── */
+(function(){
+  var canvas=document.getElementById('heroCanvas');
+  var ctx=canvas.getContext('2d');
+  var glow=document.getElementById('heroGlow');
+  var cursor=document.getElementById('heroCursor');
+  var mouse={x:window.innerWidth/2,y:window.innerHeight/2};
+  var target={x:mouse.x,y:mouse.y};
+
+  function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; }
+  resize(); window.addEventListener('resize',resize);
+
+  var pts=[];
+  for(var i=0;i<110;i++){
+    var px=Math.random()*window.innerWidth,py=Math.random()*window.innerHeight;
+    pts.push({x:px,y:py,hx:px,hy:py,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.4+.4,a:Math.random()*.4+.15});
+  }
+
+  document.addEventListener('mousemove',function(e){ target.x=e.clientX; target.y=e.clientY; cursor.style.display='block'; });
+  cursor.style.display='none';
+
+  function loop(){
+    mouse.x+=(target.x-mouse.x)*.1; mouse.y+=(target.y-mouse.y)*.1;
+    cursor.style.left=mouse.x+'px'; cursor.style.top=mouse.y+'px';
+    glow.style.left=mouse.x+'px'; glow.style.top=mouse.y+'px';
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    pts.forEach(function(p){
+      var dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<130&&d>0){var f=(130-d)/130;p.vx+=(dx/d)*f*1.5;p.vy+=(dy/d)*f*1.5;}
+      p.vx+=(p.hx-p.x)*.003; p.vy+=(p.hy-p.y)*.003; p.vx*=.91; p.vy*=.91;
+      p.x+=p.vx; p.y+=p.vy;
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(201,168,76,'+p.a+')'; ctx.fill();
+    });
+    for(var i=0;i<pts.length;i++) for(var j=i+1;j<pts.length;j++){
+      var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<100){
+        var mx=(pts[i].x+pts[j].x)/2,my=(pts[i].y+pts[j].y)/2;
+        var md=Math.sqrt((mx-mouse.x)*(mx-mouse.x)+(my-mouse.y)*(my-mouse.y));
+        var b=md<140?(1-md/140)*.55:0;
+        ctx.beginPath(); ctx.moveTo(pts[i].x,pts[i].y); ctx.lineTo(pts[j].x,pts[j].y);
+        ctx.strokeStyle='rgba(201,168,76,'+(.12*(1-d/100)+b)+')'; ctx.lineWidth=.5; ctx.stroke();
+      }
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+
+  /* Slot machine */
+  var stats=[{id:'slot0',t:20,s:'+'},{id:'slot1',t:12000,s:'+'},{id:'slot2',t:500,s:'+'},{id:'slot3',t:98,s:'%'}];
+  function buildSlot(cfg){
+    var el=document.getElementById(cfg.id);
+    var digits=String(cfg.t).split('');
+    digits.forEach(function(fd,pos){
+      var reel=document.createElement('div'); reel.className='hero-slot-reel';
+      for(var d=0;d<=9;d++){var s=document.createElement('span');s.textContent=String(d);reel.appendChild(s);}
+      var last=document.createElement('span');last.textContent=fd;reel.appendChild(last);
+      el.appendChild(reel);
+      var rem=digits.length-1-pos;
+      if(rem>0&&rem%3===0){var c=document.createElement('span');c.className='hero-suffix';c.style.fontSize='20px';c.textContent=',';el.appendChild(c);}
+    });
+    if(cfg.s){var s=document.createElement('span');s.className='hero-suffix';s.textContent=cfg.s;el.appendChild(s);}
+  }
+  function animateSlot(cfg,delay){
+    var el=document.getElementById(cfg.id);
+    el.querySelectorAll('.hero-slot-reel').forEach(function(reel,pos){
+      var dur=800+pos*140+Math.random()*200;
+      setTimeout(function(){ reel.style.transition='transform '+dur+'ms cubic-bezier(0.23,1,0.32,1)'; reel.style.transform='translateY(-'+(10*52)+'px)'; },delay+pos*100);
+    });
+  }
+  stats.forEach(function(c){buildSlot(c);});
+  setTimeout(function(){stats.forEach(function(c,i){animateSlot(c,i*160);});},1300);
+})();
+
+/* ── Scroll reveal ── */
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('on'); });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el,i){
+  el.style.transitionDelay=(i*0.08)+'s';
+  io.observe(el);
+});
+</script>
+</body>
+</html>
