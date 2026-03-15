@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>手把手專案 — 天生贏家全生涯事業有限公司</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.sub-section{background:#0a0e1a;padding:80px 5vw 100px;position:relative;overflow:hidden}
+.sub-section::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px);background-size:80px 80px}
+.sub-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.sub-lead{font-family:"Noto Serif TC",serif;font-size:18px;color:#d4c9b0;line-height:2.2;margin-bottom:56px;text-align:center;padding:36px 48px;border:1px solid rgba(201,168,76,.15);border-radius:2px;background:#0d1120}
+.sub-block{background:#0d1120;border:1px solid rgba(201,168,76,.12);padding:48px;position:relative;overflow:hidden;transition:border-color .3s;margin-bottom:2px}
+.sub-block:hover{border-color:rgba(201,168,76,.45)}
+.sub-block::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.06),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.sub-block:hover::before{opacity:1}
+.sub-block-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.sub-block:hover .sub-block-line{width:100%}
+.sub-block h3{font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;color:#f0e6cc;letter-spacing:3px;margin-bottom:14px}
+.sub-block-div{width:32px;height:1px;background:linear-gradient(to right,#c9a84c,transparent);margin-bottom:18px}
+.sub-block p{font-size:17px;line-height:2;color:#d8e4ec;margin-bottom:12px}
+.sub-block ul{list-style:none;padding:0;margin-top:12px}
+.sub-block ul li{font-size:17px;color:#d8e4ec;line-height:1.9;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:14px}
+.sub-block ul li:last-child{border-bottom:none}
+.sub-block ul li::before{content:"▪";color:#c9a84c;flex-shrink:0}
+.course-poster{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:4px}
+.poster-card{background:#0d1120;border:1px solid rgba(201,168,76,.12);padding:36px;transition:border-color .3s;position:relative;overflow:hidden}
+.poster-card:hover{border-color:rgba(201,168,76,.5)}
+.poster-img{width:100%;height:200px;object-fit:cover;filter:brightness(.8);border-radius:2px;margin-bottom:20px}
+.poster-title{font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;color:#f0e6cc;letter-spacing:3px;margin-bottom:16px}
+.poster-meta{font-size:14px;color:#8a9bb5;line-height:2}
+.poster-meta strong{color:#c9a84c}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:4px}
+.feat-card{background:#080c17;border:1px solid rgba(201,168,76,.1);padding:28px;text-align:center;transition:border-color .3s}
+.feat-card:hover{border-color:rgba(201,168,76,.4)}
+.feat-icon{font-size:36px;margin-bottom:12px}
+.feat-title{font-family:"Noto Serif TC",serif;font-size:17px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:8px}
+.feat-desc{font-size:15px;color:#8a9bb5;line-height:1.8}
+.mktg-block{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;background:#0d1120;border:1px solid rgba(201,168,76,.12);padding:48px;position:relative;overflow:hidden;transition:border-color .3s;margin-bottom:2px}
+.mktg-block:hover{border-color:rgba(201,168,76,.4)}
+.mktg-block.rev .mktg-img{order:2}
+.mktg-block.rev .mktg-body{order:1}
+.mktg-block-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.mktg-block:hover .mktg-block-line{width:100%}
+.mktg-img img{width:100%;height:280px;object-fit:cover;filter:brightness(.8);border-radius:2px;display:block}
+.mktg-eyebrow{font-size:11px;letter-spacing:4px;color:#c9a84c;margin-bottom:10px}
+.mktg-title{font-family:"Noto Serif TC",serif;font-size:24px;font-weight:700;color:#f0e6cc;letter-spacing:3px;margin-bottom:12px}
+.mktg-div{width:32px;height:1px;background:linear-gradient(to right,#c9a84c,transparent);margin-bottom:16px}
+.mktg-body p{font-size:17px;color:#d8e4ec;line-height:2}
+.sub-cta{text-align:center;margin-top:56px}
+.sub-cta p{font-size:16px;color:#8a9bb5;margin-bottom:24px}
+.sub-line-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 44px;background:#06C755;color:#fff;font-size:16px;letter-spacing:2px;font-weight:500;border-radius:4px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.sub-line-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(6,199,85,.35)}
+.sub-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#c9a84c;letter-spacing:2px;margin-top:16px}
+@media(max-width:900px){.mktg-block,.mktg-block.rev{grid-template-columns:1fr;gap:28px}.mktg-block.rev .mktg-img,.mktg-block.rev .mktg-body{order:unset}.course-poster,.feature-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav solid" id="mainNav">
+  <div style="display:flex;align-items:center;gap:40px;flex:1;">
+    <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+      <li><a href="assessment.html">評量分析</a></li>
+      <li><a href="counseling.html">評量諮商</a></li>
+      <li><a href="training.html">教育訓練</a></li>
+      <li><a href="marketing.html">整合行銷</a></li>
+    </ul>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
+  <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">TRAINING</div>
+    <div class="page-hero-title">手把手專案</div>
+  </div>
+</div>
+<section class="sub-section">
+  <div class="sub-inner">
+
+    <div class="sub-lead reveal">
+      每一個人都有與生俱來的天賦與使命，<br>
+      唯有真正的找到我們自己的天賦與使命，投入融合天賦與使命的志業，<br>
+      我們才能真正地活出自己，開創自己想要的人生！<br>
+      <strong style="color:#c9a84c;">生命教練協助與支持您活出人生的真價值！</strong>
+    </div>
+    <div class="sub-block reveal">
+      <div class="sub-block-line"></div>
+      <h3>培訓對象與特色</h3>
+      <div class="sub-block-div"></div>
+      <p><strong style="color:#c9a84c;">培訓對象：</strong>高階職場人士、CEO、企業領導人</p>
+      <ul>
+        <li><strong style="color:#c9a84c;">國際級師資</strong>：由長期以來獲百大企業指定率最高之首席講師張欣微導師、資深講師群授課，學習質量與課程滿意度評比最高</li>
+        <li><strong style="color:#c9a84c;">專業教學顧問</strong>：學習進度與訊息更新零誤差，高標準客製化服務，保障課程服務之一致水平</li>
+        <li><strong style="color:#c9a84c;">量身打造</strong>：訂製專屬個人課表，著重專長與獨特性發展，隨時調整最佳進度狀況</li>
+      </ul>
+    </div>
+    <div class="sub-block reveal">
+      <div class="sub-block-line"></div>
+      <h3>申請培訓流程</h3>
+      <div class="sub-block-div"></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:16px;position:relative;">
+        <div style="position:absolute;top:36px;left:12%;right:12%;height:1px;background:linear-gradient(to right,rgba(201,168,76,.15),rgba(201,168,76,.4),rgba(201,168,76,.15));z-index:0;"></div>
+        <div style="text-align:center;padding:0 12px;position:relative;z-index:1;">
+          <div style="width:72px;height:72px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:20px;">📞</div>
+          <div style="font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:8px;">來電簡述</div>
+          <p style="font-size:14px;color:#8a9bb5;line-height:1.8;">來電簡述狀況，以利區隔問題類別，判別提供協助</p>
+        </div>
+        <div style="text-align:center;padding:0 12px;position:relative;z-index:1;">
+          <div style="width:72px;height:72px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:20px;">🤝</div>
+          <div style="font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:8px;">進行面談</div>
+          <p style="font-size:14px;color:#8a9bb5;line-height:1.8;">安排面談時間，進行方式說明</p>
+        </div>
+        <div style="text-align:center;padding:0 12px;position:relative;z-index:1;">
+          <div style="width:72px;height:72px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:20px;">📝</div>
+          <div style="font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:8px;">執行計畫</div>
+          <p style="font-size:14px;color:#8a9bb5;line-height:1.8;">針對個人量身規劃，隨時調整最佳進度</p>
+        </div>
+        <div style="text-align:center;padding:0 12px;position:relative;z-index:1;">
+          <div style="width:72px;height:72px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:20px;">✅</div>
+          <div style="font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:8px;">後續追蹤</div>
+          <p style="font-size:14px;color:#8a9bb5;line-height:1.8;">結案或後續追蹤</p>
+        </div>
+      </div>
+    </div>
+    <div class="sub-block reveal">
+      <div class="sub-block-line"></div>
+      <h3>課程細節及收費</h3>
+      <div class="sub-block-div"></div>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:15px;">
+          <thead>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(201,168,76,.3);">
+              <th style="padding:14px 20px;text-align:left;color:#c9a84c;letter-spacing:2px;font-weight:500;">系列主題</th>
+              <th style="padding:14px 12px;text-align:left;color:#c9a84c;letter-spacing:1px;font-weight:500;">課程名稱</th>
+              <th style="padding:14px 12px;text-align:center;color:#c9a84c;letter-spacing:1px;font-weight:500;">課程費用</th>
+              <th style="padding:14px 12px;text-align:center;color:#c9a84c;letter-spacing:1px;font-weight:500;">系列費用</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);">
+              <td style="padding:10px 20px;color:#d8e4ec;" rowspan="6">評量分析師系列</td>
+              <td style="padding:10px 12px;color:#8a9bb5;">DNA讀人術</td>
+              <td style="padding:10px 12px;text-align:center;color:#c9a84c;">$12,000</td>
+              <td style="padding:10px 12px;text-align:center;color:#f0d080;font-weight:700;" rowspan="6">$800,000</td>
+            </tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">評量諮商修煉</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$48,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">評量分析師-師資認證班</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$108,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">評量分析師-萃思總裁班</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$188,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">評量分析師-高階導師班</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$288,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.05);"><td style="padding:10px 12px;color:#8a9bb5;">評量分析採樣設備專用</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$156,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);">
+              <td style="padding:10px 20px;color:#d8e4ec;" rowspan="7">評量諮商師系列</td>
+              <td style="padding:10px 12px;color:#8a9bb5;">有效提問鍛鍊-植入技巧</td>
+              <td style="padding:10px 12px;text-align:center;color:#c9a84c;">$30,000</td>
+              <td style="padding:10px 12px;text-align:center;color:#f0d080;font-weight:700;" rowspan="7">$500,000</td>
+            </tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">有效提問鍛鍊-教練技巧</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$70,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">有效提問鍛鍊-轉化技巧</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$100,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">NLP執行鍛鍊-潛意識溝通</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$50,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">NLP執行鍛鍊-敏感度技巧</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$60,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">NLP執行鍛鍊-價值觀測評</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$80,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.05);"><td style="padding:10px 12px;color:#8a9bb5;">NLP執行鍛鍊-心錨催眠術</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$110,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:10px 20px;color:#d8e4ec;" rowspan="10">心理培訓師系列</td>
+              <td style="padding:10px 12px;color:#8a9bb5;">專業講師班 初階</td>
+              <td style="padding:10px 12px;text-align:center;color:#c9a84c;">$38,000</td>
+              <td style="padding:10px 12px;text-align:center;color:#f0d080;font-weight:700;" rowspan="10">$500,000</td>
+            </tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">專業講師班-進階</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$58,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">專業講師班-高階</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$86,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">天賦教育師資-初階</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$38,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">天賦教育師資-進階</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$68,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">天賦教育師資-高階</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$98,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">活化訓練-講師授課表達實務</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$38,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">魅力表達-故事深化行銷訓練</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$38,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">文案撰寫-系統教案構思與設計</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$38,000</td></tr>
+            <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.05);"><td style="padding:10px 12px;color:#8a9bb5;">數位教材製作訓練系列</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$38,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.05);">
+              <td style="padding:10px 20px;color:#d8e4ec;" rowspan="7">DNA療育師系列</td>
+              <td style="padding:10px 12px;color:#8a9bb5;">呼吸心療</td>
+              <td style="padding:10px 12px;text-align:center;color:#c9a84c;">$70,000</td>
+              <td style="padding:10px 12px;text-align:center;color:#f0d080;font-weight:700;" rowspan="7">$500,000</td>
+            </tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">芳香心療</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$80,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">音樂心療</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$70,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">律動心療</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$70,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">手沖心療</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$70,000</td></tr>
+            <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);"><td style="padding:10px 12px;color:#8a9bb5;">藝術心療</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$70,000</td></tr>
+            <tr style="background:#0a0e1a;"><td style="padding:10px 12px;color:#8a9bb5;">創作心療</td><td style="padding:10px 12px;text-align:center;color:#c9a84c;">$70,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:20px;padding:20px 24px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);border-radius:2px;">
+        <p style="font-size:16px;color:#f0e6cc;margin:0;">符合條件者任選兩系列課程價格：<strong style="color:#f0d080;font-size:20px;">$800,000 元整</strong></p>
+        <p style="font-size:14px;color:#8a9bb5;margin:8px 0 0;">（僅限參與過「訓前培訓」，同時與『生命教練-張欣微』傳承人計畫之核心價值一致者，並願意遵從該計畫的所有傳承規範。）</p>
+      </div>
+    </div>
+
+    <div class="sub-cta reveal">
+      <p>想了解更多或洽詢合作，歡迎透過 LINE 與我們聯繫</p>
+      <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" class="sub-line-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg> 立即洽詢
+      </a><br>
+      <a href="training.html" class="sub-back">← 返回教育訓練</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-top"><div class="footer-grid">
+    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p><a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;">LINE 官方帳號 →</a></div>
+  </div></div>
+  <div class="footer-bottom-wrap"><div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" class="footer-contact-btn">聯絡我們 →</a></div></div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("open")}
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("on")})},{threshold:0.05,rootMargin:"0px 0px -50px 0px"});
+document.querySelectorAll(".reveal").forEach(function(el,i){el.style.transitionDelay=(i*0.08)+"s";io.observe(el)});
+setTimeout(function(){document.querySelectorAll(".reveal").forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add("on")})},100);
+</script>
+</body>
+</html>

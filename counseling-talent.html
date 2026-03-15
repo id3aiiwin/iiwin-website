@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天賦療育 — 天生贏家全生涯事業有限公司</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.sub-section{background:#0a0e1a;padding:80px 5vw 100px;position:relative;overflow:hidden}
+.sub-section::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px);background-size:80px 80px}
+.sub-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.sub-lead{font-family:"Noto Serif TC",serif;font-size:18px;color:#d4c9b0;line-height:2.2;margin-bottom:56px;text-align:center;padding:36px 48px;border:1px solid rgba(201,168,76,.15);border-radius:2px;background:#0d1120}
+.sub-block{background:#0d1120;border:1px solid rgba(201,168,76,.12);padding:48px;position:relative;overflow:hidden;transition:border-color .3s;margin-bottom:2px}
+.sub-block:hover{border-color:rgba(201,168,76,.45)}
+.sub-block::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.06),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.sub-block:hover::before{opacity:1}
+.sub-block-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.sub-block:hover .sub-block-line{width:100%}
+.sub-block h3{font-family:"Noto Serif TC",serif;font-size:22px;font-weight:700;color:#f0e6cc;letter-spacing:3px;margin-bottom:14px}
+.sub-block-div{width:32px;height:1px;background:linear-gradient(to right,#c9a84c,transparent);margin-bottom:18px}
+.sub-block p{font-size:17px;line-height:2;color:#d8e4ec;margin-bottom:12px}
+.sub-block ul{list-style:none;padding:0;margin-top:12px}
+.sub-block ul li{font-size:17px;color:#d8e4ec;line-height:1.9;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:14px}
+.sub-block ul li:last-child{border-bottom:none}
+.sub-block ul li::before{content:"▪";color:#c9a84c;flex-shrink:0}
+.step-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;position:relative;margin-top:20px}
+.step-flow::before{content:"";position:absolute;top:36px;left:12%;right:12%;height:1px;background:linear-gradient(to right,rgba(201,168,76,.15),rgba(201,168,76,.4),rgba(201,168,76,.15));z-index:0}
+.sf-step{text-align:center;padding:0 16px;position:relative;z-index:1}
+.sf-circle{width:72px;height:72px;border-radius:50%;background:#0d1120;border:2px solid rgba(201,168,76,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 16px;font-size:20px}
+.sf-title{font-family:"Noto Serif TC",serif;font-size:16px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:8px}
+.sf-desc{font-size:14px;color:#8a9bb5;line-height:1.8}
+.card-2col{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px}
+.info-card{background:#080c17;border:1px solid rgba(201,168,76,.1);padding:32px 28px;transition:border-color .3s}
+.info-card:hover{border-color:rgba(201,168,76,.4)}
+.info-card h4{font-family:"Noto Serif TC",serif;font-size:18px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:12px}
+.info-card p{font-size:16px;color:#d8e4ec;line-height:1.9}
+.course-card{background:#0d1120;border:1px solid rgba(201,168,76,.12);padding:28px 32px;display:grid;grid-template-columns:60px 1fr;gap:20px;align-items:start;transition:border-color .3s;margin-bottom:2px}
+.course-card:hover{border-color:rgba(201,168,76,.5)}
+.course-num{font-family:"Noto Serif TC",serif;font-size:32px;font-weight:700;color:rgba(201,168,76,.3);letter-spacing:2px;text-align:center;padding-top:4px}
+.course-title{font-family:"Noto Serif TC",serif;font-size:20px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:8px}
+.course-desc{font-size:16px;color:#d8e4ec;line-height:1.9}
+.sub-cta{text-align:center;margin-top:56px}
+.sub-cta p{font-size:16px;color:#8a9bb5;margin-bottom:24px}
+.sub-line-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 44px;background:#06C755;color:#fff;font-size:16px;letter-spacing:2px;font-weight:500;border-radius:4px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.sub-line-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(6,199,85,.35)}
+.sub-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#c9a84c;letter-spacing:2px;margin-top:16px}
+@media(max-width:700px){.step-flow{grid-template-columns:1fr 1fr}.step-flow::before{display:none}.card-2col{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav solid" id="mainNav">
+  <div style="display:flex;align-items:center;gap:40px;flex:1;">
+    <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+      <li><a href="assessment.html">評量分析</a></li>
+      <li><a href="counseling.html">評量諮商</a></li>
+      <li><a href="training.html">教育訓練</a></li>
+      <li><a href="marketing.html">整合行銷</a></li>
+    </ul>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
+  <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">COUNSELING</div>
+    <div class="page-hero-title">天賦療育</div>
+  </div>
+</div>
+<section class="sub-section">
+  <div class="sub-inner">
+
+    <div class="sub-lead reveal">
+      開放的心，是我們為自己留下的指引燈<br>
+      覺知，是一切改變的開端。
+    </div>
+    <div class="sub-block reveal">
+      <div class="sub-block-line"></div>
+      <h3>天賦療育流程</h3>
+      <div class="sub-block-div"></div>
+      <div class="step-flow">
+        <div class="sf-step">
+          <div class="sf-circle">🌱</div>
+          <div class="sf-title">覺知・如實</div>
+          <p class="sf-desc">保持自我覺知，覺察自我身心變化，透過與內在孩子的對話進入深刻自我覺察，讓情緒「如實」地被看見、被感知、被接受</p>
+        </div>
+        <div class="sf-step">
+          <div class="sf-circle">🌊</div>
+          <div class="sf-title">流動・看見</div>
+          <p class="sf-desc">情緒就是能量，當情緒被看見後，透過繪畫的出口，讓情緒自然地來去，如流水一般自在流動，生命就產生流動</p>
+        </div>
+        <div class="sf-step">
+          <div class="sf-circle">✨</div>
+          <div class="sf-title">淨化・釋放</div>
+          <p class="sf-desc">讓流體承載的情緒，壓抑的體內毒瘤，都能在保持意識的刻意練習下，帶著覺知與意識，啟動最內在的力量，讓積累得以充分清理與釋放</p>
+        </div>
+        <div class="sf-step">
+          <div class="sf-circle">💛</div>
+          <div class="sf-title">讚美・擁抱</div>
+          <p class="sf-desc">流動的香氛會帶領我們到更深更沉靜更寬廣的潛意識空間，透過無限大的生命，讓我們進入正向的迴路，讓迷失的心，找回最適合自己的姿態</p>
+        </div>
+      </div>
+    </div>
+    <div class="sub-block reveal">
+      <div class="sub-block-line"></div>
+      <h3>天賦療育特色</h3>
+      <div class="sub-block-div"></div>
+      <ul>
+        <li>一對一，隱私，安心，尊重你的獨特性！</li>
+        <li>採預約制，配合你與天賦療育的時間</li>
+        <li>天賦療育師將依你的特質與速度，陪伴你整個療育的過程</li>
+      </ul>
+    </div>
+    <div class="sub-block reveal">
+      <div class="sub-block-line"></div>
+      <h3>藝術療育</h3>
+      <div class="sub-block-div"></div>
+      <p>將可以在「藝術療育」過程中收穫到：</p>
+      <ul>
+        <li>在安全的環境，藉由創作過程整理心情與壓力</li>
+        <li>透過創作與作品，認識不同層面、尚未發現的自己</li>
+        <li>了解困難的出現，帶來的用義是什麼</li>
+        <li>再次找到力量，並陪伴自己度過低潮</li>
+      </ul>
+    </div>
+    <div class="sub-block reveal">
+      <div class="sub-block-line"></div>
+      <h3>芳香療育</h3>
+      <div class="sub-block-div"></div>
+      <p>將可以在「芳香療育」過程中收穫到：</p>
+      <ul>
+        <li>在芳香、舒適、安全的環境中，透過諮詢了解自己的內外在狀態，找出當下最需要平衡與紓解的身心困擾</li>
+        <li>認識及體驗芳香療法對身心的調理作用</li>
+        <li>能在日常生活中運用芳香療法來自我照顧</li>
+      </ul>
+    </div>
+
+    <div class="sub-cta reveal">
+      <p>想了解更多或預約服務，歡迎透過 LINE 與我們聯繫</p>
+      <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" class="sub-line-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg> 立即預約
+      </a><br>
+      <a href="counseling.html" class="sub-back">← 返回評量諮商</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top"><div class="footer-grid">
+    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p><a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;">LINE 官方帳號 →</a></div>
+  </div></div>
+  <div class="footer-bottom-wrap"><div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" class="footer-contact-btn">聯絡我們 →</a></div></div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("open")}
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add("on")})},{threshold:0.05,rootMargin:"0px 0px -50px 0px"});
+document.querySelectorAll(".reveal").forEach(function(el,i){el.style.transitionDelay=(i*0.08)+"s";io.observe(el)});
+setTimeout(function(){document.querySelectorAll(".reveal").forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add("on")})},100);
+</script>
+</body>
+</html>

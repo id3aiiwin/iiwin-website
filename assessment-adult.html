@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>成人優勢評量 — 天生贏家全生涯事業有限公司</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.sub-section{background:#0a0e1a;padding:80px 5vw 100px;position:relative;overflow:hidden}
+.sub-section::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px);background-size:80px 80px}
+.sub-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.quote-box{font-family:'Noto Serif TC',serif;font-size:18px;color:#d4c9b0;line-height:2.2;margin-bottom:56px;text-align:center;padding:36px 48px;border:1px solid rgba(201,168,76,.15);border-radius:2px;background:#0d1120;font-style:italic}
+.sub-block{background:#0d1120;border:1px solid rgba(201,168,76,.12);padding:48px;position:relative;overflow:hidden;transition:border-color .3s;margin-bottom:2px}
+.sub-block:hover{border-color:rgba(201,168,76,.45)}
+.sub-block::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.06),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.sub-block:hover::before{opacity:1}
+.sub-block-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.sub-block:hover .sub-block-line{width:100%}
+.sub-block h3{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:#f0e6cc;letter-spacing:3px;margin-bottom:14px}
+.sub-block-div{width:32px;height:1px;background:linear-gradient(to right,#c9a84c,transparent);margin-bottom:18px}
+.sub-block p{font-size:17px;line-height:2;color:#d8e4ec;margin-bottom:12px}
+.benefit-list{list-style:none;padding:0;margin-top:12px}
+.benefit-list li{font-size:17px;color:#d8e4ec;line-height:1.9;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:14px;align-items:flex-start}
+.benefit-list li:last-child{border-bottom:none}
+.benefit-list li::before{content:'▪';color:#c9a84c;flex-shrink:0;margin-top:2px;font-size:18px}
+.tier-list{display:flex;flex-direction:column;gap:2px}
+.tier-card{background:#080c17;border:1px solid rgba(201,168,76,.1);padding:28px 36px;display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start;transition:border-color .3s}
+.tier-card:hover{border-color:rgba(201,168,76,.4)}
+.tier-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;border-radius:2px;text-align:center}
+.tier-badge.b1{background:linear-gradient(135deg,#e8a87c,#d4896a)}
+.tier-badge.b2{background:linear-gradient(135deg,#b8715a,#9a5a45)}
+.tier-badge.b3{background:linear-gradient(135deg,#6b6b6b,#4a4a4a)}
+.tier-badge span{color:#fff;font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;letter-spacing:2px}
+.tier-body h4{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:12px}
+.tier-body ul{list-style:none;padding:0}
+.tier-body ul li{font-size:16px;color:#d8e4ec;line-height:1.9;padding:4px 0;display:flex;gap:10px}
+.tier-body ul li::before{content:'·';color:#c9a84c;font-size:20px;flex-shrink:0}
+.sub-cta{text-align:center;margin-top:56px}
+.sub-cta p{font-size:16px;color:#8a9bb5;margin-bottom:24px}
+.sub-line-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 44px;background:#06C755;color:#fff;font-size:16px;letter-spacing:2px;font-weight:500;border-radius:4px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.sub-line-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(6,199,85,.35)}
+.sub-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#c9a84c;letter-spacing:2px;margin-top:16px}
+@media(max-width:600px){.tier-card{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav solid" id="mainNav">
+  <div style="display:flex;align-items:center;gap:40px;flex:1;">
+    <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+      <li><a href="assessment.html">評量分析</a></li>
+      <li><a href="counseling.html">評量諮商</a></li>
+      <li><a href="training.html">教育訓練</a></li>
+      <li><a href="marketing.html">整合行銷</a></li>
+    </ul>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
+  <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">ASSESSMENT</div>
+    <div class="page-hero-title">成人優勢評量</div>
+  </div>
+</div>
+<section class="sub-section">
+  <div class="sub-inner">
+    <div class="quote-box reveal">
+  帶著與生俱來性格及氣質的每個人，都不是一張白紙。<br>
+  我們的性格，雖然會受到生長環境與後天教育的塑造，但是仍保有天生的這一個部分，<br>
+  這就是大家常說的「<strong style="color:#c9a84c;font-style:normal;">江山易改，本性難移</strong>」。
+</div>
+<div class="sub-block reveal">
+  <div class="sub-block-line"></div>
+  <h3>成人優勢的重要</h3>
+  <div class="sub-block-div"></div>
+  <p>你知道自己和他人最大的差異嗎？你知道自己的成功特質是什麼嗎？你的大腦運作模式，是主宰你成功關鍵的金鑰匙。</p>
+  <p>透過『iiWIN 天生贏家天賦評量分析系統』清楚自己的<strong style="color:#c9a84c;">決策風格、思考慣性、抗壓指數、溝通策略</strong>，以提昇自我的靈性智商，活出自我渴望的新生命。</p>
+  <p>天賦評量報告不僅自己要了解自己，親子、情侶、夫妻、合作夥伴，都需要深層了解，才能在這趟人生的交集上，成為彼此的精神啦啦隊，創造雙贏而愉快的結果。</p>
+</div>
+<div class="sub-block reveal">
+  <div class="sub-block-line"></div>
+  <h3>成人優勢評量報告效益</h3>
+  <div class="sub-block-div"></div>
+  <ul class="benefit-list">
+    <li>瞭解個人風格，充分掌握自我特色</li>
+    <li>協助個人職涯規劃，適才適所發展</li>
+    <li>認識自我管理風格，提昇組織績效</li>
+    <li>調整親子教養模式，建立優質互動</li>
+    <li>發掘天生優勢，活出更大生命價值</li>
+  </ul>
+</div>
+<div class="sub-block reveal">
+  <div class="sub-block-line"></div>
+  <h3>成人優勢評量報告版型</h3>
+  <div class="sub-block-div"></div>
+  <div class="tier-list">
+    <div class="tier-card">
+      <div class="tier-badge b1"><span>專業版</span></div>
+      <div class="tier-body"><ul>
+        <li>了解腦細胞潛藏總量，明白優勢開發的長青策略</li>
+        <li>活到老、學到老，了解最適合學習吸收的模式</li>
+        <li>認識左右腦的狀態，啟動大腦活化的運轉力</li>
+        <li>協助自己善用最優的自我感官特性，為溝通加分</li>
+        <li>清楚自己的先天價值觀，成為更渴望的自己</li>
+        <li>從認識自己的獨一無二，進而找到天命</li>
+        <li>先天心像所影響的想像力與創新能力</li>
+        <li>明白容易與人互動的模式與開發新局能力</li>
+      </ul></div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-badge b2"><span>完整版</span></div>
+      <div class="tier-body"><ul>
+        <li>涵括專業版內容</li>
+        <li>從看見自己的領導天性，下對管理策略</li>
+        <li>發現可以點燃內在快樂源的工作屬性</li>
+        <li>知道自己受先天感染的情緒黑暗面，強化抗壓能力</li>
+      </ul></div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-badge b3"><span>VIP內容</span></div>
+      <div class="tier-body"><ul>
+        <li>涵括完整版內容</li>
+        <li><strong style="color:#c9a84c;">個人 One-On-One Coaching</strong>：協助個人發現天命，重塑生命價值，進而得以邁向渴望的人生目標，建構卓越的優質信念。同時，也得針對個人在特定目標（如：DNA識人、口才聲音、人際溝通、肢體平衡、社教技巧、順氣療法、芳香療法、心靈瑜伽、舒壓活腦、自我壓力檢測⋯等）的技巧作量身也有系統的訓練</li>
+      </ul></div>
+    </div>
+  </div>
+</div>
+    <div class="sub-cta reveal">
+      <p>想了解更多或預約服務，歡迎透過 LINE 與我們聯繫</p>
+      <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" class="sub-line-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        預約服務
+      </a><br>
+      <a href="assessment.html" class="sub-back">← 返回評量分析</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-top"><div class="footer-grid">
+    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p><a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;">LINE 官方帳號 →</a></div>
+  </div></div>
+  <div class="footer-bottom-wrap"><div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" class="footer-contact-btn">聯絡我們 →</a></div></div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('on')})},{threshold:0.05,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i*0.08)+'s';io.observe(el)});
+setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('on')})},100);
+</script>
+</body>
+</html>

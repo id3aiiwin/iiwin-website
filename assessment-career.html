@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>學涯競爭評量 — 天生贏家全生涯事業有限公司</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.sub-section{background:#0a0e1a;padding:80px 5vw 100px;position:relative;overflow:hidden}
+.sub-section::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px);background-size:80px 80px}
+.sub-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.quote-box{font-family:'Noto Serif TC',serif;font-size:18px;color:#d4c9b0;line-height:2.2;margin-bottom:56px;text-align:center;padding:36px 48px;border:1px solid rgba(201,168,76,.15);border-radius:2px;background:#0d1120;font-style:italic}
+.sub-block{background:#0d1120;border:1px solid rgba(201,168,76,.12);padding:48px;position:relative;overflow:hidden;transition:border-color .3s;margin-bottom:2px}
+.sub-block:hover{border-color:rgba(201,168,76,.45)}
+.sub-block::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.06),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.sub-block:hover::before{opacity:1}
+.sub-block-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.sub-block:hover .sub-block-line{width:100%}
+.sub-block h3{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:#f0e6cc;letter-spacing:3px;margin-bottom:14px}
+.sub-block-div{width:32px;height:1px;background:linear-gradient(to right,#c9a84c,transparent);margin-bottom:18px}
+.sub-block p{font-size:17px;line-height:2;color:#d8e4ec;margin-bottom:12px}
+.benefit-list{list-style:none;padding:0;margin-top:12px}
+.benefit-list li{font-size:17px;color:#d8e4ec;line-height:1.9;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:14px;align-items:flex-start}
+.benefit-list li:last-child{border-bottom:none}
+.benefit-list li::before{content:'▪';color:#c9a84c;flex-shrink:0;margin-top:2px;font-size:18px}
+.tier-list{display:flex;flex-direction:column;gap:2px}
+.tier-card{background:#080c17;border:1px solid rgba(201,168,76,.1);padding:28px 36px;display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start;transition:border-color .3s}
+.tier-card:hover{border-color:rgba(201,168,76,.4)}
+.tier-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;border-radius:2px;text-align:center}
+.tier-badge.b1{background:linear-gradient(135deg,#e8a87c,#d4896a)}
+.tier-badge.b2{background:linear-gradient(135deg,#b8715a,#9a5a45)}
+.tier-badge.b3{background:linear-gradient(135deg,#6b6b6b,#4a4a4a)}
+.tier-badge span{color:#fff;font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;letter-spacing:2px}
+.tier-body h4{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:12px}
+.tier-body ul{list-style:none;padding:0}
+.tier-body ul li{font-size:16px;color:#d8e4ec;line-height:1.9;padding:4px 0;display:flex;gap:10px}
+.tier-body ul li::before{content:'·';color:#c9a84c;font-size:20px;flex-shrink:0}
+.sub-cta{text-align:center;margin-top:56px}
+.sub-cta p{font-size:16px;color:#8a9bb5;margin-bottom:24px}
+.sub-line-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 44px;background:#06C755;color:#fff;font-size:16px;letter-spacing:2px;font-weight:500;border-radius:4px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.sub-line-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(6,199,85,.35)}
+.sub-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#c9a84c;letter-spacing:2px;margin-top:16px}
+@media(max-width:600px){.tier-card{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav solid" id="mainNav">
+  <div style="display:flex;align-items:center;gap:40px;flex:1;">
+    <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+      <li><a href="assessment.html">評量分析</a></li>
+      <li><a href="counseling.html">評量諮商</a></li>
+      <li><a href="training.html">教育訓練</a></li>
+      <li><a href="marketing.html">整合行銷</a></li>
+    </ul>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-corner tl"></div><div class="page-hero-corner tr"></div>
+  <div class="page-hero-corner bl"></div><div class="page-hero-corner br"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">ASSESSMENT</div>
+    <div class="page-hero-title">學涯競爭評量</div>
+  </div>
+</div>
+<section class="sub-section">
+  <div class="sub-inner">
+    <div class="quote-box reveal">
+  帶著與生俱來性格及氣質的每個人，都不是一張白紙。<br>
+  用『天賦評量報告』這張『地圖』可以探知孩子先天的潛能、特質及優劣勢，<br>
+  掌握孩子獨特的資質與差異，就可以幫助家長對孩子的教育，<br>
+  <strong style="color:#c9a84c;font-style:normal;">真正走向量身訂製、因材施教。</strong>
+</div>
+<div class="sub-block reveal">
+  <div class="sub-block-line"></div>
+  <h3>青少年的誘導</h3>
+  <div class="sub-block-div"></div>
+  <p>兒童在進入青少年時期後，大約在 <strong style="color:#c9a84c;">9~16 歲</strong>之間，大量吸收了周遭環境豐富的資訊之後，他們的腦部即開始進行選擇，會進入所謂「社會化的過程」，進行過去所學習到的知識與行為的修正，並且繼續學習自己「認為」所需要的。</p>
+  <p>因此在這個階段，會有所謂的行為偏差的行徑產生（也就是一般所稱的青春期），正是因為修改了某些行為準則，而有些孩子捨棄正確的規範，轉而選擇偏差的行為作為學習對象。</p>
+  <p>父母若能夠早一步瞭解孩子的人格與潛意識，自然能在適當的時機給與誘導而走向正軌。在課業學習方面，正值升學壓力期，必須挑選自己就讀的方向來學習，若是選擇錯誤或是勉強就讀，將會對自己的未來造成傷害與損失。</p>
+</div>
+<div class="sub-block reveal">
+  <div class="sub-block-line"></div>
+  <h3>學涯競爭評量報告效益</h3>
+  <div class="sub-block-div"></div>
+  <ul class="benefit-list">
+    <li>釐清個人適合就讀的系所類別</li>
+    <li>啟動個人生命蛻變原動力，創造更多可能</li>
+    <li>認識向我特質及個人潛能，充分掌握優勢</li>
+    <li>提供畢業從事行業建議，讓您真正學以致用</li>
+  </ul>
+</div>
+<div class="sub-block reveal">
+  <div class="sub-block-line"></div>
+  <h3>學涯競爭評量報告版型</h3>
+  <div class="sub-block-div"></div>
+  <div class="tier-list">
+    <div class="tier-card">
+      <div class="tier-badge b1"><span>專業版</span></div>
+      <div class="tier-body"><ul>
+        <li>了解腦細胞潛藏總量，明白優勢開發的調整期</li>
+        <li>了解青少年適合教學與溝通的模式，減少建構上的自由心證</li>
+        <li>認識左右腦的狀態，強化創造力及記憶力的策略</li>
+        <li>適合進行溝通的頻道與對話策略</li>
+        <li>了解如何執行行為改變的動機策略</li>
+        <li>青少年先天天賦與現況的綜合策略</li>
+        <li>找出新世代兒童所接收訊息的整合策略</li>
+        <li>明白人際與開創力，認識內在承壓與執行力</li>
+      </ul></div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-badge b2"><span>完整版</span></div>
+      <div class="tier-body"><ul>
+        <li>涵括專業版內容</li>
+        <li>協助青少年明白自己最適性的科系選擇</li>
+        <li>了解未來職業生涯的最基規劃</li>
+        <li>認識先天本質所帶來的情緒衝突、創造EQ</li>
+      </ul></div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-badge b3"><span>VIP內容</span></div>
+      <div class="tier-body"><ul>
+        <li>涵括完整版內容</li>
+        <li><strong style="color:#c9a84c;">生涯 One-On-One Coaching</strong>：協助個案探尋自我並發現適合的科系選擇，提供具有建設性的相關準備。同時，也得以針對升學口試應對進行良深的技巧訓練，協助個案再循序漸進的規劃下，對未來充滿希望</li>
+      </ul></div>
+    </div>
+  </div>
+</div>
+    <div class="sub-cta reveal">
+      <p>想了解更多或預約服務，歡迎透過 LINE 與我們聯繫</p>
+      <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" class="sub-line-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        預約服務
+      </a><br>
+      <a href="assessment.html" class="sub-back">← 返回評量分析</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-top"><div class="footer-grid">
+    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p><a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;">LINE 官方帳號 →</a></div>
+  </div></div>
+  <div class="footer-bottom-wrap"><div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" class="footer-contact-btn">聯絡我們 →</a></div></div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('on')})},{threshold:0.05,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i*0.08)+'s';io.observe(el)});
+setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('on')})},100);
+</script>
+</body>
+</html>

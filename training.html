@@ -6,38 +6,56 @@
 <title>教育訓練 — 天生贏家全生涯事業有限公司</title>
 <link rel="stylesheet" href="assets/style.css">
 <style>
-.training-section { padding:80px 5vw; }
-.training-section.dark { background:#0a0e1a; }
-.training-section.light { background:#fff; }
-.training-inner { max-width:1100px; margin:0 auto; }
-.training-block { display:grid; grid-template-columns:300px 1fr; gap:64px; align-items:center; margin-bottom:64px; padding-bottom:64px; border-bottom:1px solid rgba(201,168,76,.1); }
-.training-block:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
-.training-block.reverse { grid-template-columns:1fr 300px; }
+.training-section { background:#0a0e1a; padding:80px 5vw 100px; position:relative; overflow:hidden; }
+.training-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px); background-size:80px 80px; }
+.training-inner { max-width:1100px; margin:0 auto; position:relative; z-index:1; }
+.training-hd { text-align:center; margin-bottom:64px; }
+.training-block {
+  display:grid; grid-template-columns:420px 1fr; gap:64px;
+  align-items:center; margin-bottom:3px;
+  background:#0d1120; padding:56px 48px;
+  border:1px solid rgba(201,168,76,.12);
+  position:relative; overflow:hidden;
+  transition:border-color .3s;
+}
+.training-block:hover { border-color:rgba(201,168,76,.4); }
+.training-block.reverse { grid-template-columns:1fr 420px; }
 .training-block.reverse .training-img { order:2; }
 .training-block.reverse .training-body { order:1; }
-.training-img { border-radius:4px; overflow:hidden; }
-.training-img img { width:100%; height:220px; object-fit:cover; filter:brightness(.85); }
-.training-body h3 { font-family:'Noto Serif TC',serif; font-size:26px; font-weight:700; color:#f0e6cc; letter-spacing:3px; margin-bottom:16px; }
-.training-body p { font-size:16px; line-height:2; color:#d8e4ec; margin-bottom:20px; }
-.training-links { display:flex; flex-wrap:wrap; gap:12px; }
-.training-link { display:inline-flex; align-items:center; gap:8px; padding:10px 24px; font-size:13px; letter-spacing:2px; color:#c9a84c; border:1px solid rgba(201,168,76,.4); border-radius:2px; transition:all .25s; }
-.training-link:hover { background:rgba(201,168,76,.1); border-color:#c9a84c; }
-@media(max-width:768px){
-  .training-block, .training-block.reverse { grid-template-columns:1fr; gap:24px; }
+.training-block::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.05),transparent 60%); opacity:0; transition:opacity .4s; pointer-events:none; }
+.training-block:hover::before { opacity:1; }
+.training-block-line { position:absolute; bottom:0; left:0; height:2px; width:0; background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c); transition:width .45s cubic-bezier(.4,0,.2,1); }
+.training-block:hover .training-block-line { width:100%; }
+.training-img { border-radius:4px; overflow:hidden; position:relative; }
+.training-img img { width:100%; height:280px; object-fit:cover; filter:brightness(.8); display:block; }
+.training-img::after { content:''; position:absolute; inset:0; border:1px solid rgba(201,168,76,.2); pointer-events:none; }
+.training-eyebrow { font-size:11px; letter-spacing:4px; color:#c9a84c; text-transform:uppercase; margin-bottom:12px; display:flex; align-items:center; gap:10px; }
+.training-eyebrow::after { content:''; display:block; width:24px; height:1px; background:#c9a84c; }
+.training-title { font-family:'Noto Serif TC',serif; font-size:clamp(22px,2.5vw,28px); font-weight:700; color:#f0e6cc; letter-spacing:3px; margin-bottom:16px; }
+.training-div { width:32px; height:1px; background:linear-gradient(to right,#c9a84c,transparent); margin-bottom:16px; }
+.training-body p { font-size:16px; line-height:2; color:#d8e4ec; margin-bottom:16px; }
+.training-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
+.training-link { display:inline-flex; align-items:center; gap:8px; padding:10px 22px; font-size:13px; letter-spacing:2px; color:#c9a84c; border:1px solid rgba(201,168,76,.35); border-radius:2px; text-decoration:none; transition:all .25s; }
+.training-link:hover { background:rgba(201,168,76,.08); border-color:#c9a84c; }
+@media(max-width:900px){
+  .training-block, .training-block.reverse { grid-template-columns:1fr; gap:28px; }
   .training-block.reverse .training-img, .training-block.reverse .training-body { order:unset; }
+  .training-img img { height:220px; }
 }
 </style>
 </head>
 <body>
 <nav class="nav solid" id="mainNav">
-  <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
-  <ul class="nav-links" id="navLinks">
-    <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
-    <li><a href="assessment.html">評量分析</a></li>
-    <li><a href="counseling.html">評量諮商</a></li>
-    <li><a href="training.html">教育訓練</a></li>
-    <li><a href="marketing.html">整合行銷</a></li>
-  </ul>
+  <div style="display:flex;align-items:center;gap:40px;flex:1;">
+    <a href="index.html" class="nav-logo"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-sub"><a href="about.html">關於我們</a><ul class="nav-sub-menu"><li><a href="contact.html">聯絡我們</a></li></ul></li>
+      <li><a href="assessment.html">評量分析</a></li>
+      <li><a href="counseling.html">評量諮商</a></li>
+      <li><a href="training.html">教育訓練</a></li>
+      <li><a href="marketing.html">整合行銷</a></li>
+    </ul>
+  </div>
   <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
@@ -50,95 +68,87 @@
   </div>
 </div>
 
-<section class="training-section dark">
+<section class="training-section">
   <div class="training-inner">
-    <div style="text-align:center; margin-bottom:64px;" class="reveal">
+    <div class="training-hd reveal">
       <div class="sec-eyebrow">OUR PROGRAMS</div>
-      <div class="sec-title gold" style="font-size:clamp(24px,3vw,40px);">訓練項目</div>
+      <div class="sec-title gold" style="font-size:clamp(28px,4vw,46px);">訓練項目</div>
       <div class="sec-hr"></div>
     </div>
 
+    <!-- 學童教育 -->
     <div class="training-block reveal">
+      <div class="training-block-line"></div>
       <div class="training-img">
-        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="學童教育" onerror="this.style.background='#1a2035';this.style.height='220px'">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="學童教育">
       </div>
       <div class="training-body">
-        <h3>🎒 學童教育</h3>
+        <div class="training-eyebrow">CHILDREN</div>
+        <div class="training-title">🎒 學童教育</div>
+        <div class="training-div"></div>
         <p>透過天賦教育幫助孩子培養自信和溝通能力，以及與人融洽相處的能力，懂得如何自我管理，培養正確的價值觀進而更瞭解自己，發掘自己的特質，更有勇氣與動力找尋未來方向。</p>
         <div class="training-links">
-          <a href="https://www.iiwin.com.tw/22825360702594532946.html" class="training-link">天賦教育 →</a>
+          <a href="training-open.html" class="training-link">公開課程 →</a>
         </div>
       </div>
     </div>
 
+    <!-- 個人成長 -->
     <div class="training-block reverse reveal">
+      <div class="training-block-line"></div>
       <div class="training-body">
-        <h3>🌱 個人成長</h3>
+        <div class="training-eyebrow">PERSONAL</div>
+        <div class="training-title">🌱 個人成長</div>
+        <div class="training-div"></div>
         <p>提供多階層的公開班課程型態，讓您在安排培訓時能更加清楚階層上的所需職能，擁有豐富的講師團隊，並擁有多面向的課程，完善提供給個人學習的方向與實務。</p>
         <div class="training-links">
-          <a href="https://www.iiwin.com.tw/20844382833550631243.html" class="training-link">公開課程 →</a>
-          <a href="https://www.iiwin.com.tw/2516325226251632356026696.html" class="training-link">二代接班手把手計畫 →</a>
+          <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" class="training-link">公開課程 →</a>
+          <a href="training-handson.html" class="training-link">手把手專案 →</a>
         </div>
       </div>
       <div class="training-img">
-        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="個人成長" onerror="this.style.background='#1a2035';this.style.height='220px'">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="個人成長">
       </div>
     </div>
 
+    <!-- 企業訓練 -->
     <div class="training-block reveal">
+      <div class="training-block-line"></div>
       <div class="training-img">
-        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="企業訓練" onerror="this.style.background='#1a2035';this.style.height='220px'">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="企業訓練">
       </div>
       <div class="training-body">
-        <h3>🏢 企業訓練</h3>
-        <p>不同的企業，有不同的企業文化和理念，落實理念的初衷，永續經營，是每家企業的共同期許。設為企業量身訂做最適切的培訓課程；讓企業能夠將核心價值與理念永續傳承。</p>
+        <div class="training-eyebrow">ENTERPRISE</div>
+        <div class="training-title">🏢 企業訓練</div>
+        <div class="training-div"></div>
+        <p>不同的企業，有不同的企業文化和理念，落實理念的初衷，永續經營，是每家企業的共同期許。設為企業量身訂做最適切的培訓課程，讓企業能夠將核心價值與理念永續傳承。</p>
         <div class="training-links">
-          <a href="https://www.iiwin.com.tw/20225269893534732244.html" class="training-link">企業內訓 →</a>
-          <a href="https://www.iiwin.com.tw/eap217292403721332211612604126696.html" class="training-link">EAP員工協助方案 →</a>
-          <a href="https://www.iiwin.com.tw/25976203013668122411.html" class="training-link">企業數位轉型 →</a>
+          <a href="training-enterprise.html" class="training-link">企業內訓 →</a>
+          <a href="training-eap.html" class="training-link">EAP 員工協助方案 →</a>
+          <a href="training-digital.html" class="training-link">企業數位轉型 →</a>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
 <footer class="footer">
-  <div class="footer-top">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;">
-        <p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p>
-      </div>
-      <div class="footer-col">
-        <h4>服務項目</h4>
-        <ul>
-          <li><a href="assessment.html">評量分析</a></li>
-          <li><a href="counseling.html">評量諮商</a></li>
-          <li><a href="training.html">教育訓練</a></li>
-          <li><a href="marketing.html">整合行銷</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>聯絡資訊</h4>
-        <p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p>
-        <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
-          LINE 官方帳號 →
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom-wrap">
-    <div class="footer-bottom">
-      <span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span>
-      <a href="contact.html" class="footer-contact-btn">聯絡我們 →</a>
-    </div>
-  </div>
+  <div class="footer-top"><div class="footer-grid">
+    <div class="footer-brand"><img src="https://www.iiwin.com.tw/uploads/1/4/0/7/140714890/published/1583302382.png" alt="天生贏家" style="filter:none!important;"><p>天生贏家全生涯事業有限公司<br>統一編號：53277119<br><br>與你攜手，成為人生贏家。</p></div>
+    <div class="footer-col"><h4>服務項目</h4><ul><li><a href="assessment.html">評量分析</a></li><li><a href="counseling.html">評量諮商</a></li><li><a href="training.html">教育訓練</a></li><li><a href="marketing.html">整合行銷</a></li></ul></div>
+    <div class="footer-col"><h4>聯絡資訊</h4><p>📍 桃園市中壢區領航南路三段468號15樓之13<br><br>📞 03-352-5125<br><br>🕐 週一至週五 09:00–17:00</p><a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 20px;background:#06C755;color:#fff;font-size:13px;letter-spacing:1px;border-radius:4px;text-decoration:none;">LINE 官方帳號 →</a></div>
+  </div></div>
+  <div class="footer-bottom-wrap"><div class="footer-bottom">
+    <span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span>
+    <a href="contact.html" class="footer-contact-btn">聯絡我們 →</a>
+  </div></div>
 </footer>
-
 <script>
 function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
-var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.1});
+var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.05,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i*0.1)+'s'; io.observe(el); });
+setTimeout(function(){ document.querySelectorAll('.reveal').forEach(function(el){ var r=el.getBoundingClientRect(); if(r.top < window.innerHeight) el.classList.add('on'); }); },100);
 </script>
 </body>
 </html>

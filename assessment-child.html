@@ -6,28 +6,44 @@
 <title>兒童天賦評量 — 天生贏家全生涯事業有限公司</title>
 <link rel="stylesheet" href="assets/style.css">
 <style>
-.sub-section { background:#0a0e1a; padding:80px 5vw 100px; position:relative; overflow:hidden; }
-.sub-section::before { content:''; position:absolute; inset:0; pointer-events:none; background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px); background-size:80px 80px; }
-.sub-inner { max-width:900px; margin:0 auto; position:relative; z-index:1; }
-.sub-lead { font-family:'Noto Serif TC',serif; font-size:clamp(15px,1.8vw,18px); color:#d4c9b0; line-height:2.2; margin-bottom:56px; text-align:center; padding:32px 40px; border:1px solid rgba(201,168,76,.15); border-radius:2px; background:#0d1120; }
-.sub-block { background:#0d1120; border:1px solid rgba(201,168,76,.12); padding:48px; position:relative; overflow:hidden; transition:border-color .3s; margin-bottom:2px; }
-.sub-block:hover { border-color:rgba(201,168,76,.45); }
-.sub-block::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.06),transparent 60%); opacity:0; transition:opacity .4s; pointer-events:none; }
-.sub-block:hover::before { opacity:1; }
-.sub-block-line { position:absolute; bottom:0; left:0; height:2px; width:0; background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c); transition:width .45s cubic-bezier(.4,0,.2,1); }
-.sub-block:hover .sub-block-line { width:100%; }
-.sub-block h3 { font-family:'Noto Serif TC',serif; font-size:22px; font-weight:700; color:#f0e6cc; letter-spacing:3px; margin-bottom:14px; }
-.sub-block-div { width:32px; height:1px; background:linear-gradient(to right,#c9a84c,transparent); margin-bottom:18px; }
-.sub-block p { font-size:16px; line-height:2; color:#d8e4ec; margin-bottom:10px; }
-.sub-block ul { list-style:none; padding:0; margin-top:12px; }
-.sub-block ul li { font-size:15px; color:#d8e4ec; line-height:1.9; padding:8px 0; border-bottom:1px solid rgba(255,255,255,.05); display:flex; gap:12px; }
-.sub-block ul li:last-child { border-bottom:none; }
-.sub-block ul li::before { content:'▪'; color:#c9a84c; flex-shrink:0; }
-.sub-cta { text-align:center; margin-top:56px; }
-.sub-cta p { font-size:15px; color:#8a9bb5; margin-bottom:24px; }
-.sub-line-btn { display:inline-flex; align-items:center; gap:10px; padding:16px 44px; background:#06C755; color:#fff; font-size:15px; letter-spacing:2px; font-weight:500; border-radius:4px; text-decoration:none; transition:transform .2s,box-shadow .2s; }
-.sub-line-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(6,199,85,.35); }
-.sub-back { display:inline-flex; align-items:center; gap:8px; font-size:13px; color:#c9a84c; letter-spacing:2px; margin-top:16px; }
+.sub-section{background:#0a0e1a;padding:80px 5vw 100px;position:relative;overflow:hidden}
+.sub-section::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,168,76,.04) 1px,transparent 1px);background-size:80px 80px}
+.sub-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.quote-box{font-family:'Noto Serif TC',serif;font-size:18px;color:#d4c9b0;line-height:2.2;margin-bottom:56px;text-align:center;padding:36px 48px;border:1px solid rgba(201,168,76,.15);border-radius:2px;background:#0d1120;font-style:italic}
+.sub-block{background:#0d1120;border:1px solid rgba(201,168,76,.12);padding:48px;position:relative;overflow:hidden;transition:border-color .3s;margin-bottom:2px}
+.sub-block:hover{border-color:rgba(201,168,76,.45)}
+.sub-block::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.06),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.sub-block:hover::before{opacity:1}
+.sub-block-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.sub-block:hover .sub-block-line{width:100%}
+.sub-block h3{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;color:#f0e6cc;letter-spacing:3px;margin-bottom:14px}
+.sub-block-div{width:32px;height:1px;background:linear-gradient(to right,#c9a84c,transparent);margin-bottom:18px}
+.sub-block p{font-size:17px;line-height:2;color:#d8e4ec;margin-bottom:12px}
+.benefit-list{list-style:none;padding:0;margin-top:12px}
+.benefit-list li{font-size:17px;color:#d8e4ec;line-height:1.9;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:14px;align-items:flex-start}
+.benefit-list li:last-child{border-bottom:none}
+.benefit-list li::before{content:'▪';color:#c9a84c;flex-shrink:0;margin-top:2px;font-size:18px}
+/* 版型卡片 */
+.tier-list{display:flex;flex-direction:column;gap:2px;margin-top:0}
+.tier-card{background:#080c17;border:1px solid rgba(201,168,76,.1);padding:28px 36px;display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start;transition:border-color .3s}
+.tier-card:hover{border-color:rgba(201,168,76,.4)}
+.tier-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;border-radius:2px;text-align:center}
+.tier-badge.b1{background:linear-gradient(135deg,#e8a87c,#d4896a)}
+.tier-badge.b2{background:linear-gradient(135deg,#d4896a,#b8715a)}
+.tier-badge.b3{background:linear-gradient(135deg,#b8715a,#9a5a45)}
+.tier-badge.b4{background:linear-gradient(135deg,#9a5a45,#7d4535)}
+.tier-badge.b5{background:linear-gradient(135deg,#6b6b6b,#4a4a4a)}
+.tier-badge span{color:#fff;font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;letter-spacing:2px}
+.tier-body h4{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:700;color:#f0e6cc;letter-spacing:2px;margin-bottom:12px}
+.tier-body ul{list-style:none;padding:0}
+.tier-body ul li{font-size:16px;color:#d8e4ec;line-height:1.9;padding:4px 0;display:flex;gap:10px}
+.tier-body ul li::before{content:'·';color:#c9a84c;font-size:20px;flex-shrink:0}
+.sub-cta{text-align:center;margin-top:56px}
+.sub-cta p{font-size:16px;color:#8a9bb5;margin-bottom:24px}
+.sub-line-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 44px;background:#06C755;color:#fff;font-size:16px;letter-spacing:2px;font-weight:500;border-radius:4px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.sub-line-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(6,199,85,.35)}
+.sub-back{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#c9a84c;letter-spacing:2px;margin-top:16px}
+@media(max-width:600px){.tier-card{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -54,26 +70,28 @@
 </div>
 <section class="sub-section">
   <div class="sub-inner">
-    <div class="sub-lead reveal">
+    <div class="quote-box reveal">
+      經過醫學界的反覆研究，認為愛因斯坦是因為發揮了他的優勢區域，<br>
+      而且一直不斷投入他所喜愛的領域，才成為我們熟知的天才科學家。<br><br>
       用『天賦評量報告』這張『地圖』可以探知孩子先天的潛能、特質及優劣勢，<br>
       掌握孩子獨特的資質與差異，就可以幫助家長對孩子的教育，<br>
-      真正走向量身訂製、因材施教。
+      <strong style="color:#c9a84c;font-style:normal;">真正走向量身訂製、因材施教。</strong>
     </div>
 
     <div class="sub-block reveal">
       <div class="sub-block-line"></div>
       <h3>幼教的啟發</h3>
       <div class="sub-block-div"></div>
-      <p>由醫學上的實驗證明，兒童在 0~3 歲的階段，屬於腦神經網路的建構期，會對身體的不同感官如視覺、聽覺以及觸覺所接觸到的東西產生不同的反應，並在腦部建立相對應的連結。</p>
-      <p>到了 4~8 歲時，屬於吸收學習時期，幼兒會開始主動吸收所接觸到的各種資訊，產生認知並且有了學習的動機。</p>
-      <p>【iiWIN 天生贏家性格分析評量】即在提供科學統計數據供父母參考，可協助父母在此黃金時期觀察孩子的特質，提早發掘孩子的先天優勢與劣勢。</p>
+      <p>由醫學上的實驗證明，兒童在 <strong style="color:#c9a84c;">0~3 歲</strong>的階段，屬於腦神經網路的建構期，會對身體的不同感官如視覺、聽覺以及觸覺所接觸到的東西產生不同的反應，並在腦部建立相對應的連結。</p>
+      <p>然而到了 <strong style="color:#c9a84c;">4~8 歲</strong>時，屬於吸收學習時期，幼兒會開始主動吸收所接觸到的各種資訊，產生認知並且有了學習的動機。</p>
+      <p>【iiWIN 天生贏家性格分析評量】即在提供科學統計數據供父母參考，可協助父母在此黃金時期觀察孩子的特質，<strong style="color:#c9a84c;">提早發掘孩子的先天優勢與劣勢</strong>。</p>
     </div>
 
     <div class="sub-block reveal">
       <div class="sub-block-line"></div>
       <h3>天賦評量報告效益</h3>
       <div class="sub-block-div"></div>
-      <ul>
+      <ul class="benefit-list">
         <li>有效分析智能優劣勢，掌握栽培孩子關鍵時期</li>
         <li>正確瞭解學習特質，以適當引導達到學習成效</li>
         <li>瞭解情緒模式與壓力來源，啟發孩子的覺察力</li>
@@ -82,13 +100,211 @@
       </ul>
     </div>
 
+    <div class="sub-block reveal">
+      <div class="sub-block-line"></div>
+      <h3>兒童評量報告版型</h3>
+      <div class="sub-block-div"></div>
+      <div class="tier-list">
+        <div class="tier-card">
+          <div class="tier-badge b1"><span>基礎版</span></div>
+          <div class="tier-body">
+            <ul>
+              <li>明白優勢開發的黃金期</li>
+              <li>了解適合教學與溝通的模式，減少親子摩擦</li>
+              <li>強化創造力及記憶力的策略，提供有效的學習方式</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tier-card">
+          <div class="tier-badge b2"><span>進階班</span></div>
+          <div class="tier-body">
+            <ul>
+              <li>基礎版內容</li>
+              <li>適合進行溝通的頻道與教養策略</li>
+              <li>了解如何執行行為改變的動機策略</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tier-card">
+          <div class="tier-badge b3"><span>專業版</span></div>
+          <div class="tier-body">
+            <ul>
+              <li>進階版內容</li>
+              <li>天賦開發的執行計畫</li>
+              <li>找出所接收訊息的整合策略</li>
+              <li>明白人際與開創力，認識內在承壓與執行力</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tier-card">
+          <div class="tier-badge b4"><span>完整版</span></div>
+          <div class="tier-body">
+            <ul>
+              <li>專業版內容</li>
+              <li>了解適合兒童天性的學習生涯</li>
+              <li>認識兒童未來充滿熱情的職業選擇</li>
+              <li>明白兒童容易受先天氣質而影響的情緒問題</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tier-card">
+          <div class="tier-badge b5"><span>VIP</span></div>
+          <div class="tier-body">
+            <ul>
+              <li>完整版內容</li>
+              <li><strong style="color:#c9a84c;">兒童 One-On-One Coaching</strong>：透過平行教育下的一對一引導，協同新世代孩童開發自己的天賦，讓其看見自己價值，形塑內在正向能量的根源，擁有自信的一生。同時，也得以針對孩童在情緒管理、學習專注力、人際溝通力做量身的訓練計畫，協助家長知道該如何引導孩子在學校的學習與排除情緒的衝突行為管理</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="sub-cta reveal">
       <p>想了解更多或預約兒童天賦評量服務，歡迎透過 LINE 與我們聯繫</p>
       <a href="http://line.me/R/ti/p/%40wvv6736q" target="_blank" class="sub-line-btn">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.105.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-        預約服務
+        預約評量服務
       </a><br>
       <a href="assessment.html" class="sub-back">← 返回評量分析</a>
+    </div>
+  </div>
+</section>
+<!-- 評量系列費用表 -->
+<section style="background:#050810;padding:72px 5vw;border-top:1px solid rgba(201,168,76,.08);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:48px;">
+      <div class="sec-eyebrow">PRICING</div>
+      <div class="sec-title gold" style="font-size:clamp(24px,3vw,38px);">評量系列費用</div>
+      <div class="sec-hr"></div>
+    </div>
+    <div class="reveal" style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:15px;">
+        <thead>
+          <tr style="background:#0d1120;border-bottom:1px solid rgba(201,168,76,.3);">
+            <th style="padding:16px 20px;text-align:left;color:#c9a84c;letter-spacing:2px;font-weight:500;">評量類別</th>
+            <th style="padding:16px 12px;text-align:center;color:#c9a84c;letter-spacing:1px;font-weight:500;">版型</th>
+            <th style="padding:16px 12px;text-align:left;color:#c9a84c;letter-spacing:1px;font-weight:500;">內容</th>
+            <th style="padding:16px 12px;text-align:center;color:#c9a84c;letter-spacing:1px;font-weight:500;">解說時間</th>
+            <th style="padding:16px 12px;text-align:center;color:#c9a84c;letter-spacing:1px;font-weight:500;">費用</th>
+            <th style="padding:16px 12px;text-align:left;color:#c9a84c;letter-spacing:1px;font-weight:500;">解說師資</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.05);">
+            <td style="padding:14px 20px;color:#d8e4ec;" colspan="2">個人天賦潛量分析</td>
+            <td style="padding:14px 12px;color:#8a9bb5;">先天學習潛量、學習風格</td>
+            <td style="padding:14px 12px;text-align:center;color:#d8e4ec;">30分鐘</td>
+            <td style="padding:14px 12px;text-align:center;color:#c9a84c;font-weight:600;">$1,980</td>
+            <td style="padding:14px 12px;color:#8a9bb5;">三級評量分析師</td>
+          </tr>
+          <tr style="background:rgba(201,168,76,.06);border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 20px;color:#f0d080;font-weight:600;" rowspan="4">兒童天賦評量<br><span style="font-size:12px;color:#c9a84c;font-weight:400;">★ 本頁服務</span></td>
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.2);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">進階版</span></td>
+            <td style="padding:10px 12px;color:#8a9bb5;" rowspan="4">兒童優勢開發</td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">40分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$2,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">三級評量分析師</td>
+          </tr>
+          <tr style="background:rgba(201,168,76,.06);border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.2);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">專業版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">60分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$3,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">二級評量分析師以上</td>
+          </tr>
+          <tr style="background:rgba(201,168,76,.06);border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.2);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">完整版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">90分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$6,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">一級評量分析師以上</td>
+          </tr>
+          <tr style="background:rgba(201,168,76,.06);border-bottom:1px solid rgba(255,255,255,.05);">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.35);color:#f0d080;padding:3px 10px;border-radius:2px;font-size:13px;">VIP版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">120分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$12,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">評量諮商師一對一諮商</td>
+          </tr>
+          <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 20px;color:#d8e4ec;" rowspan="3">學涯競爭評量</td>
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.1);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">專業版</span></td>
+            <td style="padding:10px 12px;color:#8a9bb5;" rowspan="3">學習學涯規劃，找出先天優勢領域及適合科系</td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">60分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$3,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">二級評量分析師以上</td>
+          </tr>
+          <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.1);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">完整版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">90分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$6,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">一級評量分析師以上</td>
+          </tr>
+          <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.05);">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.2);color:#f0d080;padding:3px 10px;border-radius:2px;font-size:13px;">VIP版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">120分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$12,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">評量諮商師一對一諮商</td>
+          </tr>
+          <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 20px;color:#d8e4ec;" rowspan="3">成人優勢評量</td>
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.1);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">專業版</span></td>
+            <td style="padding:10px 12px;color:#8a9bb5;" rowspan="3">優勢創造贏家，發現潛能、了解自己、發揮優勢</td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">60分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$3,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">二級評量分析師以上</td>
+          </tr>
+          <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.1);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">完整版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">90分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$6,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">一級評量分析師以上</td>
+          </tr>
+          <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.05);">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.2);color:#f0d080;padding:3px 10px;border-radius:2px;font-size:13px;">VIP版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">120分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$12,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">評量諮商師一對一諮商</td>
+          </tr>
+          <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 20px;color:#d8e4ec;" rowspan="3">職場職能評量</td>
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.1);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">專業版</span></td>
+            <td style="padding:10px 12px;color:#8a9bb5;" rowspan="3">人力資源規劃發展與訓練、調動與陞遷、客服與銷售</td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">60分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$3,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">二級評量分析師以上</td>
+          </tr>
+          <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.1);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">完整版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">90分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$6,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">一級評量分析師以上</td>
+          </tr>
+          <tr style="background:#0d1120;border-bottom:1px solid rgba(255,255,255,.05);">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.2);color:#f0d080;padding:3px 10px;border-radius:2px;font-size:13px;">VIP版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">120分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$12,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">評量諮商師一對一諮商</td>
+          </tr>
+          <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 20px;color:#d8e4ec;" rowspan="3">愛情智慧評量</td>
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.1);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">專業版</span></td>
+            <td style="padding:10px 12px;color:#8a9bb5;" rowspan="3">找到適合對方的最佳溝通模式，使兩性關係更圓滿</td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">60分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$3,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">二級評量分析師以上</td>
+          </tr>
+          <tr style="background:#0a0e1a;border-bottom:1px solid rgba(255,255,255,.03);">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.1);color:#c9a84c;padding:3px 10px;border-radius:2px;font-size:13px;">完整版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">90分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$6,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">一級評量分析師以上</td>
+          </tr>
+          <tr style="background:#0a0e1a;">
+            <td style="padding:10px 12px;text-align:center;"><span style="background:rgba(201,168,76,.2);color:#f0d080;padding:3px 10px;border-radius:2px;font-size:13px;">VIP版</span></td>
+            <td style="padding:10px 12px;text-align:center;color:#d8e4ec;">120分鐘</td>
+            <td style="padding:10px 12px;text-align:center;color:#c9a84c;font-weight:600;">$12,980</td>
+            <td style="padding:10px 12px;color:#8a9bb5;">評量諮商師一對一諮商</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
@@ -101,10 +317,10 @@
   <div class="footer-bottom-wrap"><div class="footer-bottom"><span>© 2025 天生贏家全生涯事業有限公司. All rights reserved.</span><a href="contact.html" class="footer-contact-btn">聯絡我們 →</a></div></div>
 </footer>
 <script>
-function toggleMenu(){ document.getElementById('navLinks').classList.toggle('open'); }
-var io=new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting) x.target.classList.add('on'); }); },{threshold:0.05,rootMargin:'0px 0px -50px 0px'});
-  setTimeout(function(){ document.querySelectorAll('.reveal').forEach(function(el){ var r=el.getBoundingClientRect(); if(r.top < window.innerHeight) el.classList.add('on'); }); }, 100);
-document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i*0.1)+'s'; io.observe(el); });
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('on')})},{threshold:0.05,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i*0.08)+'s';io.observe(el)});
+setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight)el.classList.add('on')})},100);
 </script>
 </body>
 </html>
