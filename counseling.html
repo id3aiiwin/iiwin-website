@@ -12,33 +12,24 @@
 .ci-lead{font-family:'Noto Serif TC',serif;font-size:18px;color:#d4c9b0;line-height:2.2;margin-bottom:64px;text-align:center;padding:36px 48px;border:1px solid rgba(201,168,76,.15);border-radius:2px;background:#0d1120;font-style:italic}
 /* 服務卡片 - 圖文搭配 */
 .c-services{display:flex;flex-direction:column;gap:2px}
-.c-card{display:grid;grid-template-columns:360px 1fr;min-height:340px;background:#0d1120;border:1px solid rgba(201,168,76,.12);position:relative;overflow:hidden;transition:border-color .3s;text-decoration:none}
-.c-card:nth-child(even){grid-template-columns:1fr 360px}
-.c-card:nth-child(even) .c-img{order:2}
-.c-card:nth-child(even) .c-body{order:1}
+.c-card{display:grid;grid-template-columns:360px 1fr;background:#0d1120;border:1px solid rgba(201,168,76,.12);position:relative;overflow:hidden;transition:border-color .3s;text-decoration:none}
 .c-card:hover{border-color:rgba(201,168,76,.5)}
 .c-card-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
 .c-card:hover .c-card-line{width:100%}
-/* 修正：圖片容器固定尺寸，避免圖片載入失敗時 grid 欄位塌陷 */
-.c-img{overflow:hidden;flex-shrink:0;min-height:340px;min-width:360px;background:#0d1120;}
-.c-img img{width:100%;height:100%;min-height:340px;object-fit:cover;filter:brightness(.75);display:block;transition:transform .5s}
+.c-img{position:relative;min-height:320px}
+.c-img img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;filter:brightness(.75);transition:transform .5s}
 .c-card:hover .c-img img{transform:scale(1.04)}
 .c-body{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
 .c-eyebrow{font-size:11px;letter-spacing:4px;color:#c9a84c;text-transform:uppercase;margin-bottom:10px}
 .c-title{font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,26px);font-weight:700;color:#f0e6cc;letter-spacing:3px;margin-bottom:8px}
 .c-div{width:32px;height:1px;background:linear-gradient(to right,#c9a84c,transparent);margin-bottom:16px}
-.c-desc{font-size:17px;color:#d8e4ec;line-height:1.9;margin-bottom:20px;flex:1}
+.c-desc{font-size:17px;color:#d8e4ec;line-height:1.9;margin-bottom:16px}
 .c-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#c9a84c;letter-spacing:2px;text-decoration:none;transition:gap .3s;width:fit-content}
 .c-link:hover{gap:12px}
-.c-sub-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.c-sub-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .c-sub-link{font-size:13px;color:#8a9bb5;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:5px 12px;border-radius:2px;text-decoration:none;transition:all .25s;letter-spacing:1px}
 .c-sub-link:hover{color:#c9a84c;border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.06)}
-@media(max-width:900px){
-  .c-card,.c-card:nth-child(even){grid-template-columns:1fr;min-height:auto}
-  .c-card:nth-child(even) .c-img,.c-card:nth-child(even) .c-body{order:unset}
-  .c-img{min-height:220px;}
-  .c-img img{min-height:220px;height:220px}
-}
+@media(max-width:900px){.c-card{grid-template-columns:1fr}.c-img{min-height:220px}}
 </style>
 </head>
 <body>
@@ -74,7 +65,7 @@
     </div>
 
     <div class="c-services">
-      <!-- 個人諮商服務 -->
+      <!-- 個人諮商服務：圖左文右 -->
       <a href="counseling-personal.html" class="c-card reveal">
         <div class="c-card-line"></div>
         <div class="c-img"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=80" alt="個人諮商服務"></div>
@@ -93,10 +84,9 @@
           <span class="c-link" style="margin-top:20px;">了解更多 →</span>
         </div>
       </a>
-      <!-- 天賦療育 -->
-      <a href="counseling-talent.html" class="c-card reveal">
+      <!-- 天賦療育：文左圖右 -->
+      <a href="counseling-talent.html" class="c-card reveal" style="grid-template-columns:1fr 360px;">
         <div class="c-card-line"></div>
-        <div class="c-img"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80" alt="天賦療育"></div>
         <div class="c-body">
           <div class="c-eyebrow">TALENT THERAPY</div>
           <div class="c-title">天賦療育</div>
@@ -104,23 +94,23 @@
           <p class="c-desc">透過四步驟療育流程（覺知如實→流動看見→淨化釋放→讚美擁抱），搭配藝術療育與芳香療育，協助您釋放內在情緒，重新找回生命的力量。</p>
           <span class="c-link">了解更多 →</span>
         </div>
+        <div class="c-img"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80" alt="天賦療育"></div>
       </a>
-      <!-- 團體療育 -->
+      <!-- 團體療育：圖左文右 -->
       <a href="counseling-group.html" class="c-card reveal">
         <div class="c-card-line"></div>
-        <div class="c-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80&fit=crop" alt="團體療育" onerror="this.src='https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=80&fit=crop'"></div>
+        <div class="c-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80" alt="團體療育"></div>
         <div class="c-body">
           <div class="c-eyebrow">GROUP THERAPY</div>
           <div class="c-title">團體療育</div>
           <div class="c-div"></div>
-          <!-- 修正：補充描述文字，讓卡片高度飽滿 -->
-          <p class="c-desc">在團體運作中讓療效因子充分發揮，促成成員的心理療育。一群人聚在一起，竟能幫助彼此開始成長與改變。透過結構性的團體互動，讓每位成員在安全的環境中探索自我、相互支持，共同邁向療癒與轉化。</p>
-          <!-- 修正：sub-links 保留在 c-body 內，不外移 -->
+          <p class="c-desc">在團體運作中讓療效因子充分發揮，促成成員的心理療育。一群人聚在一起，竟能幫助彼此開始成長與改變。</p>
           <div class="c-sub-links">
             <a href="counseling-dna-course.html" class="c-sub-link">DNA身心靈主題微課</a>
             <a href="counseling-dna-trip.html" class="c-sub-link">DNA淨化三日旅</a>
             <a href="counseling-travel.html" class="c-sub-link">旅遊療育</a>
           </div>
+          <span class="c-link" style="margin-top:16px;">了解更多 →</span>
         </div>
       </a>
     </div>
