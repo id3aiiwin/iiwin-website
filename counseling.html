@@ -14,27 +14,29 @@
 /* ===== 服務卡片 ===== */
 .c-services{display:flex;flex-direction:column;gap:2px}
 
+/* a 只做連結，不參與排版 */
+.c-card-wrap{display:block;text-decoration:none;color:inherit}
+
+/* div 負責 grid 排版 */
 .c-card{
   display:grid;
   grid-template-columns:360px 1fr;
+  min-height:340px;
   background:#0d1120;
   border:1px solid rgba(201,168,76,.12);
   position:relative;
   overflow:hidden;
   transition:border-color .3s;
-  text-decoration:none;
-  color:inherit;
 }
-.c-card:nth-child(even){grid-template-columns:1fr 360px}
-.c-card:nth-child(even) .c-img{order:2}
-.c-card:nth-child(even) .c-body{order:1}
-.c-card:hover{border-color:rgba(201,168,76,.5)}
-.c-card-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1);z-index:2}
-.c-card:hover .c-card-line{width:100%}
+.c-card-wrap:nth-child(even) .c-card{grid-template-columns:1fr 360px}
+.c-card-wrap:nth-child(even) .c-img{order:2}
+.c-card-wrap:nth-child(even) .c-body{order:1}
+.c-card-wrap:hover .c-card{border-color:rgba(201,168,76,.5)}
 
-/* 關鍵修正：
-   style.css 的全域 img { max-width:100% } 導致 height:100% 失效。
-   改用 position:absolute 填滿已知高度的容器，徹底迴避這個問題。 */
+.c-card-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1);z-index:2}
+.c-card-wrap:hover .c-card-line{width:100%}
+
+/* 圖片欄 */
 .c-img{
   position:relative;
   min-height:340px;
@@ -42,17 +44,18 @@
 }
 .c-img img{
   position:absolute;
-  top:0; left:0;
+  top:0;left:0;
   width:100%;
   height:100%;
-  max-width:none;   /* 覆蓋 style.css 的 max-width:100% */
+  max-width:none;
   object-fit:cover;
   filter:brightness(.75);
   display:block;
   transition:transform .5s;
 }
-.c-card:hover .c-img img{transform:scale(1.04)}
+.c-card-wrap:hover .c-img img{transform:scale(1.04)}
 
+/* 文字欄 */
 .c-body{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
 .c-eyebrow{font-size:11px;letter-spacing:4px;color:#c9a84c;text-transform:uppercase;margin-bottom:10px}
 .c-title{font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,26px);font-weight:700;color:#f0e6cc;letter-spacing:3px;margin-bottom:8px}
@@ -65,8 +68,10 @@
 .c-sub-link:hover{color:#c9a84c;border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.06)}
 
 @media(max-width:900px){
-  .c-card,.c-card:nth-child(even){grid-template-columns:1fr}
-  .c-card:nth-child(even) .c-img,.c-card:nth-child(even) .c-body{order:unset}
+  .c-card,
+  .c-card-wrap:nth-child(even) .c-card{grid-template-columns:1fr;min-height:auto}
+  .c-card-wrap:nth-child(even) .c-img,
+  .c-card-wrap:nth-child(even) .c-body{order:unset}
   .c-img{min-height:220px}
 }
 </style>
@@ -105,56 +110,64 @@
     </div>
 
     <div class="c-services">
+
       <!-- 第1張：個人諮商服務（奇數 → 圖左文右） -->
-      <a href="counseling-personal.html" class="c-card reveal">
-        <div class="c-card-line"></div>
-        <div class="c-img"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=80" alt="個人諮商服務"></div>
-        <div class="c-body">
-          <div class="c-eyebrow">PERSONAL</div>
-          <div class="c-title">個人諮商服務</div>
-          <div class="c-div"></div>
-          <p class="c-desc">在這裡，我們以最安全隱私的方式，不限距離，不限時間，不限國界。讓您釋放心中的沉痛與煩亂，天賦評量諮商師聆聽您，陪伴您，共同找出最適切的方法。</p>
-          <div class="c-sub-links">
-            <span class="c-sub-link">兒童諮商</span>
-            <span class="c-sub-link">青少年諮商</span>
-            <span class="c-sub-link">愛情諮商</span>
-            <span class="c-sub-link">職涯諮商</span>
-            <span class="c-sub-link">個人諮商</span>
+      <a href="counseling-personal.html" class="c-card-wrap reveal">
+        <div class="c-card">
+          <div class="c-card-line"></div>
+          <div class="c-img"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=80" alt="個人諮商服務"></div>
+          <div class="c-body">
+            <div class="c-eyebrow">PERSONAL</div>
+            <div class="c-title">個人諮商服務</div>
+            <div class="c-div"></div>
+            <p class="c-desc">在這裡，我們以最安全隱私的方式，不限距離，不限時間，不限國界。讓您釋放心中的沉痛與煩亂，天賦評量諮商師聆聽您，陪伴您，共同找出最適切的方法。</p>
+            <div class="c-sub-links">
+              <span class="c-sub-link">兒童諮商</span>
+              <span class="c-sub-link">青少年諮商</span>
+              <span class="c-sub-link">愛情諮商</span>
+              <span class="c-sub-link">職涯諮商</span>
+              <span class="c-sub-link">個人諮商</span>
+            </div>
+            <span class="c-link">了解更多 →</span>
           </div>
-          <span class="c-link">了解更多 →</span>
         </div>
       </a>
 
       <!-- 第2張：天賦療育（偶數 → 文左圖右） -->
-      <a href="counseling-talent.html" class="c-card reveal">
-        <div class="c-card-line"></div>
-        <div class="c-img"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80" alt="天賦療育"></div>
-        <div class="c-body">
-          <div class="c-eyebrow">TALENT THERAPY</div>
-          <div class="c-title">天賦療育</div>
-          <div class="c-div"></div>
-          <p class="c-desc">透過四步驟療育流程（覺知如實→流動看見→淨化釋放→讚美擁抱），搭配藝術療育與芳香療育，協助您釋放內在情緒，重新找回生命的力量。</p>
-          <span class="c-link">了解更多 →</span>
+      <a href="counseling-talent.html" class="c-card-wrap reveal">
+        <div class="c-card">
+          <div class="c-card-line"></div>
+          <div class="c-img"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80" alt="天賦療育"></div>
+          <div class="c-body">
+            <div class="c-eyebrow">TALENT THERAPY</div>
+            <div class="c-title">天賦療育</div>
+            <div class="c-div"></div>
+            <p class="c-desc">透過四步驟療育流程（覺知如實→流動看見→淨化釋放→讚美擁抱），搭配藝術療育與芳香療育，協助您釋放內在情緒，重新找回生命的力量。</p>
+            <span class="c-link">了解更多 →</span>
+          </div>
         </div>
       </a>
 
       <!-- 第3張：團體療育（奇數 → 圖左文右） -->
-      <a href="counseling-group.html" class="c-card reveal">
-        <div class="c-card-line"></div>
-        <div class="c-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80" alt="團體療育"></div>
-        <div class="c-body">
-          <div class="c-eyebrow">GROUP THERAPY</div>
-          <div class="c-title">團體療育</div>
-          <div class="c-div"></div>
-          <p class="c-desc">在團體運作中讓療效因子充分發揮，促成成員的心理療育。一群人聚在一起，竟能幫助彼此開始成長與改變。</p>
-          <div class="c-sub-links">
-            <a href="counseling-dna-course.html" class="c-sub-link">DNA身心靈主題微課</a>
-            <a href="counseling-dna-trip.html" class="c-sub-link">DNA淨化三日旅</a>
-            <a href="counseling-travel.html" class="c-sub-link">旅遊療育</a>
+      <a href="counseling-group.html" class="c-card-wrap reveal">
+        <div class="c-card">
+          <div class="c-card-line"></div>
+          <div class="c-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=80" alt="團體療育"></div>
+          <div class="c-body">
+            <div class="c-eyebrow">GROUP THERAPY</div>
+            <div class="c-title">團體療育</div>
+            <div class="c-div"></div>
+            <p class="c-desc">在團體運作中讓療效因子充分發揮，促成成員的心理療育。一群人聚在一起，竟能幫助彼此開始成長與改變。</p>
+            <div class="c-sub-links">
+              <a href="counseling-dna-course.html" class="c-sub-link">DNA身心靈主題微課</a>
+              <a href="counseling-dna-trip.html" class="c-sub-link">DNA淨化三日旅</a>
+              <a href="counseling-travel.html" class="c-sub-link">旅遊療育</a>
+            </div>
+            <span class="c-link">了解更多 →</span>
           </div>
-          <span class="c-link">了解更多 →</span>
         </div>
       </a>
+
     </div>
   </div>
 </section>
