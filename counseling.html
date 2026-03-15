@@ -19,7 +19,8 @@
 .c-card:hover{border-color:rgba(201,168,76,.5)}
 .c-card-line{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(to right,#b8882e,#f0d080,#c9a84c);transition:width .45s cubic-bezier(.4,0,.2,1)}
 .c-card:hover .c-card-line{width:100%}
-.c-img{overflow:hidden;flex-shrink:0;}
+/* 修正：圖片容器加上 min-height，避免圖片載入失敗時容器塌陷 */
+.c-img{overflow:hidden;flex-shrink:0;min-height:340px;}
 .c-img img{width:100%;height:100%;min-height:340px;object-fit:cover;filter:brightness(.75);display:block;transition:transform .5s}
 .c-card:hover .c-img img{transform:scale(1.04)}
 .c-body{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
@@ -32,7 +33,12 @@
 .c-sub-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
 .c-sub-link{font-size:13px;color:#8a9bb5;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:5px 12px;border-radius:2px;text-decoration:none;transition:all .25s;letter-spacing:1px}
 .c-sub-link:hover{color:#c9a84c;border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.06)}
-@media(max-width:900px){.c-card,.c-card:nth-child(even){grid-template-columns:1fr;min-height:auto}.c-card:nth-child(even) .c-img,.c-card:nth-child(even) .c-body{order:unset}.c-img img{min-height:220px;height:220px}}
+@media(max-width:900px){
+  .c-card,.c-card:nth-child(even){grid-template-columns:1fr;min-height:auto}
+  .c-card:nth-child(even) .c-img,.c-card:nth-child(even) .c-body{order:unset}
+  .c-img{min-height:220px;}
+  .c-img img{min-height:220px;height:220px}
+}
 </style>
 </head>
 <body>
@@ -107,7 +113,9 @@
           <div class="c-eyebrow">GROUP THERAPY</div>
           <div class="c-title">團體療育</div>
           <div class="c-div"></div>
-          <p class="c-desc">在團體運作中讓療效因子充分發揮，促成成員的心理療育。</p>
+          <!-- 修正：補充描述文字，讓卡片高度飽滿 -->
+          <p class="c-desc">在團體運作中讓療效因子充分發揮，促成成員的心理療育。一群人聚在一起，竟能幫助彼此開始成長與改變。透過結構性的團體互動，讓每位成員在安全的環境中探索自我、相互支持，共同邁向療癒與轉化。</p>
+          <!-- 修正：sub-links 保留在 c-body 內，不外移 -->
           <div class="c-sub-links">
             <a href="counseling-dna-course.html" class="c-sub-link">DNA身心靈主題微課</a>
             <a href="counseling-dna-trip.html" class="c-sub-link">DNA淨化三日旅</a>
